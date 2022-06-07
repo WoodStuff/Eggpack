@@ -8,6 +8,19 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Elements\Accessories\HellstoneShield.cs.bak" />
+    <None Remove="Elements\Accessories\LuckyClover.cs.bak" />
+    <None Remove="Elements\Accessories\ReinforcedShield.cs.bak" />
+    <None Remove="Elements\Accessories\ThingiteShield.cs.bak" />
+    <None Remove="Elements\Accessories\WoodenShield.cs.bak" />
+    <None Remove="Elements\Tools\ThingiteAxe.cs.bak" />
+    <None Remove="Elements\Tools\ThingiteHammer.cs.bak" />
+    <None Remove="Elements\Tools\ThingitePickaxe.cs.bak" />
+    <None Remove="Elements\Weapons\ThingiteSword.cs.bak" />
+    <None Remove="ModWorldGen.cs.bak" />
+    <None Remove="TileUtils.cs.bak" />
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
   </ItemGroup>
   <ItemGroup>

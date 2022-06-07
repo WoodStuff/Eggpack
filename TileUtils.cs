@@ -17,8 +17,8 @@ namespace MyMod
 			//Do note that neither this method nor Framing.GetTileSafely check if the wanted coordiates are in the world!
 			Tile tile = Framing.GetTileSafely(i, j);
 
-			Point16 coord = new Point16(i, j);
-			Point16 frame = new Point16(tile.TileFrameX / 18, tile.TileFrameY / 18);
+			Point16 coord = new(i, j);
+			Point16 frame = new(tile.TileFrameX / 18, tile.TileFrameY / 18);
 
 			return coord - frame;
 		}
