@@ -1,0 +1,43 @@
+﻿using eggpack.Elements.Tiles;
+using Microsoft.Xna.Framework;
+using Terraria;
+using Terraria.ID;
+using Terraria.ModLoader;
+
+namespace eggpack.Elements.Tools
+{
+	public class ThingitePickaxe : ModItem
+	{
+		public override void SetStaticDefaults()
+		{
+		}
+
+		public override void SetDefaults()
+		{
+			item.damage = 8;
+			item.melee = true;
+			item.width = 32;
+			item.height = 32;
+			item.useTime = 16;
+			item.useAnimation = 16;
+			item.pick = 60;
+			item.useStyle = ItemUseStyleID.SwingThrow;
+			item.knockBack = 2;
+			item.value = 160000;
+			item.rare = ItemRarityID.Blue;
+			item.UseSound = SoundID.Item1;
+			item.autoReuse = true;
+			item.useTurn = true;
+		}
+
+		public override void AddRecipes()
+		{
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(null, "ThingiteBar", 12);
+			recipe.AddRecipeGroup("Wood", 4);
+			recipe.AddTile(TileID.Anvils);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+		}
+	}
+}

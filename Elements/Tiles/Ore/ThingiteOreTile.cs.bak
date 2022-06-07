@@ -1,0 +1,32 @@
+﻿using Microsoft.Xna.Framework;
+using Terraria;
+using Terraria.ID;
+using Terraria.ModLoader;
+
+namespace eggpack.Elements.Tiles.Ore
+{
+	public class ThingiteOreTile : ModTile
+	{
+		public override void SetDefaults()
+		{
+			TileID.Sets.Ore[Type] = true;
+			Main.tileSpelunker[Type] = true;
+			Main.tileValue[Type] = 420;
+			Main.tileShine2[Type] = true;
+			Main.tileShine[Type] = 975;
+			Main.tileMergeDirt[Type] = true;
+			Main.tileSolid[Type] = true;
+			Main.tileBlockLight[Type] = true;
+
+			ModTranslation name = CreateMapEntryName();
+			name.SetDefault("Thingite");
+			AddMapEntry(new Color(140, 180, 219), name);
+
+			dustType = 84;
+			drop = ModContent.ItemType<Elements.Items.Tile.ThingiteOre>();
+			soundType = SoundID.Tink;
+			soundStyle = 1;
+			minPick = 40;
+		}
+	}
+}

@@ -1,0 +1,43 @@
+﻿using eggpack.Elements.Tiles;
+using Microsoft.Xna.Framework;
+using Terraria;
+using Terraria.ID;
+using Terraria.ModLoader;
+
+namespace eggpack.Elements.Tools
+{
+	public class ThingiteHammer : ModItem
+	{
+		public override void SetStaticDefaults()
+		{
+		}
+
+		public override void SetDefaults()
+		{
+			item.damage = 12;
+			item.melee = true;
+			item.width = 32;
+			item.height = 32;
+			item.useTime = 20;
+			item.useAnimation = 20;
+			item.hammer = 65;
+			item.useStyle = ItemUseStyleID.SwingThrow;
+			item.knockBack = 5.5f;
+			item.value = 17500;
+			item.rare = ItemRarityID.Blue;
+			item.UseSound = SoundID.Item1;
+			item.autoReuse = true;
+			item.useTurn = true;
+		}
+
+		public override void AddRecipes()
+		{
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(null, "ThingiteBar", 8);
+			recipe.AddRecipeGroup("Wood", 3);
+			recipe.AddTile(TileID.Anvils);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+		}
+	}
+}

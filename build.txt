@@ -1,0 +1,3 @@
+displayName = The Eggpack
+author = nirmoll
+version = 0.1
