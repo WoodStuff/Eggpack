@@ -27,7 +27,7 @@ namespace eggpack.Elements.Accessories
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddRecipeGroup(RecipeGroupID.Wood, 50)
+			.AddRecipeGroup(RecipeGroupID.Wood, 100)
 			.AddTile(TileID.WorkBenches)
 			.Register();
 		}
