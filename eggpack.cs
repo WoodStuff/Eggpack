@@ -9,25 +9,39 @@ namespace eggpack
 	{
 		public override void AddRecipes()
 		{
+			// MACE
+			CreateRecipe(ItemID.Mace)
+				.AddIngredient(null, "ThingiteBar", 10)
+				.AddRecipeGroup(RecipeGroupID.IronBar, 2)
+				.AddRecipeGroup(RecipeGroupID.Wood, 20)
+				.Register();
+
 			// BAND OF REGENERATION
 			CreateRecipe(ItemID.BandofRegeneration)
-			.AddIngredient(ItemID.LifeCrystal)
-			.AddRecipeGroup("EvilBars", 5)
-			.Register();
+				.AddIngredient(ItemID.LifeCrystal)
+				.AddIngredient(ItemID.PanicNecklace)
+				.AddIngredient(ItemID.PurificationPowder, 10)
+				.Register();
+
+			CreateRecipe(ItemID.BandofRegeneration)
+				.AddIngredient(ItemID.LifeCrystal)
+				.AddIngredient(ItemID.BandofStarpower)
+				.AddIngredient(ItemID.PurificationPowder, 10)
+				.Register();
 
 
 			// MAGIC MIRROR (from 1.4.4 update)
 			CreateRecipe(ItemID.MagicMirror)
-			.AddIngredient(ItemID.FallenStar)
-			.AddIngredient(ItemID.Glass, 5)
-			.AddIngredient(ItemID.GoldBar, 8)
-			.Register();
+				.AddIngredient(ItemID.FallenStar)
+				.AddIngredient(ItemID.Glass, 5)
+				.AddIngredient(ItemID.GoldBar, 8)
+				.Register();
 
 			CreateRecipe(ItemID.MagicMirror)
-			.AddIngredient(ItemID.FallenStar)
-			.AddIngredient(ItemID.Glass, 5)
-			.AddIngredient(ItemID.PlatinumBar, 8)
-			.Register();
+				.AddIngredient(ItemID.FallenStar)
+				.AddIngredient(ItemID.Glass, 5)
+				.AddIngredient(ItemID.PlatinumBar, 8)
+				.Register();
 		}
 		public override void AddRecipeGroups()
 		{

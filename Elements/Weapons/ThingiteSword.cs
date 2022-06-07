@@ -30,9 +30,9 @@ namespace eggpack.Elements.Weapons
 		public override void AddRecipes() 
 		{
 			CreateRecipe()
-			.AddIngredient(null, "ThingiteBar", 10)
-			.AddTile(TileID.Anvils)
-			.Register();
+				.AddIngredient(null, "ThingiteBar", 10)
+				.AddTile(TileID.Anvils)
+				.Register();
 		}
 	}
 }
