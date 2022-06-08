@@ -26,8 +26,9 @@ namespace eggpack.Elements.Accessories
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddRecipeGroup(RecipeGroupID.IronBar, 4)
-			.AddTile(TileID.Anvils);
+				.AddRecipeGroup(RecipeGroupID.IronBar, 4)
+				.AddTile(TileID.Anvils)
+				.Register();
 		}
 
 		public override void UpdateAccessory(Player player, bool hideVisual)

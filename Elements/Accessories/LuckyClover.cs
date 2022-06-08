@@ -26,10 +26,11 @@ namespace eggpack.Elements.Accessories
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddIngredient(ItemID.Blinkroot, 2)
-			.AddIngredient(ItemID.Daybloom, 3)
-			.AddIngredient(ItemID.Sunflower)
-			.AddTile(TileID.WorkBenches);
+				.AddIngredient(ItemID.Blinkroot, 2)
+				.AddIngredient(ItemID.Daybloom, 3)
+				.AddIngredient(ItemID.Sunflower)
+				.AddTile(TileID.WorkBenches)
+				.Register();
 		}
 
 		public override void UpdateAccessory(Player player, bool hideVisual)
