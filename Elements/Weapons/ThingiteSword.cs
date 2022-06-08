@@ -9,7 +9,7 @@ namespace eggpack.Elements.Weapons
 	{
         public override void SetStaticDefaults()
         {
-			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 100;
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
         public override void SetDefaults() 
 		{
@@ -17,8 +17,8 @@ namespace eggpack.Elements.Weapons
 			Item.DamageType = DamageClass.Melee;
 			Item.width = 40;
 			Item.height = 40;
-			Item.useTime = 20;
-			Item.useAnimation = 20;
+			Item.useTime = 21;
+			Item.useAnimation = 21;
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.knockBack = 6;
 			Item.value = 50000;

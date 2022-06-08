@@ -37,7 +37,7 @@ namespace eggpack.Elements.Armor.Thingite
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddIngredient(null, "ThingiteBar", 8)
+			.AddIngredient(null, "ThingiteBar", 10)
 			.AddTile(TileID.Anvils)
 			.Register();
 		}
