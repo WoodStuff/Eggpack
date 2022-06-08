@@ -33,7 +33,7 @@ namespace eggpack.Elements.Accessories
 
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{
-			player.GetDamage(DamageClass.Melee) += 3f;
+			player.GetDamage(DamageClass.Melee) += 0.03f;
 			player.GetCritChance(DamageClass.Melee) += 2f;
 		}
 	}
