@@ -1,0 +1,40 @@
+using eggpack.Elements.Tiles;
+using Terraria;
+using Terraria.Localization;
+using Terraria.ModLoader;
+using Terraria.ID;
+using Terraria.GameContent.Creative;
+
+namespace eggpack.Elements.Accessories
+{
+	public class HellstoneBladeSharpener : ModItem
+	{
+		public override void SetStaticDefaults()
+		{
+			Tooltip.SetDefault("+8% melee damage, +9% melee critical strike chance");
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+		}
+		public override void SetDefaults()
+		{
+			Item.width = 32;
+			Item.height = 32;
+			Item.value = 40000;
+			Item.rare = ItemRarityID.Orange;
+			Item.accessory = true;
+		}
+
+		public override void AddRecipes()
+		{
+			CreateRecipe()
+				.AddRecipeGroup(RecipeGroupID.IronBar, 4)
+				.AddTile(TileID.Anvils)
+				.Register();
+		}
+
+		public override void UpdateAccessory(Player player, bool hideVisual)
+		{
+			player.GetDamage(DamageClass.Melee) += 0.02f;
+			player.GetCritChance(DamageClass.Melee) += 3f;
+		}
+	}
+}
