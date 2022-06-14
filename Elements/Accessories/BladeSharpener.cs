@@ -26,7 +26,8 @@ namespace eggpack.Elements.Accessories
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-				.AddRecipeGroup(RecipeGroupID.IronBar, 4)
+				.AddRecipeGroup(RecipeGroupID.Stone, 50)
+				.AddRecipeGroup(RecipeGroupID.Diamond, 1)
 				.AddTile(TileID.Anvils)
 				.Register();
 		}
