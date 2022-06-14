@@ -11,7 +11,7 @@ namespace eggpack.Elements.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("+6% melee damage, +7% melee critical strike chance");
+			Tooltip.SetDefault("+6% melee damage, +7% melee critical strike chance\n50% chance to set struck enemies on fire");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 		public override void SetDefaults()
