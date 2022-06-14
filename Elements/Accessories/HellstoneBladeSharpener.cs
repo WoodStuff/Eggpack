@@ -26,7 +26,8 @@ namespace eggpack.Elements.Accessories
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-				.AddRecipeGroup(RecipeGroupID.IronBar, 4)
+				.AddIngredient(null, "BladeSharpener")
+				.AddIngredient(ItemID.HellstoneBar, 5)
 				.AddTile(TileID.Anvils)
 				.Register();
 		}
