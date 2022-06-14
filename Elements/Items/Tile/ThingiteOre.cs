@@ -32,8 +32,8 @@ namespace eggpack.Elements.Items.Tile
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddRecipeGroup("Tier3Ore")
-			.AddRecipeGroup("Tier4Ore")
+			.AddRecipeGroup("SilverOre")
+			.AddRecipeGroup("GoldOre")
 			.AddTile(TileID.WorkBenches)
 			.Register();
 		}

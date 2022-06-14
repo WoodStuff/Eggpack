@@ -34,13 +34,7 @@ namespace eggpack
 			CreateRecipe(ItemID.MagicMirror)
 				.AddIngredient(ItemID.FallenStar)
 				.AddIngredient(ItemID.Glass, 5)
-				.AddIngredient(ItemID.GoldBar, 8)
-				.Register();
-
-			CreateRecipe(ItemID.MagicMirror)
-				.AddIngredient(ItemID.FallenStar)
-				.AddIngredient(ItemID.Glass, 5)
-				.AddIngredient(ItemID.PlatinumBar, 8)
+				.AddRecipeGroup("GoldBar", 8)
 				.Register();
 		}
 		public override void AddRecipeGroups()
@@ -66,21 +60,71 @@ namespace eggpack
 			});
 			RecipeGroup.RegisterGroup("Gems", group);
 
-			// TIER 3 ORE
-			group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Silver Ore", new int[]
+
+
+
+
+
+
+
+
+
+			// COPPER ORE
+			group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Copper Ore", new int[]
+			{
+				ItemID.CopperOre,
+				ItemID.TinOre,
+			});
+			RecipeGroup.RegisterGroup("CopperOre", group);
+
+			// IRON ORE
+			group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Iron Ore", new int[]
+			{
+				ItemID.IronOre,
+				ItemID.LeadOre,
+			});
+            RecipeGroup.RegisterGroup("IronOre", group);
+
+            // SILVER ORE
+            group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Silver Ore", new int[]
 			{
 				ItemID.SilverOre,
 				ItemID.TungstenOre,
 			});
-			RecipeGroup.RegisterGroup("Tier3Ore", group);
+			RecipeGroup.RegisterGroup("SilverOre", group);
 
-			// TIER 4 ORE
+			// GOLD ORE
 			group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Golden Ore", new int[]
 			{
 				ItemID.GoldOre,
 				ItemID.PlatinumOre,
 			});
-			RecipeGroup.RegisterGroup("Tier4Ore", group);
+			RecipeGroup.RegisterGroup("GoldOre", group);
+
+
+			// COPPER BAR
+			group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Copper Bar", new int[]
+			{
+				ItemID.CopperBar,
+				ItemID.TinBar,
+			});
+			RecipeGroup.RegisterGroup("CopperBar", group);
+
+			// SILVER BAR
+			group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Silver Bar", new int[]
+			{
+				ItemID.SilverBar,
+				ItemID.TungstenBar,
+			});
+			RecipeGroup.RegisterGroup("SilverBar", group);
+
+			// GOLD BAR
+			group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Golden Bar", new int[]
+			{
+				ItemID.GoldBar,
+				ItemID.PlatinumBar,
+			});
+			RecipeGroup.RegisterGroup("GoldBar", group);
 		}
 	}
 }
