@@ -11,14 +11,14 @@ namespace eggpack.Elements.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("+8% melee damage, +9% melee critical strike chance");
+			Tooltip.SetDefault("+6% melee damage, +7% melee critical strike chance");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 		public override void SetDefaults()
 		{
 			Item.width = 32;
 			Item.height = 32;
-			Item.value = 40000;
+			Item.value = Item.sellPrice(0, 30, 0, 0);
 			Item.rare = ItemRarityID.Orange;
 			Item.accessory = true;
 		}
@@ -33,8 +33,8 @@ namespace eggpack.Elements.Accessories
 
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{
-			player.GetDamage(DamageClass.Melee) += 0.02f;
-			player.GetCritChance(DamageClass.Melee) += 3f;
+			player.GetDamage(DamageClass.Melee) += 0.06f;
+			player.GetCritChance(DamageClass.Melee) += 7f;
 		}
 	}
 }
