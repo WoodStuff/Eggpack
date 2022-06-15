@@ -21,7 +21,7 @@ namespace eggpack.Elements.Weapons
 			Item.useAnimation = 21;
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.knockBack = 6;
-			Item.value = 50000;
+			Item.value = Item.sellPrice(0, 1, 0, 0);
 			Item.rare = ItemRarityID.Blue;
 			Item.UseSound = SoundID.Item1;
 			Item.scale = 1.2f;

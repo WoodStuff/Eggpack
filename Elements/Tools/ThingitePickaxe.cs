@@ -25,7 +25,7 @@ namespace eggpack.Elements.Tools
 			Item.pick = 60;
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.knockBack = 2;
-			Item.value = 15000;
+			Item.value = Item.sellPrice(0, 0, 30, 0);
 			Item.rare = ItemRarityID.Blue;
 			Item.UseSound = SoundID.Item1;
 			Item.autoReuse = true;

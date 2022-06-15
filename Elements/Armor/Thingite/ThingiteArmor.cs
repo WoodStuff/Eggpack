@@ -17,7 +17,7 @@ namespace eggpack.Elements.Armor.Thingite
 		{
 			Item.width = 26;
 			Item.height = 22;
-			Item.value = 27500;
+			Item.value = Item.sellPrice(0, 0, 55, 0);
 			Item.rare = ItemRarityID.Blue;
 			Item.defense = 6;
 		}
@@ -55,7 +55,7 @@ namespace eggpack.Elements.Armor.Thingite
 		{
 			Item.width = 26;
 			Item.height = 18;
-			Item.value = 32500;
+			Item.value = Item.sellPrice(0, 0, 65, 0);
 			Item.rare = ItemRarityID.Blue;
 			Item.defense = 6;
 		}
@@ -81,7 +81,7 @@ namespace eggpack.Elements.Armor.Thingite
 		{
 			Item.width = 22;
 			Item.height = 18;
-			Item.value = 25000;
+			Item.value = Item.sellPrice(0, 0, 50, 0);
 			Item.rare = ItemRarityID.Blue;
 			Item.defense = 5;
 		}
