@@ -5,8 +5,9 @@ using Terraria.ID;
 
 namespace eggpack
 {
-    public class ModPlayers : ModPlayer
+    public class EggPlayer : ModPlayer
     {
+        public bool hasHellSharpener;
         /*public override void OnHitNPC(Item item, NPC target, int damage, float knockback, bool crit)
         {
             target.AddBuff(BuffID.OnFire, 180);

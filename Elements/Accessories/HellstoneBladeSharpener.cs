@@ -36,6 +36,7 @@ namespace eggpack.Elements.Accessories
 		{
 			player.GetDamage(DamageClass.Melee) += 0.06f;
 			player.GetCritChance(DamageClass.Melee) += 7f;
+			player.GetModPlayer<EggPlayer>().hasHellSharpener = true;
 		}
 	}
 }

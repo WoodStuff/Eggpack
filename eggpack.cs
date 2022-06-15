@@ -58,7 +58,7 @@ namespace eggpack
 		public override void AddRecipeGroups()
 		{
 			// GEMS
-			group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Gem", new int[]
+			RecipeGroup group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Gem", new int[]
 			{
 				ItemID.Amethyst,
 				ItemID.Topaz,
@@ -73,7 +73,7 @@ namespace eggpack
 			// ----------- BARS BELOW -----------
 
 			// EVIL BARS
-			RecipeGroup group = new(() => Language.GetTextValue("LegacyMisc.37") + " Evil Bar", new int[]
+			group = new(() => Language.GetTextValue("LegacyMisc.37") + " Evil Bar", new int[]
 			{
 				ItemID.DemoniteBar,
 				ItemID.CrimtaneBar,
