@@ -21,20 +21,37 @@ namespace eggpack
 				.AddIngredient(ItemID.LifeCrystal)
 				.AddIngredient(ItemID.PanicNecklace)
 				.AddIngredient(ItemID.PurificationPowder, 10)
+				.AddTile(TileID.WorkBenches)
 				.Register();
 
 			CreateRecipe(ItemID.BandofRegeneration)
 				.AddIngredient(ItemID.LifeCrystal)
 				.AddIngredient(ItemID.BandofStarpower)
 				.AddIngredient(ItemID.PurificationPowder, 10)
+				.AddTile(TileID.Workbenches)
 				.Register();
-
 
 			// MAGIC MIRROR (from 1.4.4 update)
 			CreateRecipe(ItemID.MagicMirror)
 				.AddIngredient(ItemID.FallenStar)
 				.AddIngredient(ItemID.Glass, 5)
 				.AddRecipeGroup("GoldBar", 8)
+				.Register();
+
+			// ANKLET OF THE WIND
+			CreateRecipe(ItemID.AnkletoftheWind)
+				.AddIngredient(null, "SpeedRing")
+				.AddIngredient(ItemID.JungleSpores, 20)
+				.AddIngredient(ItemID.Amethyst, 5)
+				.AddTile(TileID.TinkerersWorkbench)
+				.Register();
+
+			// SHADOW KEY
+			CreateRecipe(ItemID.ShadowKey)
+				.AddIngredient(ItemID.GoldenKey)
+				.AddRecipeGroup(RecipeGroupID.EvilBars)
+				.AddIngredient(ItemID.Bone, 30)
+				.AddTile(TileID.Anvils)
 				.Register();
 		}
 		public override void AddRecipeGroups()
