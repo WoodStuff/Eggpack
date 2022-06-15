@@ -49,7 +49,7 @@ namespace eggpack
 			// SHADOW KEY
 			CreateRecipe(ItemID.ShadowKey)
 				.AddIngredient(ItemID.GoldenKey, 5)
-				.AddRecipeGroup(null, "EvilBars", 15)
+				.AddRecipeGroup("EvilBars", 15)
 				.AddIngredient(ItemID.Bone, 30)
 				.AddTile(TileID.Anvils)
 				.Register();
