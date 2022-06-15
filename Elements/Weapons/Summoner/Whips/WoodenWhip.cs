@@ -49,7 +49,7 @@ namespace eggpack.Elements.Weapons.Summoner.Whips
         public override void SetDefaults()
         {
             //The first field is to set the Whip Projectile // The second is the damage // The third is the Knockback // The fourth is the lenght of the whip
-            WhipDefaults(ModContent.ProjectileType<WoodenWhipProjectile>(), 11, 0.5f, 7f);
+            WhipDefaults(ModContent.ProjectileType<WoodenWhipProjectile>(), 11, 0.5f, 5.5f);
         }
 
         public class WoodenWhipProjectile : ModProjectile
