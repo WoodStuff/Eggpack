@@ -7,7 +7,6 @@ using Terraria.GameContent.Creative;
 
 namespace eggpack.Elements.Accessories
 {
-	[AutoloadEquip(EquipType.HandsOn)]
 	public class PygmyEmblem : ModItem
 	{
 		public override void SetStaticDefaults()
