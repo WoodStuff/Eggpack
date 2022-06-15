@@ -1,4 +1,4 @@
-﻿using Terraria;
+﻿/*using Terraria;
 using Terraria.ModLoader;
 using Terraria.WorldBuilding;
 using Terraria.GameContent.Generation;
@@ -32,4 +32,4 @@ namespace eggpack
 			}
 		}
 	}
-}
+}*/

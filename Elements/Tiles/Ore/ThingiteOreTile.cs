@@ -66,7 +66,7 @@ namespace eggpack.Elements.Tiles.Ore
 			for (int k = 0; k < (int)(Main.maxTilesX * Main.maxTilesY * 1.5E-04); k++)
 			{
 				int x = WorldGen.genRand.Next(0, Main.maxTilesX);
-				int y = WorldGen.genRand.Next((int)WorldGen.worldSurfaceLow, Main.maxTilesY);
+				int y = WorldGen.genRand.Next((int)WorldGen.rockLayerLow, Main.maxTilesY);
 
 				WorldGen.TileRunner(x, y, WorldGen.genRand.Next(4, 7), WorldGen.genRand.Next(1, 2), ModContent.TileType<ThingiteOreTile>());
 

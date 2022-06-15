@@ -9,7 +9,7 @@ namespace eggpack.Elements.Accessories
 {
 	public class LuckyClover : ModItem
 	{
-		public override void SetStaticDefaults()
+        public override void SetStaticDefaults()
 		{
 			Tooltip.SetDefault("+4% critical strike chance");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;

@@ -44,7 +44,7 @@ namespace eggpack.Elements.Weapons.Summons.SMetalOrb
 			Item.useTime = 36;
 			Item.useAnimation = 36;
 			Item.useStyle = ItemUseStyleID.Swing;
-			Item.value = Item.sellPrice(0, 30, 0, 0);
+			Item.value = Item.sellPrice(0, 0, 30, 0);
 			Item.rare = ItemRarityID.White;
 			Item.UseSound = SoundID.Item44;
 
