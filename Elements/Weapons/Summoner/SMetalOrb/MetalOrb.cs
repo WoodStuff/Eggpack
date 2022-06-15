@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace eggpack.Elements.Weapons.Summons.SMetalOrb
+namespace eggpack.Elements.Weapons.Summoner.SMetalOrb
 {
 	/*
 	 * This file contains all the code necessary for a minion

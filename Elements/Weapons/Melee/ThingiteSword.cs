@@ -3,7 +3,7 @@ using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace eggpack.Elements.Weapons
+namespace eggpack.Elements.Weapons.Melee
 {
 	public class ThingiteSword : ModItem
 	{
