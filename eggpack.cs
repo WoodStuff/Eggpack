@@ -14,6 +14,7 @@ namespace eggpack
 				.AddIngredient(null, "ThingiteBar", 10)
 				.AddRecipeGroup(RecipeGroupID.IronBar, 2)
 				.AddRecipeGroup(RecipeGroupID.Wood, 20)
+				.AddTile(TileID.Anvils)
 				.Register();
 
 			// BAND OF REGENERATION
@@ -28,7 +29,7 @@ namespace eggpack
 				.AddIngredient(ItemID.LifeCrystal)
 				.AddIngredient(ItemID.BandofStarpower)
 				.AddIngredient(ItemID.PurificationPowder, 10)
-				.AddTile(TileID.Workbenches)
+				.AddTile(TileID.WorkBenches)
 				.Register();
 
 			// MAGIC MIRROR (from 1.4.4 update)
@@ -43,13 +44,13 @@ namespace eggpack
 				.AddIngredient(null, "SpeedRing")
 				.AddIngredient(ItemID.JungleSpores, 20)
 				.AddIngredient(ItemID.Amethyst, 5)
-				.AddTile(TileID.TinkerersWorkbench)
+				.AddTile(TileID.Anvils)
 				.Register();
 
 			// SHADOW KEY
 			CreateRecipe(ItemID.ShadowKey)
 				.AddIngredient(ItemID.GoldenKey)
-				.AddRecipeGroup(RecipeGroupID.EvilBars)
+				.AddRecipeGroup("EvilBars")
 				.AddIngredient(ItemID.Bone, 30)
 				.AddTile(TileID.Anvils)
 				.Register();
