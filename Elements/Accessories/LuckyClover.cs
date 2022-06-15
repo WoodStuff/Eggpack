@@ -18,7 +18,7 @@ namespace eggpack.Elements.Accessories
 		{
 			Item.width = 32;
 			Item.height = 32;
-			Item.value = 40000;
+			Item.value = Item.sellPrice(0, 0, 80, 0);
 			Item.rare = ItemRarityID.White;
 			Item.accessory = true;
 		}

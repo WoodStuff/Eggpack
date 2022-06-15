@@ -38,5 +38,5 @@ namespace eggpack.Elements.Accessories
 			player.GetDamage(DamageClass.Summon) += 0.16f;
 			player.maxMinions += 3;
 		}
-	}
+    }
 }
