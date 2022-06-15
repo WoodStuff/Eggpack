@@ -60,14 +60,7 @@ namespace eggpack
 			});
 			RecipeGroup.RegisterGroup("Gems", group);
 
-
-
-
-
-
-
-
-
+			// ----------- BARS BELOW -----------
 
 			// COPPER ORE
 			group = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Copper Ore", new int[]

@@ -1,4 +1,4 @@
-﻿using eggpack.Elements.Tiles;
+using eggpack.Elements.Tiles;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -7,34 +7,36 @@ using Terraria.GameContent.Creative;
 
 namespace eggpack.Elements.Accessories
 {
-	public class BladeSharpener : ModItem
+	[AutoloadEquip(EquipType.HandsOn)]
+	public class PygmyEmblem : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("+2% melee damage, +3% melee critical strike chance");
+			Tooltip.SetDefault("Increases your max number of minions by 1\n12% increased summon damage");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 		public override void SetDefaults()
 		{
-			Item.width = 32;
-			Item.height = 32;
-			Item.value = 40000;
-			Item.rare = ItemRarityID.White;
+			Item.width = 28;
+			Item.height = 20;
+			Item.value = Item.sellPrice(0, 30, 0, 0);
+			Item.rare = ItemRarityID.Pink;
 			Item.accessory = true;
 		}
 
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-				.AddIngredient(ItemID.StoneBlock, 50)
-				.AddIngredient(ItemID.Diamond, 1)
-				.AddTile(TileID.Anvils)
+				.AddIngredient(ItemID.AvengerEmblem)
+				.AddIngredient(ItemID.PygmyNecklace)
+				.AddTile(TileID.TinkerersWorkbench)
 				.Register();
 		}
 
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{
-			player.GetDamage(DamageClass.Melee) += 0.02f;
+			player.GetDamage(DamageClass.Summon) += 0.12f;
+			player.maxMinions += 1;
 		}
 	}
 }
