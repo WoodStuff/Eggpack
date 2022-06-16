@@ -10,6 +10,7 @@ namespace eggpack.Elements.Weapons.Melee
         public override void SetStaticDefaults()
         {
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+			Tooltip.SetDefault("Critical strikes weaken enemies");
 		}
         public override void SetDefaults() 
 		{
@@ -34,5 +35,10 @@ namespace eggpack.Elements.Weapons.Melee
 				.AddTile(TileID.Anvils)
 				.Register();
 		}
-	}
+        public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
+        {
+			if (!crit) return;
+			target.AddBuff(BuffID.Weak, 180);
+        }
+    }
 }
