@@ -76,6 +76,14 @@ namespace eggpack
 			});
 			RecipeGroup.RegisterGroup("Gems", group);
 
+			// EVIL MATERIALS
+			group = new(() => Language.GetTextValue("LegacyMisc.37") + " Evil Material", new int[]
+			{
+				ItemID.ShadowScale,
+				ItemID.TissueSample,
+			});
+			RecipeGroup.RegisterGroup("EvilMaterials", group);
+
 			// ----------- BARS BELOW -----------
 
 			// EVIL BARS
