@@ -36,7 +36,7 @@ namespace eggpack.Elements.Accessories
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{
 			player.manaCost *= 0.90f;
-			player.statManaMax2 += 20.0;
+			player.statManaMax2 += 20;
 		}
 	}
 }
