@@ -27,7 +27,7 @@ namespace eggpack.Elements.Accessories
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-				.AddRecipeGroup("SilverBar", 6)
+				.AddRecipeGroup(ModRecipeGroup.SilverBar, 6)
 				.AddIngredient(ItemID.Emerald)
 				.AddTile(TileID.Anvils)
 				.Register();
