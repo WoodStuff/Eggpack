@@ -54,6 +54,12 @@ namespace eggpack
 				.AddIngredient(ItemID.Bone, 30)
 				.AddTile(TileID.Anvils)
 				.Register();
+
+			// HAND WARMER
+			CreateRecipe(ItemID.HandWarmer)
+				.AddIngredient(ItemID.FlinxFur, 5)
+				.AddTile(TileID.WorkBenches)
+				.Register();
 		}
 		public override void AddRecipeGroups()
 		{
