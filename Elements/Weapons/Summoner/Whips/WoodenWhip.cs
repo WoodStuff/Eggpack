@@ -5,15 +5,10 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Terraria;
 using Terraria.Audio;
 using Terraria.Enums;
 using Terraria.GameContent;
 using Terraria.GameContent.Creative;
-using Terraria.GameContent.Drawing;
 
 
 namespace eggpack.Elements.Weapons.Summoner.Whips
@@ -120,7 +115,7 @@ namespace eggpack.Elements.Weapons.Summoner.Whips
                 {
                     Projectile.WhipPointsForCollision.Clear();
                     FillWhipControlPoints(Projectile, Projectile.WhipPointsForCollision);
-                    Vector2 position = Projectile.WhipPointsForCollision[Projectile.WhipPointsForCollision.Count - 1];
+                    Vector2 position = Projectile.WhipPointsForCollision[^1];
                     SoundEngine.PlaySound(SoundID.Item153, position);
                 }
 
@@ -146,10 +141,9 @@ namespace eggpack.Elements.Weapons.Summoner.Whips
                     num6 = (num5 - 1f) / num2;
                     num5 = MathHelper.Lerp(1f, 0f, num6);
                 }
-                float num7 = proj.ai[0] - 1f;
                 Player player = Main.player[proj.owner];
                 Item heldItem = Main.player[proj.owner].HeldItem;
-                num7 = (float)(ContentSamples.ItemsByType[heldItem.type].useAnimation * 2) * num * player.whipRangeMultiplier;
+                float num7 = (float)(ContentSamples.ItemsByType[heldItem.type].useAnimation * 2) * num * player.whipRangeMultiplier;
                 float num8 = proj.velocity.Length() * num7 * num5 * rangeMultiplier / (float)segments;
                 float num9 = 1f;
                 Vector2 playerArmPosition = Main.GetPlayerArmPosition(proj);
@@ -186,11 +180,11 @@ namespace eggpack.Elements.Weapons.Summoner.Whips
             }
             private void DrawWhip(Projectile proj)
             {
-                List<Vector2> list = new List<Vector2>();
+                List<Vector2> list = new();
                 FillWhipControlPoints(proj, list);
                 Texture2D value = TextureAssets.FishingLine.Value;
                 Microsoft.Xna.Framework.Rectangle value2 = value.Frame();
-                Vector2 origin = new Vector2(value2.Width / 2, 2f);
+                Vector2 origin = new(value2.Width / 2, 2f);
 
                 Vector2 value3 = list[0];
                 for (int i = 0; i < list.Count - 1; i++)
@@ -199,7 +193,7 @@ namespace eggpack.Elements.Weapons.Summoner.Whips
                     Vector2 vector2 = list[i + 1] - vector;
                     float rotation = vector2.ToRotation() - (float)Math.PI / 2f;
                     Microsoft.Xna.Framework.Color color = Lighting.GetColor(vector.ToTileCoordinates(), originalColor);
-                    Vector2 scale = new Vector2(1f, (vector2.Length() + 2f) / (float)value2.Height);
+                    Vector2 scale = new(1f, (vector2.Length() + 2f) / (float)value2.Height);
                     Main.EntitySpriteDraw(value, value3 - Main.screenPosition, value2, color, rotation, origin, scale, SpriteEffects.None, 0);
                     value3 += vector2;
                 }
@@ -220,9 +214,9 @@ namespace eggpack.Elements.Weapons.Summoner.Whips
                 Vector2 vector2 = controlPoints[0];
                 for (int seg = 0; seg < controlPoints.Count - 1; seg++)
                 {
-                    bool flag = false;
                     Vector2 origin = vector;
                     float scale = 1f;
+                    bool flag;
                     if (seg == 0)
                     {
                         origin.Y -= 4f;
@@ -240,8 +234,8 @@ namespace eggpack.Elements.Weapons.Summoner.Whips
                         flag = true;
                         rectangle.Y = height * 4;
                         scale = tipScale;
-                        Projectile.GetWhipSettings(proj, out var timeToFlyOut, out var _, out var _);
-                        float t = proj.ai[0] / timeToFlyOut;
+                        Projectile.GetWhipSettings(proj, out _, out _, out _);
+                        //float t = proj.ai[0] / timeToFlyOut;
                         //float amount = Utils.GetLerpValue(0.1f, 0.7f, t, clamped: true) * Utils.GetLerpValue(0.9f, 0.7f, t, clamped: true);
                         //scale = MathHelper.Lerp(0.5f, 1.5f, amount);
                     }
@@ -277,7 +271,7 @@ namespace eggpack.Elements.Weapons.Summoner.Whips
             {
                 Projectile.WhipPointsForCollision.Clear();
                 FillWhipControlPoints(Projectile, Projectile.WhipPointsForCollision);
-                Vector2 zero = new Vector2((float)Projectile.width * Projectile.scale / 2f, 0f);
+                Vector2 zero = new((float)Projectile.width * Projectile.scale / 2f, 0f);
                 for (int flag = 0; flag < Projectile.WhipPointsForCollision.Count; flag++)
                 {
                     DelegateMethods.tilecut_0 = TileCuttingContext.AttackProjectile;
@@ -306,8 +300,10 @@ namespace eggpack.Elements.Weapons.Summoner.Whips
         {
             //The recipe
             Recipe recipe = CreateRecipe();
-            recipe.AddIngredient(4914);
-            recipe.AddTile(134);
+            recipe.AddRecipeGroup(RecipeGroupID.Wood, 20);
+            recipe.AddIngredient(ItemID.Cobweb, 20);
+            recipe.AddRecipeGroup(RecipeGroupID.IronBar, 5);
+            recipe.AddTile(TileID.WorkBenches);
             recipe.Register();
         }
     }

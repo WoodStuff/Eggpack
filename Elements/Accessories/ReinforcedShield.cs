@@ -30,7 +30,6 @@ namespace eggpack.Elements.Accessories
 			.AddIngredient(ItemID.Shackle)
 			.AddIngredient(null, "WoodenShield")
 			.AddIngredient(null, "ThingiteShield")
-			.AddIngredient(ItemID.StoneBlock, 50)
 			.AddTile(TileID.TinkerersWorkbench)
 			.Register();
 		}
