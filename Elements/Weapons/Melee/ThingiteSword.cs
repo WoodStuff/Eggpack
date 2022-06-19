@@ -16,8 +16,8 @@ namespace eggpack.Elements.Weapons.Melee
 		{
 			Item.damage = 17;
 			Item.DamageType = DamageClass.Melee;
-			Item.width = 40;
-			Item.height = 40;
+			Item.width = 32;
+			Item.height = 32;
 			Item.useTime = 21;
 			Item.useAnimation = 21;
 			Item.useStyle = ItemUseStyleID.Swing;

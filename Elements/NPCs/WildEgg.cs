@@ -5,6 +5,7 @@ using System;
 using Terraria.ModLoader.Utilities;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.GameContent.Bestiary;
+using eggpack.Elements.Items;
 
 namespace eggpack.Elements.NPCs
 {
@@ -29,6 +30,8 @@ namespace eggpack.Elements.NPCs
 			NPC.value = 100f;
 			NPC.knockBackResist = 0.75f;
 			NPC.aiStyle = -1;
+			Banner = NPC.type;
+			BannerItem = ModContent.ItemType<YolkShard>();
 		}
 
 		public override float SpawnChance(NPCSpawnInfo spawnInfo)

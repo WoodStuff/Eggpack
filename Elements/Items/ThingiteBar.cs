@@ -1,4 +1,5 @@
-﻿using Terraria.ID;
+﻿using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 
@@ -24,7 +25,7 @@ namespace eggpack.Elements.Items
             Item.createTile = ModContent.TileType<Tiles.Ore.ThingiteBarTile>();
             Item.width = 12;
             Item.height = 12;
-            Item.value = 15000;
+            Item.value = Item.sellPrice(0, 0, 30, 0);
             Item.rare = ItemRarityID.Blue;
         }
 
