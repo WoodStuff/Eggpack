@@ -41,6 +41,7 @@ namespace eggpack.Elements.Weapons.Summoner.Whips
             Item.damage = dmg;
             Item.knockBack = kb;
             Item.shootSpeed = shootspeed;
+            Item.value = Item.sellPrice(0, 0, 5, 0);
         }
         public override void SetDefaults()
         {

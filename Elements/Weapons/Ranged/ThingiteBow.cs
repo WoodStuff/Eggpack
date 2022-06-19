@@ -17,7 +17,7 @@ namespace eggpack.Elements.Weapons.Ranged
 			Item.useTime = 19;
 			Item.useAnimation = 19;
 			Item.knockBack = 6;
-			Item.value = Item.sellPrice(0, 0, 6, 0);
+			Item.value = Item.sellPrice(0, 0, 15, 0);
 			Item.rare = ItemRarityID.Blue;
 			Item.scale = 1.2f;
 		}

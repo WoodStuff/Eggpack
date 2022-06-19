@@ -22,7 +22,7 @@ namespace eggpack.Elements.Weapons.Melee
 			Item.useAnimation = 8;
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.knockBack = 2;
-			Item.value = Item.sellPrice(0, 6, 50, 0);
+			Item.value = Item.sellPrice(0, 0, 25, 0);
 			Item.rare = ItemRarityID.Blue;
 			Item.UseSound = SoundID.Item1;
 			Item.scale = 1.4f;
