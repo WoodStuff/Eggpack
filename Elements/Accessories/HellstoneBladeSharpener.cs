@@ -18,7 +18,7 @@ namespace eggpack.Elements.Accessories
 		{
 			Item.width = 32;
 			Item.height = 28;
-			Item.value = Item.sellPrice(0, 1, 0, 0);
+			Item.value = Item.sellPrice(0, 1, 50, 0);
 			Item.rare = ItemRarityID.Orange;
 			Item.accessory = true;
 		}
@@ -27,7 +27,7 @@ namespace eggpack.Elements.Accessories
 		{
 			CreateRecipe()
 				.AddIngredient(null, "BladeSharpener")
-				.AddIngredient(ItemID.HellstoneBar, 5)
+				.AddIngredient(ItemID.HellstoneBar, 10)
 				.AddTile(TileID.Anvils)
 				.Register();
 		}
