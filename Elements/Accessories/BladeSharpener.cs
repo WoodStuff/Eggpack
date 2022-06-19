@@ -17,7 +17,7 @@ namespace eggpack.Elements.Accessories
 		public override void SetDefaults()
 		{
 			Item.width = 32;
-			Item.height = 32;
+			Item.height = 28;
 			Item.value = Item.sellPrice(0, 0, 80, 0);
 			Item.rare = ItemRarityID.White;
 			Item.accessory = true;

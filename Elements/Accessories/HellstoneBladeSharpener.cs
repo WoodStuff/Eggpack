@@ -17,7 +17,7 @@ namespace eggpack.Elements.Accessories
 		public override void SetDefaults()
 		{
 			Item.width = 32;
-			Item.height = 32;
+			Item.height = 28;
 			Item.value = Item.sellPrice(0, 1, 0, 0);
 			Item.rare = ItemRarityID.Orange;
 			Item.accessory = true;
@@ -35,7 +35,7 @@ namespace eggpack.Elements.Accessories
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{
 			player.GetDamage(DamageClass.Melee) += 0.06f;
-			player.GetCritChance(DamageClass.Melee) += 7f;
+			player.GetCritChance(DamageClass.Melee) += 6f;
 			player.GetModPlayer<EggPlayer>().hasHellSharpener = true;
 		}
 	}
