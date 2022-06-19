@@ -7,7 +7,7 @@ using Terraria.ObjectData;
 
 namespace eggpack.Elements.Tiles.Ore
 {
-	public class ThingiteBarTile : ModTile
+    public class ThingiteBarTile : ModTile
 	{
 		public override void SetStaticDefaults()
 		{
@@ -23,10 +23,10 @@ namespace eggpack.Elements.Tiles.Ore
 
 			ModTranslation name = CreateMapEntryName();
 			name.SetDefault("ThingiteBar");
-			AddMapEntry(new Color(100, 100, 120), Language.GetText("MapObject.MetalBar"));
+			AddMapEntry(new Color(80, 80, 100), Language.GetText("MapObject.MetalBar"));
 
 			DustType = 84;
-			ItemDrop = ModContent.ItemType<Elements.Items.Tile.ThingiteBar>();
+			ItemDrop = ModContent.ItemType<Elements.Items.ThingiteBar>();
 		}
 	}
 }

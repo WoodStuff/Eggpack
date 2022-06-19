@@ -8,7 +8,7 @@ using Terraria.WorldBuilding;
 
 namespace eggpack.Elements.Tiles.Ore
 {
-	public class ThingiteOreTile : ModTile
+    public class ThingiteOreTile : ModTile
 	{
 		public override void SetStaticDefaults()
 		{
@@ -26,7 +26,7 @@ namespace eggpack.Elements.Tiles.Ore
 			AddMapEntry(new Color(140, 180, 219), name);
 
 			DustType = 84;
-			ItemDrop = ModContent.ItemType<Elements.Items.Tile.ThingiteOre>();
+			ItemDrop = ModContent.ItemType<Elements.Items.ThingiteOre>();
 			MinPick = 40;
 		}
 	}
