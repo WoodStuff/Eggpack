@@ -24,7 +24,7 @@ namespace eggpack.Elements.Weapons.Melee
 			Item.useStyle = ItemUseStyleID.Swing;
 			Item.knockBack = 8;
 			Item.value = Item.sellPrice(0, 7, 50, 0);
-			Item.rare = ItemRarityID.Blue;
+			Item.rare = ItemRarityID.Green;
 			Item.UseSound = SoundID.Item1;
 		}
 
