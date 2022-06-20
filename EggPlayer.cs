@@ -18,7 +18,7 @@ namespace eggpack
 		public override void OnHitNPC(Item item, NPC target, int damage, float knockback, bool crit)
 		{
 			Random rng = new();
-			if (hasHellSharpener && rng.Next(1) == 0) target.AddBuff(BuffID.OnFire, 180);
+			if (hasHellSharpener && rng.Next(2) == 0) target.AddBuff(BuffID.OnFire, 180);
 		}
     }
 }
