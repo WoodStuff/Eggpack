@@ -3,6 +3,8 @@ using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 using eggpack.Elements.NPCs;
+using eggpack.Elements.NPCs.RulerOfAllEggs;
+using Terraria.Audio;
 
 namespace eggpack.Elements.Weapons.Melee
 {
@@ -41,7 +43,27 @@ namespace eggpack.Elements.Weapons.Melee
 			if (target.type == ModContent.NPCType<WildEgg>())
             {
 				target.life = 0;
-            }
+				if (player.whoAmI == Main.myPlayer)
+				{
+					// If the player using the item is the client
+					// (explicitely excluded serverside here)
+					SoundEngine.PlaySound(SoundID.Roar, player.position);
+
+					int type = ModContent.NPCType<RulerOfAllEggs>();
+
+					if (Main.netMode != NetmodeID.MultiplayerClient)
+					{
+						// If the player is not in multiplayer, spawn directly
+						NPC.SpawnOnPlayer(player.whoAmI, type);
+					}
+					else
+					{
+						// If the player is in multiplayer, request a spawn
+						// This will only work if NPCID.Sets.MPAllowedEnemies[type] is true, which we set in MinionBossBody
+						NetMessage.SendData(MessageID.SpawnBoss, number: player.whoAmI, number2: type);
+					}
+				}
+			}
 		}
 	}
 }
