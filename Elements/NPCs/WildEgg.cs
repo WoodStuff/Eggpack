@@ -27,7 +27,7 @@ namespace eggpack.Elements.NPCs
 			NPC.lifeMax = 50;
 			NPC.HitSound = SoundID.NPCHit1;
 			NPC.DeathSound = SoundID.NPCDeath1;
-			NPC.value = 100f;
+			NPC.value = 100;
 			NPC.knockBackResist = 0.75f;
 			NPC.aiStyle = -1;
 			Banner = NPC.type;
@@ -49,11 +49,11 @@ namespace eggpack.Elements.NPCs
 			bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[] {
 				BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Times.DayTime,
 
-				new FlavorTextBestiaryInfoElement("From the hallow pixies' magical dust, some eggs magically gained consciousness. But, since those are evil, the eggs have become evil as well.")
+				new FlavorTextBestiaryInfoElement("Sometimes, eggs become alive and fight anyone they see for the empire.")
 			});
 		}
 
-		public override void AI()
+        public override void AI()
 		{
 			NPC.ai[1] = -1f;
 			bool flag = false;
