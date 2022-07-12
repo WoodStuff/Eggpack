@@ -4,6 +4,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.GameContent.Creative;
+using eggpack.Players;
 
 namespace eggpack.Elements.Accessories
 {

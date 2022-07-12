@@ -9,6 +9,9 @@ using eggpack.Elements.Items;
 
 namespace eggpack.Elements.NPCs
 {
+	/// <summary>
+	/// A wild egg that sometimes drops Yolk Shards and can be used to summon the Ruler of Eggs.
+	/// </summary>
 	public class WildEgg : ModNPC
 	{
 		public bool[] aggressive = { false, false };
@@ -30,8 +33,6 @@ namespace eggpack.Elements.NPCs
 			NPC.value = 100;
 			NPC.knockBackResist = 0.75f;
 			NPC.aiStyle = -1;
-			Banner = NPC.type;
-			BannerItem = ModContent.ItemType<YolkShard>();
 		}
 
 		public override float SpawnChance(NPCSpawnInfo spawnInfo)
@@ -42,6 +43,7 @@ namespace eggpack.Elements.NPCs
 		public override void ModifyNPCLoot(NPCLoot npcLoot)
 		{
 			npcLoot.Add(ItemDropRule.Common(ItemID.RottenEgg, 2));
+			npcLoot.Add(ItemDropRule.Common(ModContent.ItemType<YolkShard>(), 20));
 		}
 
 		public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)

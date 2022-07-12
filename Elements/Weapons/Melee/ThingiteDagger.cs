@@ -5,6 +5,9 @@ using Terraria.ModLoader;
 
 namespace eggpack.Elements.Weapons.Melee
 {
+	/// <summary>
+	/// A quick sword with auto-swing, but low damage.
+	/// </summary>
 	public class ThingiteDagger : ModItem
 	{
 		public override void SetStaticDefaults()
@@ -15,6 +18,7 @@ namespace eggpack.Elements.Weapons.Melee
 		public override void SetDefaults()
 		{
 			Item.damage = 6;
+			Item.crit = 8;
 			Item.DamageType = DamageClass.Melee;
 			Item.width = 24;
 			Item.height = 24;

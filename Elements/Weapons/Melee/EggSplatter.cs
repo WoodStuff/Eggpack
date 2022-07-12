@@ -8,6 +8,9 @@ using Terraria.Audio;
 
 namespace eggpack.Elements.Weapons.Melee
 {
+	/// <summary>
+	/// A weapon crafted from Yolk Shards and used to summon the Ruler of Eggs.
+	/// </summary>
 	public class EggSplatter : ModItem
 	{
 		public override void SetStaticDefaults()
@@ -38,14 +41,17 @@ namespace eggpack.Elements.Weapons.Melee
 				.AddTile(TileID.Anvils)
 				.Register();
 		}
+		public override void ModifyHitNPC(Player player, NPC target, ref int damage, ref float knockBack, ref bool crit)
+		{
+			if (target.type == ModContent.NPCType<WildEgg>()) damage = 1000;
+		}
 		public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
 		{
 			if (target.type == ModContent.NPCType<WildEgg>())
             {
-				target.life = 0;
 				if (player.whoAmI == Main.myPlayer)
 				{
-					SoundEngine.PlaySound(SoundID.Roar, player.position);
+					SoundEngine.PlaySound(SoundID.Roar, target.position);
 
 					int type = ModContent.NPCType<RulerOfAllEggs>();
 

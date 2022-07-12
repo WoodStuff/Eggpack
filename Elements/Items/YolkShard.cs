@@ -6,6 +6,9 @@ using Terraria.GameContent.Creative;
 
 namespace eggpack.Elements.Items
 {
+	/// <summary>
+	/// A crafting material dropped by the Wild Egg.
+	/// </summary>
 	public class YolkShard : ModItem
 	{
 		public override void SetStaticDefaults()

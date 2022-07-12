@@ -5,6 +5,9 @@ using Terraria.ModLoader;
 
 namespace eggpack.Elements.Weapons.Melee
 {
+	/// <summary>
+	/// A generic sword made from Thingite.
+	/// </summary>
 	public class ThingiteSword : ModItem
 	{
         public override void SetStaticDefaults()

@@ -5,3 +5,6 @@ dotnet_diagnostic.CA2211.severity = none
 
 # IDE1006: Naming Styles
 dotnet_diagnostic.IDE1006.severity = none
+
+# CS0184: 'is' expression's given expression is never of the provided type
+dotnet_diagnostic.CS0184.severity = none
