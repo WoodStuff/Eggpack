@@ -8,3 +8,6 @@ dotnet_diagnostic.IDE1006.severity = none
 
 # CS0184: 'is' expression's given expression is never of the provided type
 dotnet_diagnostic.CS0184.severity = none
+
+# CA1822: Mark members as static
+dotnet_diagnostic.CA1822.severity = none
