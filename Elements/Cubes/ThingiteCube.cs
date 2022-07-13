@@ -27,7 +27,7 @@ namespace eggpack.Elements.Cubes
 		{
 			CubeSettings settings = new()
 			{
-				cooldown = eggpack.ToFrames(1),
+				cooldown = eggpack.ToFrames(20),
 				manaCost = 40,
 				projectileID = ModContent.ProjectileType<ThingiteBurst>(),
 				projectileSpeed = 10,
