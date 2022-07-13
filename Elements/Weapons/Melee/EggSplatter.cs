@@ -5,6 +5,7 @@ using Terraria.ModLoader;
 using eggpack.Elements.NPCs;
 using eggpack.Elements.NPCs.RulerOfAllEggs;
 using Terraria.Audio;
+using eggpack.Elements.Items;
 
 namespace eggpack.Elements.Weapons.Melee
 {
@@ -36,7 +37,7 @@ namespace eggpack.Elements.Weapons.Melee
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-				.AddIngredient(null, "YolkShard")
+				.AddIngredient<YolkShard>()
 				.AddRecipeGroup(ModRecipeGroup.EvilBar, 5)
 				.AddTile(TileID.Anvils)
 				.Register();

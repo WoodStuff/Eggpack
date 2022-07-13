@@ -1,6 +1,7 @@
 ﻿using eggpack.Players;
 using System;
 using Terraria;
+using Terraria.Audio;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -60,13 +61,13 @@ namespace eggpack.Elements
 		/// </summary>
 		public float cooldown = eggpack.ToFrames(10);
 		/// <summary>
-		/// How much MP you need to use the cube. Unless you want to use this, you should probably use SetManaCost.
+		/// How much MP you need to use the cube and how much it consumes. You can set the amount of mana taken separately using takeMana.
 		/// </summary>
-		public int requireMana = 25;
+		public int manaCost = 25;
 		/// <summary>
-		/// How much MP the cube takes when using it. Unless you want to use this, you should probably use SetManaCost.
+		/// How much MP the cube takes when using it.
 		/// </summary>
-		public int takeMana = 25;
+		public int takeMana;
 		/// <summary>
 		/// How much HP you need to use the cube.
 		/// </summary>
@@ -77,13 +78,15 @@ namespace eggpack.Elements
 		/// </summary>
 		public int projectileID;
 		/// <summary>
-		/// Damage of the projectile the cube fires.
+		/// The projectile's speed multiplier.
+		/// 1 is really slow, 6 is good, 12 is fast.
 		/// </summary>
-		public int projectileDamage;
+		public float projectileSpeed = 6;
+
 		/// <summary>
-		/// Knockback of the projectile the cube fires.
+		/// A sound can be played on cube use, this will be the SoundStyle for it.
 		/// </summary>
-		public float projectileKnockback;
+		public SoundStyle? sound = null;
 
 		/// <summary>
 		/// The buff the cube gives you when used. 0 is none.
@@ -92,7 +95,7 @@ namespace eggpack.Elements
 		/// <summary>
 		/// The duration of the cube's buff, in frames. Use <c>eggpack.ToFrames(seconds)</c> for seconds.
 		/// </summary>
-		public int buffDuration;
+		public float buffDuration;
 		/// <summary>
 		/// The debuff the cube gives you when used, since pre-ML can't get too easy. 0 is none.
 		/// </summary>
@@ -100,7 +103,7 @@ namespace eggpack.Elements
 		/// <summary>
 		/// The duration of the cube's debuff, in frames. Use <c>eggpack.ToFrames(seconds)</c> for seconds.
 		/// </summary>
-		public int backfireBuffDuration;
+		public float backfireBuffDuration;
 		/// <summary>
 		/// How much HP the cube damages you for when used. 0 is none.
 		/// </summary>

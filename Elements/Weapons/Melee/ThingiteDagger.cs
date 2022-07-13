@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using eggpack.Elements.Items;
+using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -36,7 +37,7 @@ namespace eggpack.Elements.Weapons.Melee
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-				.AddIngredient(null, "ThingiteBar", 10)
+				.AddIngredient<ThingiteBar>(10)
 				.AddTile(TileID.Anvils)
 				.Register();
 		}
