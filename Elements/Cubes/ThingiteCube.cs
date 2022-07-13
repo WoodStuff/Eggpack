@@ -20,8 +20,8 @@ namespace eggpack.Elements.Cubes
 		}
 		public override void CustomDefaults()
 		{
-			Item.value = Item.sellPrice(0, 0, 10, 0);
-			Item.rare = ItemRarityID.White;
+			Item.value = Item.sellPrice(0, 1, 0, 0);
+			Item.rare = ItemRarityID.Blue;
 		}
 		public override CubeSettings GetCubeSettings(Player player)
 		{
