@@ -3,7 +3,7 @@ using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 using eggpack.Elements.NPCs;
-using eggpack.Elements.NPCs.RulerOfAllEggs;
+using eggpack.Elements.NPCs.RulerOfEggs;
 using Terraria.Audio;
 using eggpack.Elements.Items;
 
@@ -54,7 +54,7 @@ namespace eggpack.Elements.Weapons.Melee
 				{
 					SoundEngine.PlaySound(SoundID.Roar, target.position);
 
-					int type = ModContent.NPCType<RulerOfAllEggs>();
+					int type = ModContent.NPCType<RulerOfEggs>();
 
 					if (Main.netMode != NetmodeID.MultiplayerClient)
 					{
