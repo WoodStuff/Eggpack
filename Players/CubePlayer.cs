@@ -47,6 +47,8 @@ namespace eggpack.Players
 					Player.noKnockback = kb;
 				}
 
+				if (cubeSettings.healLife != 0) Player.Heal(cubeSettings.healLife);
+
 				// add the buffs & debuffs
 				if (cubeSettings.buffID != 0) Player.AddBuff(cubeSettings.buffID, (int)cubeSettings.buffDuration);
 				if (cubeSettings.backfireBuffID != 0) Player.AddBuff(cubeSettings.backfireBuffID, (int)cubeSettings.backfireBuffDuration);

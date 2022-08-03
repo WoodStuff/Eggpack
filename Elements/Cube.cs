@@ -72,6 +72,10 @@ namespace eggpack.Elements
 		/// How much HP you need to use the cube.
 		/// </summary>
 		public int requireLife;
+		/// <summary>
+		/// How much HP this cube heals when used.
+		/// </summary>
+		public int healLife;
 
 		/// <summary>
 		/// The projectile the cube fires. 0 is none.
