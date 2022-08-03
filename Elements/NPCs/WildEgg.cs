@@ -6,6 +6,8 @@ using Terraria.ModLoader.Utilities;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.GameContent.Bestiary;
 using eggpack.Elements.Items;
+using Terraria.DataStructures;
+using eggpack.Elements.NPCs.RulerOfEggsBoss;
 
 namespace eggpack.Elements.NPCs
 {
@@ -15,6 +17,7 @@ namespace eggpack.Elements.NPCs
 	public class WildEgg : ModNPC
 	{
 		public bool[] aggressive = { false, false };
+		public bool hostile = false;
 
 		public override void SetStaticDefaults()
 		{
@@ -55,11 +58,16 @@ namespace eggpack.Elements.NPCs
 			});
 		}
 
-        public override void AI()
+		public override void AI()
 		{
 			NPC.ai[1] = -1f;
 			bool flag = false;
-			if (!Main.dayTime || NPC.life != NPC.lifeMax || (double)NPC.position.Y > Main.worldSurface * 16.0)
+			if (
+				!Main.dayTime ||
+				NPC.life != NPC.lifeMax ||
+				NPC.position.Y > Main.worldSurface * 16.0 ||
+				NPC.AnyNPCs(ModContent.NPCType<RulerOfEggs>())
+			)
 			{
 				flag = true;
 				aggressive[0] = true;
@@ -108,7 +116,7 @@ namespace eggpack.Elements.NPCs
 			{
 				if (NPC.collideY && NPC.oldVelocity.Y != 0f && Collision.SolidCollision(NPC.position, NPC.width, NPC.height))
 				{
-					NPC.position.X -= NPC.velocity.X + (float)NPC.direction;
+					NPC.position.X -= NPC.velocity.X + NPC.direction;
 				}
 				if (NPC.ai[3] == NPC.position.X)
 				{
@@ -117,7 +125,7 @@ namespace eggpack.Elements.NPCs
 				}
 				NPC.ai[3] = 0f;
 				NPC.velocity.X *= 0.8f;
-				if ((double)NPC.velocity.X > -0.1 && (double)NPC.velocity.X < 0.1)
+				if (NPC.velocity.X > -0.1 && NPC.velocity.X < 0.1)
 				{
 					NPC.velocity.X = 0f;
 				}

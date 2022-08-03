@@ -3,7 +3,7 @@ using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 using eggpack.Elements.NPCs;
-using eggpack.Elements.NPCs.RulerOfEggs;
+using eggpack.Elements.NPCs.RulerOfEggsBoss;
 using Terraria.Audio;
 using eggpack.Elements.Items;
 

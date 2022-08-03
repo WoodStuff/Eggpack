@@ -1,15 +1,11 @@
 ﻿using Microsoft.Xna.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace eggpack.Elements.NPCs.RulerOfEggs
+namespace eggpack.Elements.NPCs.RulerOfEggsBoss
 {
 	public class RulerOfEggs : ModNPC
 	{
@@ -31,7 +27,7 @@ namespace eggpack.Elements.NPCs.RulerOfEggs
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Ruler of All Eggs");
+			DisplayName.SetDefault("Ruler of Eggs");
 		}
 		public override void SetDefaults()
 		{
@@ -84,6 +80,7 @@ namespace eggpack.Elements.NPCs.RulerOfEggs
 
 		private int SpawningTimer = 0;
 		private int SubphaseTimer = 0;
+		private int SubphaseTimer2 = 0;
 
 		public override void AI()
 		{
@@ -111,13 +108,13 @@ namespace eggpack.Elements.NPCs.RulerOfEggs
 			float Phase2HP = 0.5f; // transform into phase 2 at 50% hp
 			if (NPC.life <= NPC.lifeMax * Phase2HP) SecondPhase = true;
 
-			DoSubphase();
+			DoSubphase(player);
 		}
 
 		private void StartSpawning(Player player)
 		{
 			if (!Spawning) return;
-			if (RainPhaseLocation == 0) SetRainPhaseLocation();
+			if (RainPhaseLocation == 0 && Main.netMode != NetmodeID.MultiplayerClient) SetRainPhaseLocation();
 
 			TargetLocation = player.Center - NPC.Center - new Vector2(-RainPhaseLocation * NPC.width, NPC.height * 0.75f);
 			Vector2 toDestinationNormalized = TargetLocation.SafeNormalize(Vector2.UnitY);
@@ -138,26 +135,59 @@ namespace eggpack.Elements.NPCs.RulerOfEggs
 			}
 		}
 
-		private void DoSubphase()
+		private void DoSubphase(Player player)
 		{
 			//Main.NewText((Subphases)Subphase);
 			switch ((Subphases)Subphase)
 			{
 				case Subphases.Rain:
-					NPC.velocity = Vector2.Zero;
-					NPC.velocity.X -= 0.05f;
+					DoSubphase_Rain(player);
 					break;
 				default:
 					break;
 			}
 		}
 
+		private void DoSubphase_Rain(Player player)
+		{
+			SubphaseTimer++;
+			SubphaseTimer2++;
+
+			if (RainPhaseLocation == 0 && Main.netMode != NetmodeID.MultiplayerClient) SetRainPhaseLocation();
+
+			TargetLocation = player.Center - NPC.Center - new Vector2(-RainPhaseLocation * NPC.width, NPC.height * 0.75f);
+			Vector2 toDestinationNormalized = TargetLocation.SafeNormalize(Vector2.UnitY);
+
+			float speed = Math.Min(600, TargetLocation.Length());
+			NPC.velocity = toDestinationNormalized * speed / 30;
+
+			if (Main.netMode != NetmodeID.MultiplayerClient)
+			{
+				if (SubphaseTimer2 == 45)
+				{
+					SubphaseTimer2 = 0;
+
+					int egg = NPC.NewNPC(
+						NPC.GetSource_FromAI(),
+						(int)NPC.Center.X,
+						(int)NPC.Center.Y,
+						ModContent.NPCType<WildEgg>()
+					);
+					Main.npc[egg].lifeMax *= 2;
+					Main.npc[egg].life *= 2;
+					Main.npc[egg].damage *= 2;
+					Main.npc[egg].velocity = new Vector2(player.position.X > Main.npc[egg].position.X ? 10 : -10, -(NPC.position.Y - player.position.Y) / 450);
+					Main.NewText((NPC.position.Y - player.position.Y) / 10);
+					Main.NewText(NPC.height);
+				}
+			}
+		}
+
 		
 		private void SetRainPhaseLocation()
 		{
-			Random rng = new();
 			short[] sides = { -1, 1 };
-			RainPhaseLocation = sides[rng.Next(2)];
+			RainPhaseLocation = sides[Main.rand.Next(2)];
 		}
 	}
 }
