@@ -31,7 +31,7 @@ namespace eggpack.Elements
 		/// <summary>
 		/// All cube prefixes.
 		/// </summary>
-		public static List<int> CubePrefixes = new();
+		public static List<int> CubePrefixes = [];
 
 		/// <summary>
 		/// SetDefaults sets common variables for all cubes, use this for cubes. You can override SetDefaults here too. Things you need to set:
