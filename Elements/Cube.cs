@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Terraria;
 using Terraria.Audio;
 using Terraria.GameContent.Creative;
+using Terraria.GameContent.UI.Chat;
 using Terraria.ModLoader;
 using Terraria.Utilities;
 
@@ -45,6 +46,7 @@ namespace eggpack.Elements
 		public override void UpdateEquip(Player player)
 		{
 			player.GetModPlayer<EggPlayer>().equippedCube = Type;
+			player.GetModPlayer<EggPlayer>().equippedCubePrefix = Item.prefix;
 		}
 		public override int ChoosePrefix(UnifiedRandom rand)
 		{
@@ -65,11 +67,12 @@ namespace eggpack.Elements
 		{
 			return new CubeSettings();
 		}
-		public CubeSettings GetModifiedStats()
+		public CubeSettings GetModifiedStats(Player player)
 		{
-			Main.NewText("modifying stats");
-			int prefix = Item.prefix;
+			int prefix = player.GetModPlayer<EggPlayer>().equippedCubePrefix;
 			CubeSettings modifiers = GetCubeSettings();
+			if (prefix == 0) return modifiers;
+
 			if (CubePrefixes.Contains(prefix))
 			{
 				modifiers.cooldown *= (PrefixLoader.GetPrefix(prefix) as CubePrefix).ModifyStats().cooldown;

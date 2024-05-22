@@ -16,8 +16,10 @@ namespace eggpack.Players
 		{
 			if (KeybindSystem.CubeAbility.JustPressed && Player.GetModPlayer<EggPlayer>().equippedCube != 0 && !Player.HasBuff<CubeSickness>())
 			{
+				
 				Cube cube = (Cube)ModContent.GetModItem(Player.GetModPlayer<EggPlayer>().equippedCube);
-				CubeSettings cubeSettings = cube.GetModifiedStats();
+				CubeSettings cubeSettings = cube.GetModifiedStats(Player);
+
 				Main.NewText(cubeSettings.cooldown);
 
 				// dont do anything if player has insufficient mana or life
@@ -57,6 +59,8 @@ namespace eggpack.Players
 
 				// play the sound
 				if (cubeSettings.sound != null) SoundEngine.PlaySound((SoundStyle)cubeSettings.sound, Player.Center);
+
+				// add the cooldown debuff
 				Player.AddBuff(ModContent.BuffType<CubeSickness>(), (int)cubeSettings.cooldown);
 
 				cube.OnActivate(Player);

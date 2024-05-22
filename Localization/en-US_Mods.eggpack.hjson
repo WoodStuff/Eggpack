@@ -1,0 +1,180 @@
+"Keybinds.Cube Ability.DisplayName": Cube  Ability
+WorldGen.ThingiteOrePassMessage: Mods.eggpack.WorldGen.ThingiteOrePassMessage
+Tiles.ThingiteOreTile.MapEntry: Thingite Ore Tile
+
+Buffs: {
+	CubeSickness: {
+		DisplayName: Cube Sickness
+		Description: Mods.eggpack.Buffs.CubeSickness.Description
+	}
+
+	WeaponExhaustion: {
+		DisplayName: Weapon Exhaustion
+		Description: Mods.eggpack.Buffs.WeaponExhaustion.Description
+	}
+
+	MetalOrbBuff: {
+		DisplayName: Metal Orb Buff
+		Description: Mods.eggpack.Buffs.MetalOrbBuff.Description
+	}
+
+	WoodenWhipDebuff: {
+		DisplayName: Wooden Whip Debuff
+		Description: Mods.eggpack.Buffs.WoodenWhipDebuff.Description
+	}
+}
+
+Items: {
+	BladeSharpener: {
+		DisplayName: Blade Sharpener
+		Tooltip: ""
+	}
+
+	HellstoneBladeSharpener: {
+		DisplayName: Hellstone Blade Sharpener
+		Tooltip: ""
+	}
+
+	HellstoneShield: {
+		DisplayName: Hellstone Shield
+		Tooltip: ""
+	}
+
+	LuckyClover: {
+		DisplayName: Lucky Clover
+		Tooltip: ""
+	}
+
+	ManaRing: {
+		DisplayName: Mana Ring
+		Tooltip: ""
+	}
+
+	PygmyEmblem: {
+		DisplayName: Pygmy Emblem
+		Tooltip: ""
+	}
+
+	ReinforcedShield: {
+		DisplayName: Reinforced Shield
+		Tooltip: ""
+	}
+
+	SpeedRing: {
+		DisplayName: Speed Ring
+		Tooltip: ""
+	}
+
+	TheBookOfTheDead: {
+		DisplayName: The Book Of The Dead
+		Tooltip: ""
+	}
+
+	ThingiteShield: {
+		DisplayName: Thingite Shield
+		Tooltip: ""
+	}
+
+	WoodenCrosshair: {
+		DisplayName: Wooden Crosshair
+		Tooltip: ""
+	}
+
+	WoodenShield: {
+		DisplayName: Wooden Shield
+		Tooltip: ""
+	}
+
+	ThingiteBreastplate: {
+		DisplayName: Thingite Breastplate
+		Tooltip: ""
+	}
+
+	ThingiteGreaves: {
+		DisplayName: Thingite Greaves
+		Tooltip: ""
+	}
+
+	ThingiteHelmet: {
+		DisplayName: Thingite Helmet
+		Tooltip: ""
+	}
+
+	ThingiteCube: {
+		DisplayName: Thingite Cube
+		Tooltip: ""
+	}
+
+	ThingiteBar: {
+		DisplayName: Thingite Bar
+		Tooltip: ""
+	}
+
+	ThingiteOre: {
+		DisplayName: Thingite Ore
+		Tooltip: ""
+	}
+
+	YolkShard: {
+		DisplayName: Yolk Shard
+		Tooltip: ""
+	}
+
+	ThingiteAxe: {
+		DisplayName: Thingite Axe
+		Tooltip: ""
+	}
+
+	ThingiteHammer: {
+		DisplayName: Thingite Hammer
+		Tooltip: ""
+	}
+
+	ThingitePickaxe: {
+		DisplayName: Thingite Pickaxe
+		Tooltip: ""
+	}
+
+	EggSplatter: {
+		DisplayName: Egg Splatter
+		Tooltip: ""
+	}
+
+	ThingiteDagger: {
+		DisplayName: Thingite Dagger
+		Tooltip: ""
+	}
+
+	ThingiteSword: {
+		DisplayName: Thingite Sword
+		Tooltip: ""
+	}
+
+	ThingiteBow: {
+		DisplayName: Thingite Bow
+		Tooltip: ""
+	}
+
+	MetalStaff: {
+		DisplayName: Metal Staff
+		Tooltip: ""
+	}
+
+	WoodenWhip: {
+		DisplayName: Wooden Whip
+		Tooltip: ""
+	}
+}
+
+NPCs: {
+	RulerOfEggs.DisplayName: Ruler Of Eggs
+	WildEgg.DisplayName: Wild Egg
+}
+
+Prefixes.Fast.DisplayName: Fast
+
+Projectiles: {
+	ThingiteBurst.DisplayName: Thingite Burst
+	MetalOrb.DisplayName: Metal Orb
+	WoodenWhipProjectile.DisplayName: Wooden Whip Projectile
+}

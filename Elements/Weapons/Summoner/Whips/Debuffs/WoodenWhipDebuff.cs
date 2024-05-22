@@ -19,8 +19,7 @@ namespace eggpack.Elements.Weapons.Summoner.Whips.Debuffs
 	{
 		public override void ModifyHitByProjectile(NPC npc, Projectile projectile, ref NPC.HitModifiers modifiers)
 		{
-			if (projectile.npcProj || projectile.trap || !projectile.IsMinionOrSentryRelated)
-				return;
+			if (projectile.npcProj || projectile.trap || !projectile.IsMinionOrSentryRelated) return;
 
 			var projTagMultiplier = ProjectileID.Sets.SummonTagDamageMultiplier[projectile.type];
 			if (npc.HasBuff<WoodenWhipDebuff>())
