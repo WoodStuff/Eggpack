@@ -16,13 +16,7 @@ namespace eggpack.Elements.NPCs
 	/// </summary>
 	public class WildEgg : ModNPC
 	{
-		public bool[] aggressive = { false, false };
-		public bool hostile = false;
-
-		public override void SetStaticDefaults()
-		{
-			DisplayName.SetDefault("Wild Egg");
-		}
+		public bool[] aggressive = [false, false];
 
 		public override void SetDefaults()
 		{

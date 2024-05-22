@@ -11,12 +11,12 @@ namespace eggpack.Elements.Weapons.Melee
 	/// </summary>
 	public class ThingiteSword : ModItem
 	{
-        public override void SetStaticDefaults()
-        {
+		public override void SetStaticDefaults()
+		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("Critical strikes weaken enemies");
+			// Tooltip.SetDefault("Critical strikes weaken enemies");
 		}
-        public override void SetDefaults() 
+		public override void SetDefaults() 
 		{
 			Item.damage = 17;
 			Item.DamageType = DamageClass.Melee;
@@ -39,10 +39,10 @@ namespace eggpack.Elements.Weapons.Melee
 				.AddTile(TileID.Anvils)
 				.Register();
 		}
-        public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
-        {
-			if (!crit) return;
+		public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
+		{
+			if (!hit.Crit) return;
 			target.AddBuff(BuffID.Weak, 180);
-        }
-    }
+		}
+	}
 }

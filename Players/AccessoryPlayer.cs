@@ -1,8 +1,5 @@
 ﻿using eggpack.Elements;
-using eggpack.Elements.Cubes;
-using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace eggpack.Players

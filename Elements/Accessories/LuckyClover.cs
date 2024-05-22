@@ -11,7 +11,7 @@ namespace eggpack.Elements.Accessories
 	{
         public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("+4% critical strike chance");
+			// Tooltip.SetDefault("+4% critical strike chance");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 		public override void SetDefaults()

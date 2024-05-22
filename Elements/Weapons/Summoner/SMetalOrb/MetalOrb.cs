@@ -6,59 +6,31 @@ using Terraria.ModLoader;
 
 namespace eggpack.Elements.Weapons.Summoner.SMetalOrb
 {
-	/*
-	 * This file contains all the code necessary for a minion
-	 * - ModItem
-	 *     the weapon which you use to summon the minion with
-	 * - ModBuff
-	 *     the icon you can click on to despawn the minion
-	 * - ModProjectile 
-	 *     the minion itself
-	 *     
-	 * It is not recommended to put all these classes in the same file. For demonstrations sake they are all compacted together so you get a better overwiew.
-	 * To get a better understanding of how everything works together, and how to code minion AI, read the guide: https://github.com/tModLoader/tModLoader/wiki/Basic-Minion-Guide
-	 * This is NOT an in-depth guide to advanced minion AI
-	 */
-
 	public class MetalOrb : ModProjectile
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Metal Orb");
-			// This is necessary for right-click targeting
 			ProjectileID.Sets.MinionTargettingFeature[Projectile.type] = true;
-
-			Main.projPet[Projectile.type] = true; // Denotes that this projectile is a pet or minion
-
-			ProjectileID.Sets.MinionSacrificable[Projectile.type] = true; // This is needed so your minion can properly spawn when summoned and replaced when other minions are summoned
-			ProjectileID.Sets.CultistIsResistantTo[Projectile.type] = true; // Make the cultist resistant to this projectile, as it's resistant to all homing projectiles.
+			Main.projPet[Projectile.type] = true; 
+			ProjectileID.Sets.MinionSacrificable[Projectile.type] = true;
+			ProjectileID.Sets.CultistIsResistantTo[Projectile.type] = true;
 		}
 
 		public sealed override void SetDefaults()
 		{
 			Projectile.width = 32;
 			Projectile.height = 32;
-			Projectile.tileCollide = false; // Makes the minion go through tiles freely
+			Projectile.tileCollide = false;
 
-			// These below are needed for a minion weapon
-			Projectile.friendly = true; // Only controls if it deals damage to enemies on contact (more on that later)
-			Projectile.minion = true; // Declares this as a minion (has many effects)
-			Projectile.DamageType = DamageClass.Summon; // Declares the damage type (needed for it to deal damage)
-			Projectile.minionSlots = 1f; // Amount of slots this minion occupies from the total minion slots available to the player (more on that later)
-			Projectile.penetrate = -1; // Needed so the minion doesn't despawn on collision with enemies or tiles
+			Projectile.friendly = true;
+			Projectile.minion = true;
+			Projectile.DamageType = DamageClass.Summon;
+			Projectile.minionSlots = 1f;
+			Projectile.penetrate = -1;
 		}
 
-		// Here you can decide if your minion breaks things like grass or pots
-		public override bool? CanCutTiles()
-		{
-			return false;
-		}
-
-		// This is mandatory if your minion deals contact damage (further related stuff in AI() in the Movement region)
-		public override bool MinionContactDamage()
-		{
-			return true;
-		}
+		public override bool? CanCutTiles() => false;
+		public override bool MinionContactDamage() => true;
 
 		public override void AI()
 		{

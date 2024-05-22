@@ -13,8 +13,8 @@ namespace eggpack.Elements.Buffs
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Weapon Exhaustion");
-			Description.SetDefault("Weapons are slowed down by 25%");
+			// DisplayName.SetDefault("Weapon Exhaustion");
+			// Description.SetDefault("Weapons are slowed down by 25%");
 			Main.debuff[Type] = true;
 		}
 		public override void Update(Player player, ref int buffIndex)

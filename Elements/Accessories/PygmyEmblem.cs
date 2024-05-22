@@ -11,7 +11,7 @@ namespace eggpack.Elements.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("Increases your max number of minions by 1\n12% increased summon damage");
+			// Tooltip.SetDefault("Increases your max number of minions by 1\n12% increased summon damage");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 		public override void SetDefaults()

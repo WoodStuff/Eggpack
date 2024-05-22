@@ -17,7 +17,7 @@ namespace eggpack.Elements.Weapons.Summoner.Whips
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("'Simple. You form it into a whip.'");
+			// Tooltip.SetDefault("'Simple. You form it into a whip.'");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 

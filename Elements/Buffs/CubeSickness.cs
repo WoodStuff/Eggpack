@@ -13,8 +13,8 @@ namespace eggpack.Elements.Buffs
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Cube Cooldown");
-			Description.SetDefault("Cannot use any cubes");
+			// DisplayName.SetDefault("Cube Cooldown");
+			// Description.SetDefault("Cannot use any cubes");
 			Main.debuff[Type] = true;
 			BuffID.Sets.NurseCannotRemoveDebuff[Type] = true;
 		}

@@ -21,12 +21,9 @@ namespace eggpack.Elements.Tiles.Ore
 			TileObjectData.newTile.LavaDeath = false;
 			TileObjectData.addTile(Type);
 
-			ModTranslation name = CreateMapEntryName();
-			name.SetDefault("ThingiteBar");
 			AddMapEntry(new Color(80, 80, 100), Language.GetText("MapObject.MetalBar"));
 
 			DustType = 84;
-			ItemDrop = ModContent.ItemType<Elements.Items.ThingiteBar>();
 		}
 	}
 }

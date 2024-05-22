@@ -10,9 +10,6 @@ namespace eggpack.Elements.Weapons.Summoner.SMetalOrb
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Metal Orb");
-			Description.SetDefault("The metal orb will fight for you");
-
 			Main.buffNoSave[Type] = true;
 			Main.buffNoTimeDisplay[Type] = true;
 		}

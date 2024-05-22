@@ -1,10 +1,11 @@
-﻿using eggpack.Players;
-using System;
+﻿using eggpack.Elements.Prefixes.Cubes;
+using eggpack.Players;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.Audio;
 using Terraria.GameContent.Creative;
-using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.Utilities;
 
 namespace eggpack.Elements
 {
@@ -28,6 +29,11 @@ namespace eggpack.Elements
 		}
 
 		/// <summary>
+		/// All cube prefixes.
+		/// </summary>
+		public static List<int> CubePrefixes = new();
+
+		/// <summary>
 		/// SetDefaults sets common variables for all cubes, use this for cubes. You can override SetDefaults here too. Things you need to set:
 		/// <c>Item.value</c>, <c>Item.rare</c>
 		/// </summary>
@@ -40,6 +46,14 @@ namespace eggpack.Elements
 		{
 			player.GetModPlayer<EggPlayer>().equippedCube = Type;
 		}
+		public override int ChoosePrefix(UnifiedRandom rand)
+		{
+			return rand.Next(CubePrefixes);
+		}
+		public override bool AllowPrefix(int pre)
+		{
+			return true;
+		}
 		/// <summary>
 		/// Allows you to do something when the cube activates.
 		/// </summary>
@@ -47,8 +61,21 @@ namespace eggpack.Elements
 		/// <summary>
 		/// Sets most of the cube's stats.
 		/// </summary>
-		public virtual CubeSettings GetCubeSettings(Player player) {
+		public virtual CubeSettings GetCubeSettings()
+		{
 			return new CubeSettings();
+		}
+		public CubeSettings GetModifiedStats()
+		{
+			Main.NewText("modifying stats");
+			int prefix = Item.prefix;
+			CubeSettings modifiers = GetCubeSettings();
+			if (CubePrefixes.Contains(prefix))
+			{
+				modifiers.cooldown *= (PrefixLoader.GetPrefix(prefix) as CubePrefix).ModifyStats().cooldown;
+			}
+			Main.NewText((PrefixLoader.GetPrefix(prefix) as CubePrefix).ModifyStats().cooldown);
+			return modifiers;
 		}
 	}
 	/// <summary>

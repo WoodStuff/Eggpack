@@ -12,7 +12,7 @@ namespace eggpack.Elements.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("-10% mana cost\n+20 max mana");
+			// Tooltip.SetDefault("-10% mana cost\n+20 max mana");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 		public override void SetDefaults()

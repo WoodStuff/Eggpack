@@ -13,17 +13,17 @@ namespace eggpack.Elements.Cubes
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault(
+			/* Tooltip.SetDefault(
 				"Costs 40 mana\n" +
 				"Releases a Thingite Burst that does 60 damage, but slows down weapons by 25% for 10 seconds"
-			);
+			); */
 		}
 		public override void CustomDefaults()
 		{
 			Item.value = Item.sellPrice(0, 1, 0, 0);
 			Item.rare = ItemRarityID.Blue;
 		}
-		public override CubeSettings GetCubeSettings(Player player)
+		public override CubeSettings GetCubeSettings()
 		{
 			CubeSettings settings = new()
 			{

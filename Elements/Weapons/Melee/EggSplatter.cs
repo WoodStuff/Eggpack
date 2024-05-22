@@ -17,7 +17,7 @@ namespace eggpack.Elements.Weapons.Melee
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			Tooltip.SetDefault("Please do not hit a wild egg with this");
+			// Tooltip.SetDefault("Please do not hit a wild egg with this");
 		}
 		public override void SetDefaults()
 		{
@@ -42,11 +42,11 @@ namespace eggpack.Elements.Weapons.Melee
 				.AddTile(TileID.Anvils)
 				.Register();
 		}
-		public override void ModifyHitNPC(Player player, NPC target, ref int damage, ref float knockBack, ref bool crit)
+		public override void ModifyHitNPC(Player player, NPC target, ref NPC.HitModifiers modifiers)
 		{
-			if (target.type == ModContent.NPCType<WildEgg>()) damage = 1000;
+			if (target.type == ModContent.NPCType<WildEgg>()) modifiers.SetInstantKill();
 		}
-		public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
+		public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
 		{
 			if (target.type == ModContent.NPCType<WildEgg>())
             {
@@ -62,7 +62,7 @@ namespace eggpack.Elements.Weapons.Melee
 					}
 					else
 					{
-						NetMessage.SendData(MessageID.SpawnBoss, number: player.whoAmI, number2: type);
+						NetMessage.SendData(MessageID.SpawnBossUseLicenseStartEvent, number: player.whoAmI, number2: type);
 					}
 				}
 			}

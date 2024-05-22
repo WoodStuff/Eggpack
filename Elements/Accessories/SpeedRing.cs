@@ -12,7 +12,7 @@ namespace eggpack.Elements.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			Tooltip.SetDefault("+10% movement speed");
+			// Tooltip.SetDefault("+10% movement speed");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 		public override void SetDefaults()

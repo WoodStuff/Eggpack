@@ -1,12 +1,12 @@
-﻿using Terraria;
+﻿using eggpack.Elements;
+using eggpack.Elements.Buffs;
+using eggpack.Systems;
+using Microsoft.Xna.Framework;
+using Terraria;
+using Terraria.Audio;
+using Terraria.DataStructures;
 using Terraria.GameInput;
 using Terraria.ModLoader;
-using eggpack.Systems;
-using eggpack.Elements;
-using Microsoft.Xna.Framework;
-using Terraria.DataStructures;
-using eggpack.Elements.Buffs;
-using Terraria.Audio;
 
 namespace eggpack.Players
 {
@@ -17,7 +17,8 @@ namespace eggpack.Players
 			if (KeybindSystem.CubeAbility.JustPressed && Player.GetModPlayer<EggPlayer>().equippedCube != 0 && !Player.HasBuff<CubeSickness>())
 			{
 				Cube cube = (Cube)ModContent.GetModItem(Player.GetModPlayer<EggPlayer>().equippedCube);
-				CubeSettings cubeSettings = cube.GetCubeSettings(Player);
+				CubeSettings cubeSettings = cube.GetModifiedStats();
+				Main.NewText(cubeSettings.cooldown);
 
 				// dont do anything if player has insufficient mana or life
 				if (Player.statMana < cubeSettings.manaCost || Player.statLife < cubeSettings.requireLife) return;
@@ -39,7 +40,8 @@ namespace eggpack.Players
 
 				// take the mana and life
 				Player.statMana -= cubeSettings.takeMana == 0 ? cubeSettings.manaCost : cubeSettings.takeMana;
-				if (cubeSettings.backfireDamage != 0) {
+				if (cubeSettings.backfireDamage != 0)
+				{
 					// gives the player knockback immunity for this specific attack
 					bool kb = Player.noKnockback;
 					Player.noKnockback = true;

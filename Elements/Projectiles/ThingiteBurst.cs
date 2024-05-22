@@ -14,7 +14,7 @@ namespace eggpack.Elements.Projectiles
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Thingite Burst");
+			// DisplayName.SetDefault("Thingite Burst");
 		}
 
 		public override void SetDefaults()
@@ -71,7 +71,7 @@ namespace eggpack.Elements.Projectiles
 
 			return false;
 		}
-		public override void Kill(int timeLeft)
+		public override void OnKill(int timeLeft)
 		{
 			int particles = 16;
 			for (int i = 0; i < particles; i++)
