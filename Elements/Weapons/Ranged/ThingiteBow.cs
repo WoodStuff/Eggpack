@@ -12,14 +12,22 @@ namespace eggpack.Elements.Weapons.Ranged
 		}
 		public override void SetDefaults()
 		{
-			Item.CloneDefaults(ItemID.PlatinumBow);
-			Item.damage = 13;
-			Item.useTime = 19;
-			Item.useAnimation = 19;
-			Item.knockBack = 6;
+			int damage = 13;
+			int speed = 25;
+			float velocity = 8f;
+			float knockback = 6f;
+
+			Item.DefaultToBow(speed, velocity);
+
+			Item.width = 16;
+			Item.height = 32;
+			Item.scale = 1.2f;
+
+			Item.damage = damage;
+			Item.knockBack = knockback;
+
 			Item.value = Item.sellPrice(0, 0, 15, 0);
 			Item.rare = ItemRarityID.Blue;
-			Item.scale = 1.2f;
 		}
 		public override void AddRecipes()
 		{

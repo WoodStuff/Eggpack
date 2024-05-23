@@ -32,13 +32,6 @@ namespace eggpack
 				.AddTile(TileID.WorkBenches)
 				.Register();
 
-			// MAGIC MIRROR (from 1.4.4 update)
-			Recipe.Create(ItemID.MagicMirror)
-				.AddIngredient(ItemID.FallenStar)
-				.AddIngredient(ItemID.Glass, 5)
-				.AddRecipeGroup(ModRecipeGroup.GoldBar, 8)
-				.Register();
-
 			// ANKLET OF THE WIND
 			Recipe.Create(ItemID.AnkletoftheWind)
 				.AddIngredient(null, "SpeedRing")

@@ -18,7 +18,7 @@ namespace eggpack.Elements.Weapons.Melee
 		}
 		public override void SetDefaults()
 		{
-			Item.damage = 6;
+			Item.damage = 7;
 			Item.crit = 8;
 			Item.DamageType = DamageClass.Melee;
 			Item.width = 24;

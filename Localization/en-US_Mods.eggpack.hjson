@@ -1,58 +1,58 @@
-"Keybinds.Cube Ability.DisplayName": Cube  Ability
-WorldGen.ThingiteOrePassMessage: Mods.eggpack.WorldGen.ThingiteOrePassMessage
-Tiles.ThingiteOreTile.MapEntry: Thingite Ore Tile
+"Keybinds.Cube Ability.DisplayName": Use Cube
+WorldGen.ThingiteOrePassMessage: Generating thingite
+Tiles.ThingiteOreTile.MapEntry: Thingite
 
 Buffs: {
 	CubeSickness: {
 		DisplayName: Cube Sickness
-		Description: Mods.eggpack.Buffs.CubeSickness.Description
+		Description: Cannot use any cubes
 	}
 
 	WeaponExhaustion: {
 		DisplayName: Weapon Exhaustion
-		Description: Mods.eggpack.Buffs.WeaponExhaustion.Description
+		Description: Weapons are slowed down by 25%
 	}
 
 	MetalOrbBuff: {
 		DisplayName: Metal Orb Buff
-		Description: Mods.eggpack.Buffs.MetalOrbBuff.Description
+		Description: The metal orb will fight for you
 	}
 
 	WoodenWhipDebuff: {
 		DisplayName: Wooden Whip Debuff
-		Description: Mods.eggpack.Buffs.WoodenWhipDebuff.Description
+		Description: Marked by the Wooden Whip
 	}
 }
 
 Items: {
 	BladeSharpener: {
 		DisplayName: Blade Sharpener
-		Tooltip: ""
+		Tooltip: +2% melee damage, +3% melee critical strike chance
 	}
 
 	HellstoneBladeSharpener: {
 		DisplayName: Hellstone Blade Sharpener
-		Tooltip: ""
+		Tooltip: +6% melee damage, +7% melee critical strike chance\n50% chance to set struck enemies on fire
 	}
 
 	HellstoneShield: {
 		DisplayName: Hellstone Shield
-		Tooltip: ""
+		Tooltip: +5% critical strike chance
 	}
 
 	LuckyClover: {
 		DisplayName: Lucky Clover
-		Tooltip: ""
+		Tooltip: +4% critical strike chance
 	}
 
 	ManaRing: {
 		DisplayName: Mana Ring
-		Tooltip: ""
+		Tooltip: -10% mana cost\n+20 max mana
 	}
 
 	PygmyEmblem: {
 		DisplayName: Pygmy Emblem
-		Tooltip: ""
+		Tooltip: Increases your max number of minions by 1\n12% increased summon damage
 	}
 
 	ReinforcedShield: {
@@ -62,12 +62,12 @@ Items: {
 
 	SpeedRing: {
 		DisplayName: Speed Ring
-		Tooltip: ""
+		Tooltip: +10% movement speed
 	}
 
 	TheBookOfTheDead: {
 		DisplayName: The Book Of The Dead
-		Tooltip: ""
+		Tooltip: Increases your max number of minions by 3\n16% increased summon damage
 	}
 
 	ThingiteShield: {
@@ -77,7 +77,7 @@ Items: {
 
 	WoodenCrosshair: {
 		DisplayName: Wooden Crosshair
-		Tooltip: ""
+		Tooltip: +2% critical strike chance
 	}
 
 	WoodenShield: {
@@ -102,7 +102,11 @@ Items: {
 
 	ThingiteCube: {
 		DisplayName: Thingite Cube
-		Tooltip: ""
+		Tooltip:
+			'''
+			Costs 40 mana
+			Releases a Thingite Burst that does 60 damage, but slows down weapons by 25% for 10 seconds"
+			'''
 	}
 
 	ThingiteBar: {
@@ -137,17 +141,17 @@ Items: {
 
 	EggSplatter: {
 		DisplayName: Egg Splatter
-		Tooltip: ""
+		Tooltip: Please do not hit a wild egg with this
 	}
 
 	ThingiteDagger: {
 		DisplayName: Thingite Dagger
-		Tooltip: ""
+		Tooltip: Exceptionally quick
 	}
 
 	ThingiteSword: {
 		DisplayName: Thingite Sword
-		Tooltip: ""
+		Tooltip: Critical strikes weaken enemies
 	}
 
 	ThingiteBow: {
@@ -157,12 +161,12 @@ Items: {
 
 	MetalStaff: {
 		DisplayName: Metal Staff
-		Tooltip: ""
+		Tooltip: Summons a metal orb to fight for you
 	}
 
 	WoodenWhip: {
 		DisplayName: Wooden Whip
-		Tooltip: ""
+		Tooltip: '''"Simple. You form it into a whip."'''
 	}
 }
 
@@ -171,7 +175,10 @@ NPCs: {
 	WildEgg.DisplayName: Wild Egg
 }
 
-Prefixes.Fast.DisplayName: Fast
+Prefixes: {
+	Fast.DisplayName: Fast
+	Quick.DisplayName: Quick
+}
 
 Projectiles: {
 	ThingiteBurst.DisplayName: Thingite Burst
