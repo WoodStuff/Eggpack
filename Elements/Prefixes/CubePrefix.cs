@@ -13,11 +13,11 @@ namespace eggpack.Elements.Prefixes.Cubes
 		/// Return a CubePrefixModifiers here to modify cube when it has this prefix.
 		/// </summary>
 		/// <returns>What should be modified in the cube.</returns>
-		public abstract CubePrefixModifiers ModifyStats();
+		public abstract CubePrefixModifiers GetModifiedStats();
 	}
 
 	/// <summary>
-	/// Return this in ModifyStats() to modify the stats of a cube.
+	/// Return this in GetModifiedStats() to modify the stats of a cube.
 	/// </summary>
 	public class CubePrefixModifiers
 	{

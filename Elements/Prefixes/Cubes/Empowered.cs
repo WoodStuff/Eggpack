@@ -5,15 +5,15 @@ using Terraria;
 namespace eggpack.Elements.Prefixes.Cubes
 {
 	/// <summary>
-	/// A positive cube prefix that gives -15% cooldown duration.
+	/// A positive cube prefix that gives +20% buff duration.
 	/// </summary>
-	public class Quick : CubePrefix
+	public class Empowered : CubePrefix
 	{
 		public override CubePrefixModifiers GetModifiedStats()
 		{
 			return new()
 			{
-				cooldown = 0.85f
+				buffDuration = 1.2f
 			};
 		}
 		public override void ModifyValue(ref float valueMult)

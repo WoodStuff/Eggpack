@@ -14,7 +14,7 @@ namespace eggpack.Elements.Prefixes
 			TooltipLine line2 = new(Mod, "CubePrefix", "") { IsModifier = true };
 
 			if (item.prefix == ModContent.PrefixType<Fast>()) { line.Text = "-10% cooldown duration"; }
-			//else if 
+			else if (item.prefix == ModContent.PrefixType<Quick>()) { line.Text = "-15% cooldown duration"; }
 
 			else { prefixed = false; }
 			if (prefixed)

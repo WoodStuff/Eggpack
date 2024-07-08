@@ -9,7 +9,7 @@ namespace eggpack.Elements.Prefixes.Cubes
 	/// </summary>
 	public class Fast : CubePrefix
 	{
-		public override CubePrefixModifiers ModifyStats()
+		public override CubePrefixModifiers GetModifiedStats()
 		{
 			return new()
 			{

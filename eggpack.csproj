@@ -18,6 +18,4 @@
     <None Remove="ModWorldGen.cs.bak" />
     <None Remove="TileUtils.cs.bak" />
   </ItemGroup>
-  <ItemGroup>
-  </ItemGroup>
 </Project>

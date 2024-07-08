@@ -31,6 +31,7 @@ namespace eggpack.Elements.Cubes
 				manaCost = 40,
 				projectileID = ModContent.ProjectileType<ThingiteBurst>(),
 				projectileSpeed = 10,
+				damages = true,
 				backfireBuffID = ModContent.BuffType<WeaponExhaustion>(),
 				backfireBuffDuration = eggpack.ToFrames(10),
 			};

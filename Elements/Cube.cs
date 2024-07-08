@@ -1,6 +1,9 @@
 ﻿using eggpack.Elements.Prefixes.Cubes;
 using eggpack.Players;
+using Humanizer;
+using System;
 using System.Collections.Generic;
+using System.Reflection;
 using Terraria;
 using Terraria.Audio;
 using Terraria.GameContent.Creative;
@@ -50,6 +53,18 @@ namespace eggpack.Elements
 		}
 		public override int ChoosePrefix(UnifiedRandom rand)
 		{
+			List<int> prefixes = CubePrefixes;
+			foreach (int id in prefixes)
+			{
+				CubePrefix prefix = PrefixLoader.GetPrefix(id) as CubePrefix;
+				CubePrefixModifiers prefix_stats = prefix.GetModifiedStats();
+				CubeSettings cube_stats = GetCubeSettings();
+					 if (prefix_stats.damage != 1 && !cube_stats.damages) CubePrefixes.Remove(id);
+				else if (prefix_stats.knockback != 1 && !cube_stats.damages) CubePrefixes.Remove(id);
+				else if (prefix_stats.buffDuration != 1 && cube_stats.buffID == 0) CubePrefixes.Remove(id);
+				else if (prefix_stats.backfireBuffDuration != 1 && cube_stats.backfireBuffID == 0) CubePrefixes.Remove(id);
+				else if (prefix_stats.lifeCost != 1 && cube_stats.requireLife == 0) CubePrefixes.Remove(id);
+			}
 			return rand.Next(CubePrefixes);
 		}
 		public override bool AllowPrefix(int pre)
@@ -75,9 +90,11 @@ namespace eggpack.Elements
 
 			if (CubePrefixes.Contains(prefix))
 			{
-				modifiers.cooldown *= (PrefixLoader.GetPrefix(prefix) as CubePrefix).ModifyStats().cooldown;
+				CubePrefix pref = PrefixLoader.GetPrefix(prefix) as CubePrefix;
+				modifiers.cooldown *= pref.GetModifiedStats().cooldown;
+				//modifiers.manaCost *= pref.GetModifiedStats().manaCost; Cannot implicitly convert type 'float' to 'int'.An explicit conversion exists(are you missing a cast?) !?
+
 			}
-			Main.NewText((PrefixLoader.GetPrefix(prefix) as CubePrefix).ModifyStats().cooldown);
 			return modifiers;
 		}
 	}
@@ -85,14 +102,14 @@ namespace eggpack.Elements
 	/// A class used to easily make the properties of the cube.
 	/// </summary>
 	public class CubeSettings
-	{
-		/// <summary>
-		/// The cooldown before you can use the cube again, in frames. Use <c>eggpack.ToFrames(seconds)</c> for seconds.
-		/// </summary>
+{
+	/// <summary>
+	/// The cooldown before you can use the cube again, in frames. Use <c>eggpack.ToFrames(seconds)</c> for seconds.
+	/// </summary>
 		public float cooldown = eggpack.ToFrames(10);
-		/// <summary>
-		/// How much MP you need to use the cube and how much it consumes. You can set the amount of mana taken separately using takeMana.
-		/// </summary>
+	/// <summary>
+	/// How much MP you need to use the cube and how much it consumes. You can set the amount of mana taken separately using takeMana.
+	/// </summary>
 		public int manaCost = 25;
 		/// <summary>
 		/// How much MP the cube takes when using it.
@@ -116,6 +133,14 @@ namespace eggpack.Elements
 		/// 1 is really slow, 6 is good, 12 is fast.
 		/// </summary>
 		public float projectileSpeed = 6;
+		/// <summary>
+		/// Multiplies the damage. Mainly used for projectiles.
+		/// </summary>
+		public float damageMult = 1;
+		/// <summary>
+		/// If the cube damages other entities.
+		/// </summary>
+		public bool damages = false;
 
 		/// <summary>
 		/// A sound can be played on cube use, this will be the SoundStyle for it.

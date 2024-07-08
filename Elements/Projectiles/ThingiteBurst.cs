@@ -12,11 +12,6 @@ namespace eggpack.Elements.Projectiles
 	/// </summary>
 	public class ThingiteBurst : ModProjectile
 	{
-		public override void SetStaticDefaults()
-		{
-			// DisplayName.SetDefault("Thingite Burst");
-		}
-
 		public override void SetDefaults()
 		{
 			Projectile.damage = 60;

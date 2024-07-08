@@ -2,6 +2,7 @@
 using eggpack.Elements.Buffs;
 using eggpack.Systems;
 using Microsoft.Xna.Framework;
+using System;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
@@ -20,8 +21,6 @@ namespace eggpack.Players
 				Cube cube = (Cube)ModContent.GetModItem(Player.GetModPlayer<EggPlayer>().equippedCube);
 				CubeSettings cubeSettings = cube.GetModifiedStats(Player);
 
-				Main.NewText(cubeSettings.cooldown);
-
 				// dont do anything if player has insufficient mana or life
 				if (Player.statMana < cubeSettings.manaCost || Player.statLife < cubeSettings.requireLife) return;
 
@@ -34,7 +33,7 @@ namespace eggpack.Players
 						Player.Center,
 						(Main.MouseWorld - Player.Center).SafeNormalize(Vector2.Zero) * cubeSettings.projectileSpeed,
 						cubeSettings.projectileID,
-						projectile.damage,
+						Convert.ToInt32(projectile.damage * cubeSettings.damageMult),
 						projectile.knockBack,
 						Player.whoAmI
 					);

@@ -105,7 +105,7 @@ Items: {
 		Tooltip:
 			'''
 			Costs 40 mana
-			Releases a Thingite Burst that does 60 damage, but slows down weapons by 25% for 10 seconds"
+			Releases a Thingite Burst that does 60 damage, but slows down weapons by 25% for 10 seconds
 			'''
 	}
 
@@ -178,6 +178,7 @@ NPCs: {
 Prefixes: {
 	Fast.DisplayName: Fast
 	Quick.DisplayName: Quick
+	Empowered.DisplayName: Empowered
 }
 
 Projectiles: {
