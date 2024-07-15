@@ -8,6 +8,7 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.GameContent.Creative;
 using Terraria.GameContent.UI.Chat;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.Utilities;
 
@@ -59,13 +60,15 @@ namespace eggpack.Elements
 				CubePrefix prefix = PrefixLoader.GetPrefix(id) as CubePrefix;
 				CubePrefixModifiers prefix_stats = prefix.GetModifiedStats();
 				CubeSettings cube_stats = GetCubeSettings();
-					 if (prefix_stats.damage != 1 && !cube_stats.damages) CubePrefixes.Remove(id);
-				else if (prefix_stats.knockback != 1 && !cube_stats.damages) CubePrefixes.Remove(id);
-				else if (prefix_stats.buffDuration != 1 && cube_stats.buffID == 0) CubePrefixes.Remove(id);
-				else if (prefix_stats.backfireBuffDuration != 1 && cube_stats.backfireBuffID == 0) CubePrefixes.Remove(id);
-				else if (prefix_stats.lifeCost != 1 && cube_stats.requireLife == 0) CubePrefixes.Remove(id);
+					 if (prefix_stats.damage != 1 && !cube_stats.damages) prefixes.Remove(id);
+				else if (prefix_stats.knockback != 1 && !cube_stats.damages) prefixes.Remove(id);
+				else if (prefix_stats.buffDuration != 1 && cube_stats.buffID == 0) prefixes.Remove(id);
+				else if (prefix_stats.backfireBuffDuration != 1 && cube_stats.backfireBuffID == 0) prefixes.Remove(id);
+				else if (prefix_stats.lifeCost != 1 && cube_stats.requireLife == 0) prefixes.Remove(id);
+				else if (prefix_stats.healing != 1 && cube_stats.healLife == 0) prefixes.Remove(id);
+				else if (prefix_stats.projectileSpeed != 1 && cube_stats.projectileID == 0) prefixes.Remove(id);
 			}
-			return rand.Next(CubePrefixes);
+			return rand.Next(prefixes);
 		}
 		public override bool AllowPrefix(int pre)
 		{
@@ -82,9 +85,14 @@ namespace eggpack.Elements
 		{
 			return new CubeSettings();
 		}
+		/// <summary>
+		/// Get the cube's stats taking into account the cube's prefix.
+		/// </summary>
+		/// <param name="player">The player that has the cube.</param>
+		/// <returns>Cube's stats taking into account the prefix.</returns>
 		public CubeSettings GetModifiedStats(Player player)
 		{
-			int prefix = player.GetModPlayer<EggPlayer>().equippedCubePrefix;
+			int prefix = Item.prefix;
 			CubeSettings modifiers = GetCubeSettings();
 			if (prefix == 0) return modifiers;
 
@@ -92,24 +100,41 @@ namespace eggpack.Elements
 			{
 				CubePrefix pref = PrefixLoader.GetPrefix(prefix) as CubePrefix;
 				modifiers.cooldown *= pref.GetModifiedStats().cooldown;
-				//modifiers.manaCost *= pref.GetModifiedStats().manaCost; Cannot implicitly convert type 'float' to 'int'.An explicit conversion exists(are you missing a cast?) !?
-
+				modifiers.manaCost = (int)(modifiers.manaCost * pref.GetModifiedStats().manaCost);
+				modifiers.damageMult *= pref.GetModifiedStats().damage;
+				modifiers.knockbackMult *= pref.GetModifiedStats().knockback;
+				modifiers.buffDuration *= pref.GetModifiedStats().buffDuration;
+				modifiers.backfireBuffDuration *= pref.GetModifiedStats().backfireBuffDuration;
+				modifiers.requireLife = (int)(modifiers.manaCost * pref.GetModifiedStats().lifeCost);
+				modifiers.healLife = (int)(modifiers.healLife * pref.GetModifiedStats().healing);
+				modifiers.projectileSpeed *= pref.GetModifiedStats().projectileSpeed;
 			}
 			return modifiers;
+		}
+		public override void ModifyTooltips(List<TooltipLine> tooltips)
+		{
+			Player player = Main.CurrentPlayer;
+
+			var line = new TooltipLine(Mod, "UseMana", $"Uses {GetModifiedStats(player).manaCost} mana");
+			tooltips.Add(line);
+
+			var tooltip = Language.GetTextValue($"Mods.eggpack.Items.{Name}.CubeTooltip");
+			line = new TooltipLine(Mod, "CubeTooltip", tooltip);
+			tooltips.Add(line);
 		}
 	}
 	/// <summary>
 	/// A class used to easily make the properties of the cube.
 	/// </summary>
 	public class CubeSettings
-{
-	/// <summary>
-	/// The cooldown before you can use the cube again, in frames. Use <c>eggpack.ToFrames(seconds)</c> for seconds.
-	/// </summary>
+	{
+		/// <summary>
+		/// The cooldown before you can use the cube again, in frames. Use <c>eggpack.ToFrames(seconds)</c> for seconds.
+		/// </summary>
 		public float cooldown = eggpack.ToFrames(10);
-	/// <summary>
-	/// How much MP you need to use the cube and how much it consumes. You can set the amount of mana taken separately using takeMana.
-	/// </summary>
+		/// <summary>
+		/// How much MP you need to use the cube and how much it consumes. You can set the amount of mana taken separately using takeMana.
+		/// </summary>
 		public int manaCost = 25;
 		/// <summary>
 		/// How much MP the cube takes when using it.
@@ -137,6 +162,10 @@ namespace eggpack.Elements
 		/// Multiplies the damage. Mainly used for projectiles.
 		/// </summary>
 		public float damageMult = 1;
+		/// <summary>
+		/// Multiplies the knockkback. Mainly used for projectiles.
+		/// </summary>
+		public float knockbackMult = 1;
 		/// <summary>
 		/// If the cube damages other entities.
 		/// </summary>

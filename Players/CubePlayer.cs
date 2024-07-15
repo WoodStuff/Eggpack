@@ -34,7 +34,7 @@ namespace eggpack.Players
 						(Main.MouseWorld - Player.Center).SafeNormalize(Vector2.Zero) * cubeSettings.projectileSpeed,
 						cubeSettings.projectileID,
 						Convert.ToInt32(projectile.damage * cubeSettings.damageMult),
-						projectile.knockBack,
+						projectile.knockBack * cubeSettings.knockbackMult,
 						Player.whoAmI
 					);
 				}

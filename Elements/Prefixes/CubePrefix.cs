@@ -30,6 +30,5 @@ namespace eggpack.Elements.Prefixes.Cubes
 		public float lifeCost = 1;
 		public float healing = 1;
 		public float projectileSpeed = 1;
-		public float projectileVelocity = 1;
 	}
 }

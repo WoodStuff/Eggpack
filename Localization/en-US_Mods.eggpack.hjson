@@ -102,11 +102,8 @@ Items: {
 
 	ThingiteCube: {
 		DisplayName: Thingite Cube
-		Tooltip:
-			'''
-			Costs 40 mana
-			Releases a Thingite Burst that does 60 damage, but slows down weapons by 25% for 10 seconds
-			'''
+		CubeTooltip: Releases a Thingite Burst that does 60 damage, but slows down weapons by 25% for 10 seconds
+		Tooltip: ""
 	}
 
 	ThingiteBar: {
@@ -179,6 +176,33 @@ Prefixes: {
 	Fast.DisplayName: Fast
 	Quick.DisplayName: Quick
 	Empowered.DisplayName: Empowered
+	Powerful.DisplayName: Powerful
+	Broken.DisplayName: Broken
+	Charged.DisplayName: Charged
+	Crude.DisplayName: Crude
+	Efficient.DisplayName: Efficient
+	Energized.DisplayName: Energized
+	Exhaustive.DisplayName: Exhaustive
+	Forceful.DisplayName: Forceful
+	Frugal.DisplayName: Frugal
+	Generous.DisplayName: Generous
+	Healthy.DisplayName: Healthy
+	Impatient.DisplayName: Impatient
+	Inferior.DisplayName: Inferior
+	Intense.DisplayName: Intense
+	Lazy.DisplayName: Lazy
+	Legendary.DisplayName: Legendary
+	Lengthened.DisplayName: Lengthened
+	Merciful.DisplayName: Merciful
+	Mythic.DisplayName: Mythic
+	Punishing.DisplayName: Punishing
+	Rapid.DisplayName: Rapid
+	Sacrificial.DisplayName: Sacrificial
+	Sharp.DisplayName: Sharp
+	Slow.DisplayName: Slow
+	Spherical.DisplayName: Spherical
+	Wasteful.DisplayName: Wasteful
+	Weak.DisplayName: Weak
 }
 
 Projectiles: {
