@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Terraria.ModLoader;
 
-namespace eggpack.Elements.Prefixes.Cubes
+namespace Eggpack.Elements.Prefixes.Cubes
 {
 	public abstract class CubePrefix : ModPrefix
 	{

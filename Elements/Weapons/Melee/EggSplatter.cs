@@ -2,12 +2,12 @@
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
-using eggpack.Elements.NPCs;
-using eggpack.Elements.NPCs.RulerOfEggsBoss;
+using Eggpack.Elements.NPCs;
+using Eggpack.Elements.NPCs.RulerOfEggsBoss;
 using Terraria.Audio;
-using eggpack.Elements.Items;
+using Eggpack.Elements.Items;
 
-namespace eggpack.Elements.Weapons.Melee
+namespace Eggpack.Elements.Weapons.Melee
 {
 	/// <summary>
 	/// A weapon crafted from Yolk Shards and used to summon the Ruler of Eggs.

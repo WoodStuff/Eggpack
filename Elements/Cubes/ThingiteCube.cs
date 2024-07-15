@@ -1,22 +1,18 @@
-﻿using eggpack.Elements.Buffs;
-using eggpack.Elements.Items;
-using eggpack.Elements.Projectiles;
+﻿using Eggpack.Elements.Buffs;
+using Eggpack.Elements.Items;
+using Eggpack.Elements.Projectiles;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace eggpack.Elements.Cubes
+namespace Eggpack.Elements.Cubes
 {
 	public class ThingiteCube : Cube
 	{
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			/* Tooltip.SetDefault(
-				"Costs 40 mana\n" +
-				"Releases a Thingite Burst that does 60 damage, but slows down weapons by 25% for 10 seconds"
-			); */
 		}
 		public override void CustomDefaults()
 		{
@@ -27,13 +23,13 @@ namespace eggpack.Elements.Cubes
 		{
 			CubeSettings settings = new()
 			{
-				cooldown = eggpack.ToFrames(20),
+				cooldown = Eggpack.ToFrames(20),
 				manaCost = 40,
 				projectileID = ModContent.ProjectileType<ThingiteBurst>(),
 				projectileSpeed = 10,
 				damages = true,
 				backfireBuffID = ModContent.BuffType<WeaponExhaustion>(),
-				backfireBuffDuration = eggpack.ToFrames(10),
+				backfireBuffDuration = Eggpack.ToFrames(10),
 			};
 
 			return settings;

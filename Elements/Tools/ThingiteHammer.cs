@@ -1,11 +1,11 @@
-﻿using eggpack.Elements.Tiles;
+﻿using Eggpack.Elements.Tiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace eggpack.Elements.Tools
+namespace Eggpack.Elements.Tools
 {
 	public class ThingiteHammer : ModItem
 	{

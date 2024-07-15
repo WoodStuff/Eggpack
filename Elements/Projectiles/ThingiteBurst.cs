@@ -5,7 +5,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace eggpack.Elements.Projectiles
+namespace Eggpack.Elements.Projectiles
 {
 	/// <summary>
 	/// A projectile fired by the Thingite Cube.

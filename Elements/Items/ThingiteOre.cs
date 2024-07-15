@@ -1,10 +1,10 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using eggpack;
+using Eggpack;
 using Terraria.GameContent.Creative;
 
-namespace eggpack.Elements.Items
+namespace Eggpack.Elements.Items
 {
 	public class ThingiteOre : ModItem
 	{

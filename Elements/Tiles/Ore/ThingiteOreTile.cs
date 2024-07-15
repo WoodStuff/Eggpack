@@ -7,7 +7,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.WorldBuilding;
 
-namespace eggpack.Elements.Tiles.Ore
+namespace Eggpack.Elements.Tiles.Ore
 {
     public class ThingiteOreTile : ModTile
 	{

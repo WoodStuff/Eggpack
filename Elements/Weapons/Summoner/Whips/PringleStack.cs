@@ -10,7 +10,7 @@ using Terraria.Enums;
 using Terraria.GameContent;
 using Terraria.GameContent.Creative;
 
-namespace eggpack.Elements.Weapons.Summoner.Whips
+namespace Eggpack.Elements.Weapons.Summoner.Whips
 {
     internal class PringleStack
     {

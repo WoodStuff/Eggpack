@@ -1,8 +1,8 @@
-﻿using eggpack.Elements;
+﻿using Eggpack.Elements;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace eggpack.Players
+namespace Eggpack.Players
 {
 	/// <summary>
 	/// The slot that holds Cubes.
@@ -19,7 +19,7 @@ namespace eggpack.Players
 			return item.ModItem is Cube;
 		}
 
-		public override string FunctionalTexture => "eggpack/Elements/Cube";
+		public override string FunctionalTexture => "Eggpack/Elements/Cube";
 
 		public override void OnMouseHover(AccessorySlotType context)
 		{

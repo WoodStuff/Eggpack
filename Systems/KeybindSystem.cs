@@ -1,6 +1,6 @@
 ﻿using Terraria.ModLoader;
 
-namespace eggpack.Systems
+namespace Eggpack.Systems
 {
 	public class KeybindSystem : ModSystem
 	{

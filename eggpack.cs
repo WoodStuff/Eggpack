@@ -3,9 +3,9 @@ using Terraria.ModLoader;
 using Terraria.Localization;
 using Terraria.ID;
 
-namespace eggpack
+namespace Eggpack
 {
-	public class eggpack : Mod
+	public class Eggpack : Mod
 	{
 		public static float ToFrames(float secs)
 		{

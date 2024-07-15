@@ -4,7 +4,7 @@ using Terraria.ID;
 using System;
 using Terraria.GameContent.Creative;
 
-namespace eggpack.Elements.Armor.Thingite
+namespace Eggpack.Elements.Armor.Thingite
 {
 	[AutoloadEquip(EquipType.Head)]
 	public class ThingiteHelmet : ModItem

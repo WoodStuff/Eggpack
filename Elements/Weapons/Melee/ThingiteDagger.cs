@@ -1,10 +1,10 @@
-﻿using eggpack.Elements.Items;
+﻿using Eggpack.Elements.Items;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace eggpack.Elements.Weapons.Melee
+namespace Eggpack.Elements.Weapons.Melee
 {
 	/// <summary>
 	/// A quick sword with auto-swing, but low damage.

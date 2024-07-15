@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 using Terraria.Localization;
 using Terraria.ID;
 
-namespace eggpack
+namespace Eggpack
 {
 	public class ModRecipes : ModSystem
 	{

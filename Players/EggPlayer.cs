@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace eggpack.Players
+namespace Eggpack.Players
 {
 	/// <summary>
 	/// The main player without any focus on anything.

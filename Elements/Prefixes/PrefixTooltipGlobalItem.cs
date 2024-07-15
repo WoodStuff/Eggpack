@@ -1,9 +1,9 @@
-﻿using eggpack.Elements.Prefixes.Cubes;
+﻿using Eggpack.Elements.Prefixes.Cubes;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace eggpack.Elements.Prefixes
+namespace Eggpack.Elements.Prefixes
 {
 	public class PrefixTooltipGlobalItem : GlobalItem
 	{
@@ -49,7 +49,7 @@ namespace eggpack.Elements.Prefixes
 					break;
 				case int p when p == ModContent.PrefixType<Legendary>():
 					g1.Text = "+8% damage";
-					g3.Text = "-10% cooldown";
+					g2.Text = "-10% cooldown";
 					g3.Text = "+15% knockback";
 					g4.Text = "-20% mana cost";
 					break;

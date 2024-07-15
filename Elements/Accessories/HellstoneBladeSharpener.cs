@@ -1,12 +1,12 @@
-using eggpack.Elements.Tiles;
+using Eggpack.Elements.Tiles;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.GameContent.Creative;
-using eggpack.Players;
+using Eggpack.Players;
 
-namespace eggpack.Elements.Accessories
+namespace Eggpack.Elements.Accessories
 {
 	public class HellstoneBladeSharpener : ModItem
 	{

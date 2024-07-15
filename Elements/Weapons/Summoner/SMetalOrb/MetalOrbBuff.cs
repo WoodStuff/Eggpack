@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace eggpack.Elements.Weapons.Summoner.SMetalOrb
+namespace Eggpack.Elements.Weapons.Summoner.SMetalOrb
 {
 	public class MetalOrbBuff : ModBuff
 	{

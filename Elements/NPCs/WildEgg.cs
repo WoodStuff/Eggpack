@@ -5,11 +5,11 @@ using System;
 using Terraria.ModLoader.Utilities;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.GameContent.Bestiary;
-using eggpack.Elements.Items;
+using Eggpack.Elements.Items;
 using Terraria.DataStructures;
-using eggpack.Elements.NPCs.RulerOfEggsBoss;
+using Eggpack.Elements.NPCs.RulerOfEggsBoss;
 
-namespace eggpack.Elements.NPCs
+namespace Eggpack.Elements.NPCs
 {
 	/// <summary>
 	/// A wild egg that sometimes drops Yolk Shards and can be used to summon the Ruler of Eggs.

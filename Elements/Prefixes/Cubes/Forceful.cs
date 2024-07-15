@@ -1,8 +1,8 @@
 ﻿using Terraria.ModLoader;
-using eggpack.Elements;
+using Eggpack.Elements;
 using Terraria;
 
-namespace eggpack.Elements.Prefixes.Cubes
+namespace Eggpack.Elements.Prefixes.Cubes
 {
 	/// <summary>
 	/// A neutral cube prefix.

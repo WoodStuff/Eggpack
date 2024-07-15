@@ -3,7 +3,7 @@ using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace eggpack.Elements.Weapons.Ranged
+namespace Eggpack.Elements.Weapons.Ranged
 {
 	public class ThingiteBow : ModItem {
 		public override void SetStaticDefaults()

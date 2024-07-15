@@ -7,7 +7,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace eggpack.Elements.Buffs
+namespace Eggpack.Elements.Buffs
 {
 	public class WeaponExhaustion : ModBuff
 	{

@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 using Terraria.Localization;
 using Terraria.ID;
 
-namespace eggpack
+namespace Eggpack
 {
 	public class ModRecipeGroup : ModSystem
 	{
@@ -22,8 +22,8 @@ namespace eggpack
 		public override void AddRecipeGroups()
 		{
 			// GEMS
-			Gems = new(() => Language.GetTextValue("LegacyMisc.37") + " Gem", new int[]
-			{
+			Gems = new(() => Language.GetTextValue("LegacyMisc.37") + " Gem",
+			[
 				ItemID.Amethyst,
 				ItemID.Topaz,
 				ItemID.Sapphire,
@@ -31,90 +31,90 @@ namespace eggpack
 				ItemID.Ruby,
 				ItemID.Diamond,
 				ItemID.Amber,
-			});
+			]);
 			RecipeGroup.RegisterGroup("Gems", Gems);
 
 			// EVIL MATERIALS
-			EvilMaterials = new(() => Language.GetTextValue("LegacyMisc.37") + " Evil Material", new int[]
-			{
+			EvilMaterials = new(() => Language.GetTextValue("LegacyMisc.37") + " Evil Material",
+			[
 				ItemID.ShadowScale,
 				ItemID.TissueSample,
-			});
+			]);
 			RecipeGroup.RegisterGroup("EvilMaterials", EvilMaterials);
 
-			// ----------- BARS BELOW -----------
+			// ----------- BARS BELOW ----------- //
 
 			// EVIL ORE
-			EvilOre = new(() => Language.GetTextValue("LegacyMisc.37") + " Evil Ore", new int[]
-			{
+			EvilOre = new(() => Language.GetTextValue("LegacyMisc.37") + " Evil Ore",
+			[
 				ItemID.DemoniteOre,
 				ItemID.CrimtaneOre,
-			});
+			]);
 			RecipeGroup.RegisterGroup("EvilOre", EvilOre);
 
 			// EVIL BARS
-			EvilBar = new(() => Language.GetTextValue("LegacyMisc.37") + " Evil Bar", new int[]
-			{
+			EvilBar = new(() => Language.GetTextValue("LegacyMisc.37") + " Evil Bar",
+			[
 				ItemID.DemoniteBar,
 				ItemID.CrimtaneBar,
-			});
+			]);
 			RecipeGroup.RegisterGroup("EvilBar", EvilBar);
 
 			// COPPER ORE
-			CopperOre = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Copper Ore", new int[]
-			{
+			CopperOre = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Copper Ore",
+			[
 				ItemID.CopperOre,
 				ItemID.TinOre,
-			});
+			]);
 			RecipeGroup.RegisterGroup("CopperOre", CopperOre);
 
 			// IRON ORE
-			IronOre = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Iron Ore", new int[]
-			{
+			IronOre = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Iron Ore",
+			[
 				ItemID.IronOre,
 				ItemID.LeadOre,
-			});
+			]);
 			RecipeGroup.RegisterGroup("IronOre", IronOre);
 
 			// SILVER ORE
-			SilverOre = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Silver Ore", new int[]
-			{
+			SilverOre = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Silver Ore",
+			[
 				ItemID.SilverOre,
 				ItemID.TungstenOre,
-			});
+			]);
 			RecipeGroup.RegisterGroup("SilverOre", SilverOre);
 
 			// GOLD ORE
-			GoldOre = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Golden Ore", new int[]
-			{
+			GoldOre = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Golden Ore",
+			[
 				ItemID.GoldOre,
 				ItemID.PlatinumOre,
-			});
+			]);
 			RecipeGroup.RegisterGroup("GoldOre", GoldOre);
 
 
 			// COPPER BAR
-			CopperBar = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Copper Bar", new int[]
-			{
+			CopperBar = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Copper Bar",
+			[
 				ItemID.CopperBar,
 				ItemID.TinBar,
-			});
+			]);
 			RecipeGroup.RegisterGroup("CopperBar", CopperBar);
 
 			// SILVER BAR
-			SilverBar = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Silver Bar", new int[]
-			{
+			SilverBar = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Silver Bar",
+			[
 				ItemID.SilverBar,
 				ItemID.TungstenBar,
-			});
+			]);
 			RecipeGroup.RegisterGroup("SilverBar", SilverBar);
 
 			// GOLD BAR
-			GoldBar = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Golden Bar", new int[]
-			{
+			GoldBar = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Golden Bar",
+			[
 				ItemID.GoldBar,
 				ItemID.PlatinumBar,
-			});
+			]);
 			RecipeGroup.RegisterGroup("GoldBar", GoldBar);
 		}
 	}

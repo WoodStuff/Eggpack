@@ -1,17 +1,16 @@
-﻿using eggpack.Elements.Tiles;
+﻿using Eggpack.Elements.Tiles;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.GameContent.Creative;
 
-namespace eggpack.Elements.Accessories
+namespace Eggpack.Elements.Accessories
 {
 	public class LuckyClover : ModItem
 	{
         public override void SetStaticDefaults()
 		{
-			// Tooltip.SetDefault("+4% critical strike chance");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 		public override void SetDefaults()

@@ -5,7 +5,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace eggpack.Elements.NPCs.RulerOfEggsBoss
+namespace Eggpack.Elements.NPCs.RulerOfEggsBoss
 {
 	public class RulerOfEggs : ModNPC
 	{

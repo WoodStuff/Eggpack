@@ -1,4 +1,4 @@
-﻿using eggpack.Elements.Weapons.Summoner.Whips.Debuffs;
+﻿using Eggpack.Elements.Weapons.Summoner.Whips.Debuffs;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace eggpack.Elements.Weapons.Summoner.Whips.Projectiles
+namespace Eggpack.Elements.Weapons.Summoner.Whips.Projectiles
 {
 	public class WoodenWhipProjectile : ModProjectile
 	{

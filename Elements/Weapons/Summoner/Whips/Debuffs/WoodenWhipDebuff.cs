@@ -1,9 +1,9 @@
-﻿using eggpack.Elements.Tools;
+﻿using Eggpack.Elements.Tools;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace eggpack.Elements.Weapons.Summoner.Whips.Debuffs
+namespace Eggpack.Elements.Weapons.Summoner.Whips.Debuffs
 {
 	public class WoodenWhipDebuff : ModBuff
 	{

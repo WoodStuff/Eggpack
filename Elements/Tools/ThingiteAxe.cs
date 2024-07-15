@@ -4,7 +4,7 @@ using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace eggpack.Elements.Tools
+namespace Eggpack.Elements.Tools
 {
 	public class ThingiteAxe : ModItem
 	{

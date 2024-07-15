@@ -1,5 +1,5 @@
-﻿using eggpack.Elements.Prefixes.Cubes;
-using eggpack.Players;
+﻿using Eggpack.Elements.Prefixes.Cubes;
+using Eggpack.Players;
 using Humanizer;
 using System;
 using System.Collections.Generic;
@@ -12,7 +12,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.Utilities;
 
-namespace eggpack.Elements
+namespace Eggpack.Elements
 {
 	/// <summary>
 	/// A cube item. This, when equipped, allows you to have active abilities.
@@ -54,8 +54,8 @@ namespace eggpack.Elements
 		}
 		public override int ChoosePrefix(UnifiedRandom rand)
 		{
-			List<int> prefixes = CubePrefixes;
-			foreach (int id in prefixes)
+			List<int> prefixes = new(CubePrefixes);
+			foreach (int id in CubePrefixes)
 			{
 				CubePrefix prefix = PrefixLoader.GetPrefix(id) as CubePrefix;
 				CubePrefixModifiers prefix_stats = prefix.GetModifiedStats();
@@ -88,7 +88,6 @@ namespace eggpack.Elements
 		/// <summary>
 		/// Get the cube's stats taking into account the cube's prefix.
 		/// </summary>
-		/// <param name="player">The player that has the cube.</param>
 		/// <returns>Cube's stats taking into account the prefix.</returns>
 		public CubeSettings GetModifiedStats()
 		{
@@ -111,12 +110,40 @@ namespace eggpack.Elements
 			}
 			return modifiers;
 		}
+		/// <summary>
+		/// Get the cube's stats taking into account the cube's prefix.
+		/// </summary>
+		/// <param name="player">The player that has the cube.</param>
+		/// <returns>Cube's stats taking into account the prefix.</returns>
+		public CubeSettings GetModifiedStats(Player player)
+		{
+			int prefix = player.GetModPlayer<EggPlayer>().equippedCubePrefix;
+			CubeSettings modifiers = GetCubeSettings();
+			if (prefix == 0) return modifiers;
+
+			if (CubePrefixes.Contains(prefix))
+			{
+				CubePrefix pref = PrefixLoader.GetPrefix(prefix) as CubePrefix;
+				modifiers.cooldown *= pref.GetModifiedStats().cooldown;
+				modifiers.manaCost = (int)(modifiers.manaCost * pref.GetModifiedStats().manaCost);
+				modifiers.damageMult *= pref.GetModifiedStats().damage;
+				modifiers.knockbackMult *= pref.GetModifiedStats().knockback;
+				modifiers.buffDuration *= pref.GetModifiedStats().buffDuration;
+				modifiers.backfireBuffDuration *= pref.GetModifiedStats().backfireBuffDuration;
+				modifiers.requireLife = (int)(modifiers.manaCost * pref.GetModifiedStats().lifeCost);
+				modifiers.healLife = (int)(modifiers.healLife * pref.GetModifiedStats().healing);
+				modifiers.projectileSpeed *= pref.GetModifiedStats().projectileSpeed;
+			}
+			return modifiers;
+		}
 		public override void ModifyTooltips(List<TooltipLine> tooltips)
 		{
-			var line = new TooltipLine(Mod, "UseMana", $"Uses {GetModifiedStats().manaCost} mana");
+			CubeSettings stats = GetModifiedStats();
+			var tooltip = $"[i:109]{GetModifiedStats().manaCost} [i:3099]{Eggpack.ToSeconds(stats.cooldown)}s";
+			var line = new TooltipLine(Mod, "ManaCooldown", tooltip);
 			tooltips.Add(line);
 
-			var tooltip = Language.GetTextValue($"Mods.eggpack.Items.{Name}.CubeTooltip");
+			tooltip = Language.GetTextValue($"Mods.Eggpack.Items.{Name}.CubeTooltip");
 			line = new TooltipLine(Mod, "CubeTooltip", tooltip);
 			tooltips.Add(line);
 		}
@@ -127,9 +154,9 @@ namespace eggpack.Elements
 	public class CubeSettings
 	{
 		/// <summary>
-		/// The cooldown before you can use the cube again, in frames. Use <c>eggpack.ToFrames(seconds)</c> for seconds.
+		/// The cooldown before you can use the cube again, in frames. Use <c>Eggpack.ToFrames(seconds)</c> for seconds.
 		/// </summary>
-		public float cooldown = eggpack.ToFrames(10);
+		public float cooldown = Eggpack.ToFrames(10);
 		/// <summary>
 		/// How much MP you need to use the cube and how much it consumes. You can set the amount of mana taken separately using takeMana.
 		/// </summary>
@@ -179,7 +206,7 @@ namespace eggpack.Elements
 		/// </summary>
 		public int buffID;
 		/// <summary>
-		/// The duration of the cube's buff, in frames. Use <c>eggpack.ToFrames(seconds)</c> for seconds.
+		/// The duration of the cube's buff, in frames. Use <c>Eggpack.ToFrames(seconds)</c> for seconds.
 		/// </summary>
 		public float buffDuration;
 		/// <summary>
@@ -187,7 +214,7 @@ namespace eggpack.Elements
 		/// </summary>
 		public int backfireBuffID;
 		/// <summary>
-		/// The duration of the cube's debuff, in frames. Use <c>eggpack.ToFrames(seconds)</c> for seconds.
+		/// The duration of the cube's debuff, in frames. Use <c>Eggpack.ToFrames(seconds)</c> for seconds.
 		/// </summary>
 		public float backfireBuffDuration;
 		/// <summary>

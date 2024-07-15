@@ -2,7 +2,7 @@
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 
-namespace eggpack
+namespace Eggpack
 {
 	public static class TileUtils
 	{

@@ -32,7 +32,11 @@ Items: {
 
 	HellstoneBladeSharpener: {
 		DisplayName: Hellstone Blade Sharpener
-		Tooltip: +6% melee damage, +7% melee critical strike chance\n50% chance to set struck enemies on fire
+		Tooltip:
+			'''
+			+6% melee damage, +7% melee critical strike chance
+			50% chance to set struck enemies on fire
+			'''
 	}
 
 	HellstoneShield: {
@@ -47,12 +51,20 @@ Items: {
 
 	ManaRing: {
 		DisplayName: Mana Ring
-		Tooltip: -10% mana cost\n+20 max mana
+		Tooltip:
+			'''
+			-10% mana cost
+			+20 max mana
+			'''
 	}
 
 	PygmyEmblem: {
 		DisplayName: Pygmy Emblem
-		Tooltip: Increases your max number of minions by 1\n12% increased summon damage
+		Tooltip:
+			'''
+			Increases your max number of minions by 1
+			12% increased summon damage
+			'''
 	}
 
 	ReinforcedShield: {
@@ -67,7 +79,11 @@ Items: {
 
 	TheBookOfTheDead: {
 		DisplayName: The Book Of The Dead
-		Tooltip: Increases your max number of minions by 3\n16% increased summon damage
+		Tooltip:
+			'''
+			Increases your max number of minions by 3
+			16% increased summon damage
+			'''
 	}
 
 	ThingiteShield: {

@@ -3,7 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 
-namespace eggpack.Elements.Items
+namespace Eggpack.Elements.Items
 {
 	public class ThingiteBar : ModItem
 	{

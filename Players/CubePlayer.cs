@@ -1,6 +1,6 @@
-﻿using eggpack.Elements;
-using eggpack.Elements.Buffs;
-using eggpack.Systems;
+﻿using Eggpack.Elements;
+using Eggpack.Elements.Buffs;
+using Eggpack.Systems;
 using Microsoft.Xna.Framework;
 using System;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.DataStructures;
 using Terraria.GameInput;
 using Terraria.ModLoader;
 
-namespace eggpack.Players
+namespace Eggpack.Players
 {
 	public class CubePlayer : ModPlayer
 	{
@@ -19,7 +19,7 @@ namespace eggpack.Players
 			{
 				
 				Cube cube = (Cube)ModContent.GetModItem(Player.GetModPlayer<EggPlayer>().equippedCube);
-				CubeSettings cubeSettings = cube.GetModifiedStats();
+				CubeSettings cubeSettings = cube.GetModifiedStats(Player);
 
 				// dont do anything if player has insufficient mana or life
 				if (Player.statMana < cubeSettings.manaCost || Player.statLife < cubeSettings.requireLife) return;
