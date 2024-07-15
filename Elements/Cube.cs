@@ -90,7 +90,7 @@ namespace eggpack.Elements
 		/// </summary>
 		/// <param name="player">The player that has the cube.</param>
 		/// <returns>Cube's stats taking into account the prefix.</returns>
-		public CubeSettings GetModifiedStats(Player player)
+		public CubeSettings GetModifiedStats()
 		{
 			int prefix = Item.prefix;
 			CubeSettings modifiers = GetCubeSettings();
@@ -113,9 +113,7 @@ namespace eggpack.Elements
 		}
 		public override void ModifyTooltips(List<TooltipLine> tooltips)
 		{
-			Player player = Main.CurrentPlayer;
-
-			var line = new TooltipLine(Mod, "UseMana", $"Uses {GetModifiedStats(player).manaCost} mana");
+			var line = new TooltipLine(Mod, "UseMana", $"Uses {GetModifiedStats().manaCost} mana");
 			tooltips.Add(line);
 
 			var tooltip = Language.GetTextValue($"Mods.eggpack.Items.{Name}.CubeTooltip");

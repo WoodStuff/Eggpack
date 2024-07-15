@@ -19,7 +19,7 @@ namespace eggpack.Players
 			{
 				
 				Cube cube = (Cube)ModContent.GetModItem(Player.GetModPlayer<EggPlayer>().equippedCube);
-				CubeSettings cubeSettings = cube.GetModifiedStats(Player);
+				CubeSettings cubeSettings = cube.GetModifiedStats();
 
 				// dont do anything if player has insufficient mana or life
 				if (Player.statMana < cubeSettings.manaCost || Player.statLife < cubeSettings.requireLife) return;
