@@ -14,7 +14,6 @@ namespace Eggpack.Elements.Weapons.Melee
 		public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-			// Tooltip.SetDefault("Exceptionally quick");
 		}
 		public override void SetDefaults()
 		{

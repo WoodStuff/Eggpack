@@ -7,17 +7,17 @@ using Terraria.GameContent.Creative;
 
 namespace Eggpack.Elements.Accessories
 {
-	public class BladeSharpener : ModItem
+	public class ThingiteCrosshair : ModItem
 	{
-		public override void SetStaticDefaults()
+        public override void SetStaticDefaults()
 		{
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 		public override void SetDefaults()
 		{
-			Item.width = 32;
-			Item.height = 28;
-			Item.value = Item.sellPrice(0, 0, 80, 0);
+			Item.width = 46;
+			Item.height = 46;
+			Item.value = Item.sellPrice(0, 1, 0, 0);
 			Item.rare = ItemRarityID.White;
 			Item.accessory = true;
 		}
@@ -25,16 +25,15 @@ namespace Eggpack.Elements.Accessories
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-				.AddIngredient(ItemID.StoneBlock, 50)
-				.AddIngredient(ItemID.Diamond, 1)
+				.AddIngredient(null, "WoodenCrosshair")
+				.AddIngredient(null, "ThingiteBar", 4)
 				.AddTile(TileID.Anvils)
 				.Register();
 		}
 
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{
-			player.GetDamage(DamageClass.Melee) += 0.02f;
-			player.GetCritChance(DamageClass.Melee) += 3f;
+			player.GetCritChance(DamageClass.Generic) += 5f;
 		}
 	}
 }

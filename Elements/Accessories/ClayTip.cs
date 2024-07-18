@@ -7,7 +7,7 @@ using Terraria.GameContent.Creative;
 
 namespace Eggpack.Elements.Accessories
 {
-	public class BladeSharpener : ModItem
+	public class ClayTip : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
@@ -15,9 +15,9 @@ namespace Eggpack.Elements.Accessories
 		}
 		public override void SetDefaults()
 		{
-			Item.width = 32;
-			Item.height = 28;
-			Item.value = Item.sellPrice(0, 0, 80, 0);
+			Item.width = 14;
+			Item.height = 16;
+			Item.value = Item.sellPrice(0, 0, 40, 0);
 			Item.rare = ItemRarityID.White;
 			Item.accessory = true;
 		}
@@ -25,16 +25,16 @@ namespace Eggpack.Elements.Accessories
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-				.AddIngredient(ItemID.StoneBlock, 50)
-				.AddIngredient(ItemID.Diamond, 1)
-				.AddTile(TileID.Anvils)
+				.AddIngredient(ItemID.ClayBlock, 50)
+				.AddIngredient(ItemID.StoneBlock, 20)
+				.AddTile(TileID.WorkBenches)
 				.Register();
 		}
 
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{
-			player.GetDamage(DamageClass.Melee) += 0.02f;
-			player.GetCritChance(DamageClass.Melee) += 3f;
+			player.GetDamage(DamageClass.Ranged) += 0.02f;
+			player.GetCritChance(DamageClass.Ranged) += 2f;
 		}
 	}
 }

@@ -181,6 +181,21 @@ Items: {
 		DisplayName: Wooden Whip
 		Tooltip: '''"Simple. You form it into a whip."'''
 	}
+
+	ThingiteCrosshair: {
+		DisplayName: Thingite Crosshair
+		Tooltip: +5% critical strike chance
+	}
+
+	ClayTip: {
+		DisplayName: Clay Tip
+		Tooltip: Arrows get +2% damage and +2% critical strike chance
+	}
+
+	GraniteStaff: {
+		DisplayName: Granite Staff
+		Tooltip: Shoots three granite balls
+	}
 }
 
 NPCs: {
@@ -225,4 +240,5 @@ Projectiles: {
 	ThingiteBurst.DisplayName: Thingite Burst
 	MetalOrb.DisplayName: Metal Orb
 	WoodenWhipProjectile.DisplayName: Wooden Whip Projectile
+	GraniteStaffProjectile.DisplayName: Granite Staff Projectile
 }
