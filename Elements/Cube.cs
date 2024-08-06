@@ -1,13 +1,9 @@
 ﻿using Eggpack.Elements.Prefixes.Cubes;
 using Eggpack.Players;
-using Humanizer;
-using System;
 using System.Collections.Generic;
-using System.Reflection;
 using Terraria;
 using Terraria.Audio;
 using Terraria.GameContent.Creative;
-using Terraria.GameContent.UI.Chat;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.Utilities;

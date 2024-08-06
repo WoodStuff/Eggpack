@@ -5,8 +5,12 @@ using Terraria.ModLoader;
 
 namespace Eggpack.Systems
 {
+	/// <summary>
+	/// The script for adding loot to vanilla world-generated chests.
+	/// </summary>
 	public class ChestLootSystem : ModSystem
 	{
+		private int graniteCounter = 0;
 		public override void PostWorldGen()
 		{
             foreach (var chest in Main.chest)
@@ -21,7 +25,19 @@ namespace Eggpack.Systems
 							ShiftChestItems(chest);
 						} // from here the first slot is free and we can put items into it
 
-						chest.item[0].SetDefaults(Mod.Find<ModItem>("GraniteStaff").Type);
+						switch (graniteCounter % 2)
+						{
+							case 0:
+								chest.item[0].SetDefaults(Mod.Find<ModItem>("GraniteStaff").Type);
+								break;
+							case 1:
+								chest.item[0].SetDefaults(Mod.Find<ModItem>("GraniteSword").Type);
+								break;
+							default:
+								break;
+						}
+						graniteCounter++;
+						if (WorldGen.genRand.NextBool()) chest.item[0].Prefix(-1);
 
 						break;
 				}

@@ -4,7 +4,6 @@
   <PropertyGroup>
     <AssemblyName>Eggpack</AssemblyName>
     <LangVersion>latest</LangVersion>
-    <TargetFramework>net8.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Elements\Accessories\HellstoneShield.cs.bak" />
@@ -12,6 +11,7 @@
     <None Remove="Elements\Accessories\ReinforcedShield.cs.bak" />
     <None Remove="Elements\Accessories\ThingiteShield.cs.bak" />
     <None Remove="Elements\Accessories\WoodenShield.cs.bak" />
+    <None Remove="Elements\Projectiles\GraniteSwordProjectile.png" />
     <None Remove="Elements\Tools\ThingiteAxe.cs.bak" />
     <None Remove="Elements\Tools\ThingiteHammer.cs.bak" />
     <None Remove="Elements\Tools\ThingitePickaxe.cs.bak" />

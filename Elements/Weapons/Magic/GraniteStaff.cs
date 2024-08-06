@@ -22,7 +22,7 @@ namespace Eggpack.Elements.Weapons.Magic
 		public override void SetDefaults()
 		{
 			Item.DefaultToStaff(ModContent.ProjectileType<GraniteStaffProjectile>(), 10, 28, 10);
-			Item.SetWeaponValues(20, 5, 8);
+			Item.SetWeaponValues(20, 5, 5);
 			Item.SetShopValues(ItemRarityColor.Green2, 13000);
 			Item.width = 48;
 			Item.height = 18;

@@ -2,6 +2,9 @@
 
 namespace Eggpack.Systems
 {
+	/// <summary>
+	/// Creates the mod's keybinds.
+	/// </summary>
 	public class KeybindSystem : ModSystem
 	{
 		public static ModKeybind CubeAbility { get; private set; }

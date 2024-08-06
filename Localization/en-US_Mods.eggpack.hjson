@@ -194,7 +194,12 @@ Items: {
 
 	GraniteStaff: {
 		DisplayName: Granite Staff
-		Tooltip: Shoots three granite balls
+		Tooltip: Shoots three granite energy bolts
+	}
+
+	GraniteSword: {
+		DisplayName: Granite Sword
+		Tooltip: Shoots a granite energy bolt
 	}
 }
 
@@ -241,4 +246,5 @@ Projectiles: {
 	MetalOrb.DisplayName: Metal Orb
 	WoodenWhipProjectile.DisplayName: Wooden Whip Projectile
 	GraniteStaffProjectile.DisplayName: Granite Staff Projectile
+	GraniteSwordProjectile.DisplayName: Granite Sword Projectile
 }
