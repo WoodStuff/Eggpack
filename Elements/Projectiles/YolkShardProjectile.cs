@@ -8,19 +8,18 @@ using Terraria.ModLoader;
 namespace Eggpack.Elements.Projectiles
 {
 	/// <summary>
-	/// A projectile fired by the Granite Staff.
+	/// A yolk shard fired in the Ruler of Eggs' Shards attack.
 	/// </summary>
-	public class GraniteStaffProjectile : ModProjectile
+	public class YolkShardProjectile : ModProjectile
 	{
 		public override void SetDefaults()
 		{
-			Projectile.DamageType = DamageClass.Magic;
+			Projectile.DamageType = DamageClass.Generic;
 
-			Projectile.width = 16;
-			Projectile.height = 16;
-			Projectile.aiStyle = 1;
-			Projectile.friendly = true;
-			AIType = ProjectileID.Bullet;
+			Projectile.width = 18;
+			Projectile.height = 32;
+			Projectile.aiStyle = ProjAIStyleID.Arrow;
+			Projectile.hostile = true;
 		}
 		public override void AI()
 		{
@@ -30,7 +29,7 @@ namespace Eggpack.Elements.Projectiles
 					new Vector2(Projectile.position.X, Projectile.position.Y),
 					Projectile.width,
 					Projectile.height,
-					DustID.Granite,
+					DustID.Honey,
 					0f,
 					0f,
 					100
@@ -47,7 +46,7 @@ namespace Eggpack.Elements.Projectiles
 					new Vector2(Projectile.position.X, Projectile.position.Y),
 					Projectile.width,
 					Projectile.height,
-					DustID.Granite,
+					DustID.Honey,
 					new Vector2(0, 1).RotatedBy(Math.PI * 2 / particles).X * 3,
 					new Vector2(0, 1).RotatedBy(Math.PI * 2 / particles).Y * 3,
 					100,

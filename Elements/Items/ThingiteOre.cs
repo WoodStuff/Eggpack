@@ -11,7 +11,7 @@ namespace Eggpack.Elements.Items
 		public override void SetStaticDefaults()
 		{
 			ItemID.Sets.SortingPriorityMaterials[Item.type] = 58;
-			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 100; 
+			Item.ResearchUnlockCount = 100; 
 		}
 
 		public override void SetDefaults()
@@ -21,7 +21,7 @@ namespace Eggpack.Elements.Items
 			Item.useAnimation = 15;
 			Item.useTime = 10;
 			Item.autoReuse = true;
-			Item.maxStack = 999;
+			Item.maxStack = Item.CommonMaxStack;
 			Item.consumable = true;
 			Item.createTile = ModContent.TileType<Elements.Tiles.Ore.ThingiteOreTile>();
 			Item.width = 12;

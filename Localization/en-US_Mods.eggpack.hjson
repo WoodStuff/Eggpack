@@ -201,6 +201,11 @@ Items: {
 		DisplayName: Granite Sword
 		Tooltip: Shoots a granite energy bolt
 	}
+
+	RulerOfEggsBag: {
+		DisplayName: Ruler Of Eggs Bag
+		Tooltip: ""
+	}
 }
 
 NPCs: {
@@ -247,4 +252,5 @@ Projectiles: {
 	WoodenWhipProjectile.DisplayName: Wooden Whip Projectile
 	GraniteStaffProjectile.DisplayName: Granite Staff Projectile
 	GraniteSwordProjectile.DisplayName: Granite Sword Projectile
+	YolkShardProjectile.DisplayName: Yolk Shard Projectile
 }

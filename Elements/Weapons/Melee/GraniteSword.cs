@@ -17,7 +17,7 @@ namespace Eggpack.Elements.Weapons.Melee
 	{
 		public override void SetStaticDefaults()
 		{
-			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+			Item.ResearchUnlockCount = 1;
 		}
 		public override void SetDefaults()
 		{
@@ -29,6 +29,7 @@ namespace Eggpack.Elements.Weapons.Melee
 			Item.useAnimation = 24;
 			Item.shoot = ModContent.ProjectileType<GraniteSwordProjectile>();
 			Item.shootSpeed = 9f;
+			Item.scale = 1.1f;
 
 			Item.width = 40;
 			Item.height = 40;

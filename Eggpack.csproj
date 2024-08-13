@@ -12,6 +12,7 @@
     <None Remove="Elements\Accessories\ThingiteShield.cs.bak" />
     <None Remove="Elements\Accessories\WoodenShield.cs.bak" />
     <None Remove="Elements\Projectiles\GraniteSwordProjectile.png" />
+    <None Remove="Elements\Projectiles\YolkShardProjectile.png" />
     <None Remove="Elements\Tools\ThingiteAxe.cs.bak" />
     <None Remove="Elements\Tools\ThingiteHammer.cs.bak" />
     <None Remove="Elements\Tools\ThingitePickaxe.cs.bak" />

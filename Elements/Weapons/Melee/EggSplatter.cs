@@ -16,19 +16,19 @@ namespace Eggpack.Elements.Weapons.Melee
 	{
 		public override void SetStaticDefaults()
 		{
-			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+			Item.ResearchUnlockCount = 1;
 			// Tooltip.SetDefault("Please do not hit a wild egg with this");
 		}
 		public override void SetDefaults()
 		{
-			Item.damage = 8;
+			Item.damage = 10;
 			Item.DamageType = DamageClass.Melee;
 			Item.width = 40;
 			Item.height = 40;
 			Item.useTime = 18;
 			Item.useAnimation = 18;
 			Item.useStyle = ItemUseStyleID.Swing;
-			Item.knockBack = 8;
+			Item.knockBack = 5;
 			Item.value = Item.sellPrice(0, 7, 50, 0);
 			Item.rare = ItemRarityID.Green;
 			Item.UseSound = SoundID.Item1;

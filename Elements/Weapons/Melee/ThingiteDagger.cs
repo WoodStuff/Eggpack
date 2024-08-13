@@ -13,7 +13,7 @@ namespace Eggpack.Elements.Weapons.Melee
 	{
 		public override void SetStaticDefaults()
 		{
-			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+			Item.ResearchUnlockCount = 1;
 		}
 		public override void SetDefaults()
 		{
@@ -29,7 +29,7 @@ namespace Eggpack.Elements.Weapons.Melee
 			Item.value = Item.sellPrice(0, 0, 25, 0);
 			Item.rare = ItemRarityID.Blue;
 			Item.UseSound = SoundID.Item1;
-			Item.scale = 1.4f;
+			Item.scale = 1.3f;
 			Item.autoReuse = true;
 		}
 

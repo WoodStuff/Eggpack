@@ -13,7 +13,7 @@ namespace Eggpack.Elements.Weapons.Melee
 	{
 		public override void SetStaticDefaults()
 		{
-			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+			Item.ResearchUnlockCount = 1;
 		}
 		public override void SetDefaults() 
 		{

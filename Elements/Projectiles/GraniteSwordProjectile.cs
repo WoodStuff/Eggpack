@@ -14,8 +14,6 @@ namespace Eggpack.Elements.Projectiles
 	{
 		public override void SetDefaults()
 		{
-			Projectile.damage = 0;
-			Projectile.knockBack = 4;
 			Projectile.DamageType = DamageClass.Melee;
 
 			Projectile.width = 16;

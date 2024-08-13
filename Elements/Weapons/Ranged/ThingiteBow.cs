@@ -8,7 +8,7 @@ namespace Eggpack.Elements.Weapons.Ranged
 	public class ThingiteBow : ModItem {
 		public override void SetStaticDefaults()
 		{
-			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+			Item.ResearchUnlockCount = 1;
 		}
 		public override void SetDefaults()
 		{
