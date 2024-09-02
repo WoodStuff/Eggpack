@@ -2,6 +2,7 @@
 using Eggpack.Elements.Items;
 using Eggpack.Elements.Projectiles;
 using Terraria;
+using Terraria.Enums;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -10,14 +11,9 @@ namespace Eggpack.Elements.Cubes
 {
 	public class ThingiteCube : Cube
 	{
-		public override void SetStaticDefaults()
-		{
-			Item.ResearchUnlockCount = 1;
-		}
 		public override void CustomDefaults()
 		{
-			Item.value = Item.sellPrice(0, 1, 0, 0);
-			Item.rare = ItemRarityID.Blue;
+			Item.SetShopValues(ItemRarityColor.Blue1, Item.sellPrice(0, 1));
 		}
 		public override CubeSettings GetCubeSettings()
 		{
@@ -25,9 +21,11 @@ namespace Eggpack.Elements.Cubes
 			{
 				cooldown = Eggpack.ToFrames(20),
 				manaCost = 40,
+
 				projectileID = ModContent.ProjectileType<ThingiteBurst>(),
 				projectileSpeed = 10,
 				damages = true,
+
 				backfireBuffID = ModContent.BuffType<WeaponExhaustion>(),
 				backfireBuffDuration = Eggpack.ToFrames(10),
 			};

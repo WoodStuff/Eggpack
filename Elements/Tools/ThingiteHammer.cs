@@ -1,4 +1,5 @@
-﻿using Eggpack.Elements.Tiles;
+﻿using Eggpack.Elements.Items;
+using Eggpack.Elements.Tiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -18,8 +19,8 @@ namespace Eggpack.Elements.Tools
 		{
 			Item.damage = 12;
 			Item.DamageType = DamageClass.Melee;
-			Item.width = 32;
-			Item.height = 32;
+			Item.width = 38;
+			Item.height = 38;
 			Item.useTime = 20;
 			Item.useAnimation = 20;
 			Item.hammer = 65;
@@ -35,8 +36,8 @@ namespace Eggpack.Elements.Tools
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddIngredient(null, "ThingiteBar", 6)
-			.AddRecipeGroup("Wood", 4)
+			.AddIngredient<ThingiteBar>(6)
+			.AddRecipeGroup(RecipeGroupID.Wood, 4)
 			.AddTile(TileID.Anvils)
 			.Register();
 		}

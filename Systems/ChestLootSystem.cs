@@ -13,7 +13,23 @@ namespace Eggpack.Systems
 		private int graniteCounter = 0;
 		public override void PostWorldGen()
 		{
-            foreach (var chest in Main.chest)
+			// change gold chests into granite chests
+			foreach (var chest in Main.chest)
+			{
+				// match only gold chests in front of unsafe granite walls
+				if (chest == null
+					|| Main.tile[chest.x, chest.y].TileType != TileID.Containers
+					|| Main.tile[chest.x, chest.y].TileFrameX != 36
+					|| Main.tile[chest.x, chest.y].WallType != WallID.GraniteUnsafe) continue;
+
+				Main.tile[chest.x, chest.y].TileFrameX = 50 * 36;
+				Main.tile[chest.x+1, chest.y].TileFrameX = 50 * 36 + 18;
+				Main.tile[chest.x, chest.y+1].TileFrameX = 50 * 36;
+				Main.tile[chest.x+1, chest.y+1].TileFrameX = 50 * 36 + 18;
+			}
+
+			// add chest loot
+			foreach (var chest in Main.chest)
             {
 				if (chest == null || Main.tile[chest.x, chest.y].TileType != TileID.Containers) continue;
 				switch (Main.tile[chest.x, chest.y].TileFrameX)

@@ -1,4 +1,5 @@
-﻿using Eggpack.Elements.Tiles;
+﻿using Eggpack.Elements.Items;
+using Eggpack.Elements.Tiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -35,8 +36,8 @@ namespace Eggpack.Elements.Tools
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddIngredient(null, "ThingiteBar", 12)
-			.AddRecipeGroup("Wood", 4)
+			.AddIngredient<ThingiteBar>(12)
+			.AddRecipeGroup(RecipeGroupID.Wood, 4)
 			.AddTile(TileID.Anvils)
 			.Register();
 		}

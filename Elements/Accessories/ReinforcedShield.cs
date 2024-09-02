@@ -21,15 +21,15 @@ namespace Eggpack.Elements.Accessories
 			Item.value = 250000;
 			Item.rare = ItemRarityID.Green;
 			Item.accessory = true;
-			Item.defense = 5;
+			Item.defense = 3;
 		}
 
 		public override void AddRecipes()
 		{
 			CreateRecipe()
 			.AddIngredient(ItemID.Shackle)
-			.AddIngredient(null, "WoodenShield")
-			.AddIngredient(null, "ThingiteShield")
+			.AddIngredient<ThingiteShield>()
+			.AddRecipeGroup(RecipeGroupID.IronBar, 6)
 			.AddTile(TileID.TinkerersWorkbench)
 			.Register();
 		}

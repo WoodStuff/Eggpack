@@ -9,6 +9,8 @@ namespace Eggpack.Players
 	/// </summary>
 	public class CubeSlot : ModAccessorySlot
 	{
+		public override bool DrawDyeSlot => false;
+		public override bool DrawVanitySlot => false;
 		public override bool CanAcceptItem(Item item, AccessorySlotType context)
 		{
 			return item.ModItem is Cube;

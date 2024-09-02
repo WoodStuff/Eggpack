@@ -2,13 +2,13 @@
   "profiles": {
     "Terraria": {
       "commandName": "Executable",
-      "executablePath": "dotnet",
-      "commandLineArgs": "$(tMLPath)",
+      "executablePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\tModLoader\\dotnet\\dotnet.exe",
+      "commandLineArgs": "$(tMLPath) -skipselect \"Eggpack Testing:Eggpack Test World\"",
       "workingDirectory": "$(tMLSteamPath)"
     },
     "TerrariaServer": {
       "commandName": "Executable",
-      "executablePath": "dotnet",
+      "executablePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\tModLoader\\dotnet\\dotnet.exe",
       "commandLineArgs": "$(tMLServerPath)",
       "workingDirectory": "$(tMLSteamPath)"
     }

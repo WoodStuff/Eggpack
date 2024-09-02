@@ -22,10 +22,10 @@ namespace Eggpack.Elements.Prefixes
 			switch (item.prefix)
 			{
 				case int p when p == ModContent.PrefixType<Fast>():
-					g1.Text = "-10% cooldown duration";
+					g1.Text = "-5% cooldown duration";
 					break;
 				case int p when p == ModContent.PrefixType<Quick>():
-					g1.Text = "-15% cooldown duration";
+					g1.Text = "-10% cooldown duration";
 					break;
 				case int p when p == ModContent.PrefixType<Empowered>():
 					g1.Text = "+20% buff duration";

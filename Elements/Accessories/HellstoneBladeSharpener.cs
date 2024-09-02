@@ -26,7 +26,7 @@ namespace Eggpack.Elements.Accessories
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-				.AddIngredient(null, "BladeSharpener")
+				.AddIngredient<BladeSharpener>()
 				.AddIngredient(ItemID.HellstoneBar, 10)
 				.AddTile(TileID.Anvils)
 				.Register();
@@ -34,7 +34,7 @@ namespace Eggpack.Elements.Accessories
 
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{
-			player.GetDamage(DamageClass.Melee) += 0.06f;
+			player.GetDamage(DamageClass.Melee) += 0.02f;
 			player.GetCritChance(DamageClass.Melee) += 6f;
 			player.GetModPlayer<EggPlayer>().hasHellSharpener = true;
 		}

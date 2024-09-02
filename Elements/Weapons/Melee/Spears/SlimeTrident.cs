@@ -1,0 +1,35 @@
+using Eggpack.Elements.Items;
+using Eggpack.Elements.Projectiles;
+using Eggpack.Elements.Projectiles.Spear;
+using Microsoft.Xna.Framework;
+using Terraria;
+using Terraria.DataStructures;
+using Terraria.Enums;
+using Terraria.GameContent.Creative;
+using Terraria.ID;
+using Terraria.ModLoader;
+
+namespace Eggpack.Elements.Weapons.Melee.Spears
+{
+    public class SlimeTrident : ModItem
+    {
+        public override void SetStaticDefaults()
+        {
+			ItemID.Sets.Spears[Item.type] = true; // This allows the game to recognize our new item as a spear.
+			Item.ResearchUnlockCount = 1;
+        }
+        public override void SetDefaults()
+        {
+            Item.DefaultToSpear(ModContent.ProjectileType<SlimeTridentProjectile>(), 6, 32);
+            Item.SetWeaponValues(24, 7, 3);
+            Item.SetShopValues(ItemRarityColor.Blue1, 13000);
+            Item.DamageType = DamageClass.Melee;
+
+            Item.width = 40;
+            Item.height = 40;
+            Item.UseSound = SoundID.Item71;
+        }
+
+		public override bool CanUseItem(Player player) => player.ownedProjectileCounts[Item.shoot] < 1;
+	}
+}

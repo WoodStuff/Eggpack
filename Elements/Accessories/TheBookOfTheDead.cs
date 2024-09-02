@@ -26,7 +26,7 @@ namespace Eggpack.Elements.Accessories
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-				.AddIngredient(null, "PygmyEmblem")
+				.AddIngredient<PygmyEmblem>()
 				.AddIngredient(ItemID.PapyrusScarab)
 				.AddIngredient(ItemID.Ectoplasm, 10)
 				.AddTile(TileID.TinkerersWorkbench)

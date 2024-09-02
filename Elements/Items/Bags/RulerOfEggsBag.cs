@@ -1,4 +1,5 @@
-﻿using Eggpack.Elements.NPCs.RulerOfEggsBoss;
+﻿using Eggpack.Elements.Items.Tiles;
+using Eggpack.Elements.NPCs.RulerOfEggsBoss;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
@@ -30,6 +31,7 @@ namespace Eggpack.Elements.Items.Bags
 		public override void ModifyItemLoot(ItemLoot itemLoot)
 		{
 			itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<YolkShard>(), 1, 1, 3));
+			itemLoot.Add(ItemDropRule.Common(ModContent.ItemType<Yolkifier>()));
 			itemLoot.Add(ItemDropRule.CoinsBasedOnNPCValue(ModContent.NPCType<RulerOfEggs>()));
 		}
 	}

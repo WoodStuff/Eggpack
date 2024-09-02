@@ -13,7 +13,7 @@ namespace Eggpack.Elements.Prefixes.Cubes
 		{
 			return new()
 			{
-				cooldown = 0.85f
+				cooldown = 0.9f
 			};
 		}
 		public override void ModifyValue(ref float valueMult)

@@ -17,7 +17,6 @@ namespace Eggpack.Players
 		{
 			if (KeybindSystem.CubeAbility.JustPressed && Player.GetModPlayer<EggPlayer>().equippedCube != 0 && !Player.HasBuff<CubeSickness>())
 			{
-				
 				Cube cube = (Cube)ModContent.GetModItem(Player.GetModPlayer<EggPlayer>().equippedCube);
 				CubeSettings cubeSettings = cube.GetModifiedStats(Player);
 
@@ -25,7 +24,7 @@ namespace Eggpack.Players
 				if (Player.statMana < cubeSettings.manaCost || Player.statLife < cubeSettings.requireLife) return;
 
 				// shoot the projectile if it exists
-				if (cubeSettings.projectileID != 0)
+				if (cubeSettings.projectileID != 0 && !cubeSettings.dontShoot)
 				{
 					Projectile projectile = ModContent.GetModProjectile(cubeSettings.projectileID).Projectile;
 					Projectile.NewProjectile(

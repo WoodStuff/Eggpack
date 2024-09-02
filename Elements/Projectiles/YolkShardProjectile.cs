@@ -15,11 +15,14 @@ namespace Eggpack.Elements.Projectiles
 		public override void SetDefaults()
 		{
 			Projectile.DamageType = DamageClass.Generic;
+			Projectile.penetrate = -1;
+			Projectile.tileCollide = false;
+			Projectile.hostile = true;
+			Projectile.timeLeft = 300;
+			Projectile.aiStyle = ProjAIStyleID.Arrow;
 
 			Projectile.width = 18;
-			Projectile.height = 32;
-			Projectile.aiStyle = ProjAIStyleID.Arrow;
-			Projectile.hostile = true;
+			Projectile.height = 18;
 		}
 		public override void AI()
 		{
@@ -48,9 +51,7 @@ namespace Eggpack.Elements.Projectiles
 					Projectile.height,
 					DustID.Honey,
 					new Vector2(0, 1).RotatedBy(Math.PI * 2 / particles).X * 3,
-					new Vector2(0, 1).RotatedBy(Math.PI * 2 / particles).Y * 3,
-					100,
-					new Color(192, 192, 192)
+					new Vector2(0, 1).RotatedBy(Math.PI * 2 / particles).Y * 3
 				);
 				Main.dust[particle].noGravity = true;
 			}

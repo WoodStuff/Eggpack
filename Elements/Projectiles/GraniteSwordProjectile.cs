@@ -18,27 +18,21 @@ namespace Eggpack.Elements.Projectiles
 
 			Projectile.width = 16;
 			Projectile.height = 16;
-			Projectile.aiStyle = 1;
 			Projectile.friendly = true;
 			Projectile.timeLeft = 90;
-
-			AIType = ProjectileID.Bullet;
 		}
 		public override void AI()
 		{
-			for (int i = 0; i < 3; i++)
-			{
-				int particle = Dust.NewDust(
-					new Vector2(Projectile.position.X, Projectile.position.Y),
-					Projectile.width,
-					Projectile.height,
-					DustID.Granite,
-					0f,
-					0f,
-					100
-				);
-				Main.dust[particle].noGravity = true;
-			}
+			int particle = Dust.NewDust(
+				new Vector2(Projectile.position.X, Projectile.position.Y),
+				Projectile.width,
+				Projectile.height,
+				DustID.Granite,
+				Projectile.velocity.X,
+				Projectile.velocity.Y,
+				100
+			);
+			Main.dust[particle].noGravity = true;
 		}
 		public override void OnKill(int timeLeft)
 		{
@@ -51,9 +45,7 @@ namespace Eggpack.Elements.Projectiles
 					Projectile.height,
 					DustID.Granite,
 					new Vector2(0, 1).RotatedBy(Math.PI * 2 / particles).X * 3,
-					new Vector2(0, 1).RotatedBy(Math.PI * 2 / particles).Y * 3,
-					100,
-					new Color(192, 192, 192)
+					new Vector2(0, 1).RotatedBy(Math.PI * 2 / particles).Y * 3
 				);
 				Main.dust[particle].noGravity = true;
 			}

@@ -12,7 +12,6 @@ namespace Eggpack.Elements.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			// Tooltip.SetDefault("+5% critical strike chance");
 			Item.ResearchUnlockCount = 1;
 		}
 		public override void SetDefaults()
@@ -22,13 +21,13 @@ namespace Eggpack.Elements.Accessories
 			Item.value = Item.sellPrice(0, 7, 50, 0);
 			Item.rare = ItemRarityID.Orange;
 			Item.accessory = true;
-			Item.defense = 5;
+			Item.defense = 3;
 		}
 
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddIngredient(null, "ReinforcedShield")
+			.AddIngredient<ReinforcedShield>()
 			.AddIngredient(ItemID.HellstoneBar, 10)
 			.AddTile(TileID.Anvils)
 			.Register();

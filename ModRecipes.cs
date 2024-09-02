@@ -2,6 +2,8 @@
 using Terraria.ModLoader;
 using Terraria.Localization;
 using Terraria.ID;
+using Eggpack.Elements.Items;
+using Eggpack.Elements.Accessories;
 
 namespace Eggpack
 {
@@ -11,7 +13,7 @@ namespace Eggpack
 		{
 			// MACE
 			Recipe.Create(ItemID.Mace)
-				.AddIngredient(null, "ThingiteBar", 10)
+				.AddIngredient<ThingiteBar>(10)
 				.AddRecipeGroup(RecipeGroupID.IronBar, 2)
 				.AddRecipeGroup(RecipeGroupID.Wood, 20)
 				.AddTile(TileID.Anvils)
@@ -34,8 +36,9 @@ namespace Eggpack
 
 			// ANKLET OF THE WIND
 			Recipe.Create(ItemID.AnkletoftheWind)
-				.AddIngredient(null, "SpeedRing")
+				.AddIngredient<SpeedRing>()
 				.AddIngredient(ItemID.JungleSpores, 20)
+				.AddIngredient(ItemID.Vine, 5)
 				.AddIngredient(ItemID.Amethyst, 5)
 				.AddTile(TileID.Anvils)
 				.Register();
@@ -52,6 +55,12 @@ namespace Eggpack
 			Recipe.Create(ItemID.HandWarmer)
 				.AddIngredient(ItemID.FlinxFur, 5)
 				.AddTile(TileID.WorkBenches)
+				.Register();
+
+			// THROWING KNIFE
+			Recipe.Create(ItemID.ThrowingKnife, 50)
+				.AddRecipeGroup(RecipeGroupID.IronBar)
+				.AddTile(TileID.Anvils)
 				.Register();
 		}
 	}

@@ -4,6 +4,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.GameContent.Creative;
+using Eggpack.Elements.Items;
 
 namespace Eggpack.Elements.Accessories
 {
@@ -25,8 +26,8 @@ namespace Eggpack.Elements.Accessories
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-				.AddIngredient(null, "WoodenCrosshair")
-				.AddIngredient(null, "ThingiteBar", 4)
+				.AddIngredient<WoodenCrosshair>()
+				.AddIngredient<ThingiteBar>(4)
 				.AddTile(TileID.Anvils)
 				.Register();
 		}

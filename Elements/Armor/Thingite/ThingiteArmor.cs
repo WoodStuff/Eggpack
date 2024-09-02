@@ -3,6 +3,7 @@ using Terraria.ModLoader;
 using Terraria.ID;
 using System;
 using Terraria.GameContent.Creative;
+using Eggpack.Elements.Items;
 
 namespace Eggpack.Elements.Armor.Thingite
 {
@@ -37,7 +38,7 @@ namespace Eggpack.Elements.Armor.Thingite
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddIngredient(null, "ThingiteBar", 10)
+			.AddIngredient<ThingiteBar>(10)
 			.AddTile(TileID.Anvils)
 			.Register();
 		}
@@ -63,7 +64,7 @@ namespace Eggpack.Elements.Armor.Thingite
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddIngredient(null, "ThingiteBar", 12)
+			.AddIngredient<ThingiteBar>(12)
 			.AddTile(TileID.Anvils)
 			.Register();
 		}
@@ -89,7 +90,7 @@ namespace Eggpack.Elements.Armor.Thingite
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddIngredient(null, "ThingiteBar", 8)
+			.AddIngredient<ThingiteBar>(8)
 			.AddTile(TileID.Anvils)
 			.Register();
 		}

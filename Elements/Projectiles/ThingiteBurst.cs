@@ -1,7 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using System;
 using Terraria;
-using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -19,12 +18,11 @@ namespace Eggpack.Elements.Projectiles
 			Projectile.DamageType = DamageClass.Generic;
 			Projectile.penetrate = 2;
 			Projectile.tileCollide = true;
+			Projectile.friendly = true;
+			Projectile.timeLeft = 180;
 
 			Projectile.width = 30;
 			Projectile.height = 30;
-			Projectile.aiStyle = 1;
-			Projectile.friendly = true;
-			AIType = ProjectileID.Bullet;
 		}
 		public override void AI()
 		{

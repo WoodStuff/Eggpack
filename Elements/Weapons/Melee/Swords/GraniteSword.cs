@@ -8,7 +8,7 @@ using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Eggpack.Elements.Weapons.Melee
+namespace Eggpack.Elements.Weapons.Melee.Swords
 {
 	/// <summary>
 	/// A sword that fires a Granite Orb, found in Granite Chests.
@@ -23,7 +23,7 @@ namespace Eggpack.Elements.Weapons.Melee
 		{
 			Item.CloneDefaults(ItemID.IceBlade);
 			Item.SetWeaponValues(18, 7, 3);
-			Item.SetShopValues(ItemRarityColor.Green2, 13000);
+			Item.SetShopValues(ItemRarityColor.Green2, Item.sellPrice(0, 1, 30, 0));
 			Item.DamageType = DamageClass.Melee;
 			Item.useTime = 48;
 			Item.useAnimation = 24;

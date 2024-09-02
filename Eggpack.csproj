@@ -7,15 +7,23 @@
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Elements\Accessories\HellstoneShield.cs.bak" />
+    <None Remove="Elements\Accessories\JewelRing_HandsOn.png" />
+    <None Remove="Elements\Accessories\LifeRing.png" />
+    <None Remove="Elements\Accessories\LifeRing_HandsOn.png" />
     <None Remove="Elements\Accessories\LuckyClover.cs.bak" />
     <None Remove="Elements\Accessories\ReinforcedShield.cs.bak" />
     <None Remove="Elements\Accessories\ThingiteShield.cs.bak" />
     <None Remove="Elements\Accessories\WoodenShield.cs.bak" />
+    <None Remove="Elements\NPCs\RulerOfEggsBoss\LoyalEgg.png" />
     <None Remove="Elements\Projectiles\GraniteSwordProjectile.png" />
+    <None Remove="Elements\Projectiles\Slicers\MeteorSlicerProjectile.png" />
+    <None Remove="Elements\Projectiles\YolkBurst.png" />
+    <None Remove="Elements\Projectiles\YolkBurstFriendly.png" />
     <None Remove="Elements\Projectiles\YolkShardProjectile.png" />
     <None Remove="Elements\Tools\ThingiteAxe.cs.bak" />
     <None Remove="Elements\Tools\ThingiteHammer.cs.bak" />
     <None Remove="Elements\Tools\ThingitePickaxe.cs.bak" />
+    <None Remove="Elements\Weapons\Ranged\Slicers\MeteorSlicer.png" />
     <None Remove="Elements\Weapons\ThingiteSword.cs.bak" />
     <None Remove="ModWorldGen.cs.bak" />
     <None Remove="TileUtils.cs.bak" />

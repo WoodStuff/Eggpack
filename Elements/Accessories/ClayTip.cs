@@ -1,9 +1,6 @@
-﻿using Eggpack.Elements.Tiles;
-using Terraria;
-using Terraria.Localization;
+﻿using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
-using Terraria.GameContent.Creative;
 
 namespace Eggpack.Elements.Accessories
 {
@@ -33,8 +30,7 @@ namespace Eggpack.Elements.Accessories
 
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{
-			player.GetDamage(DamageClass.Ranged) += 0.02f;
-			player.GetCritChance(DamageClass.Ranged) += 2f;
+			player.GetCritChance(DamageClass.Ranged) += 4f;
 		}
 	}
 }

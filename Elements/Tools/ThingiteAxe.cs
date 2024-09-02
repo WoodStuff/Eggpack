@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Eggpack.Elements.Items;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -8,16 +9,16 @@ namespace Eggpack.Elements.Tools
 {
 	public class ThingiteAxe : ModItem
 	{
-        public override void SetStaticDefaults()
-        {
+		public override void SetStaticDefaults()
+		{
 			Item.ResearchUnlockCount = 1;
 		}
-        public override void SetDefaults()
+		public override void SetDefaults()
 		{
 			Item.damage = 10;
 			Item.DamageType = DamageClass.Melee;
-			Item.width = 32;
-			Item.height = 28;
+			Item.width = 36;
+			Item.height = 32;
 			Item.useTime = 16;
 			Item.useAnimation = 16;
 			Item.axe = 14;
@@ -33,8 +34,8 @@ namespace Eggpack.Elements.Tools
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			.AddIngredient(null, "ThingiteBar", 8)
-			.AddRecipeGroup("Wood", 3)
+			.AddIngredient<ThingiteBar>(8)
+			.AddRecipeGroup(RecipeGroupID.Wood, 3)
 			.AddTile(TileID.Anvils)
 			.Register();
 		}

@@ -162,7 +162,7 @@ namespace Eggpack.Elements
 		/// </summary>
 		public int takeMana;
 		/// <summary>
-		/// How much HP you need to use the cube.
+		/// How much HP you need to use the cube. This does not take away life, use <see cref="backfireDamage"/> to take away the life.
 		/// </summary>
 		public int requireLife;
 		/// <summary>
@@ -170,6 +170,10 @@ namespace Eggpack.Elements
 		/// </summary>
 		public int healLife;
 
+		/// <summary>
+		/// Determines if activating shoots the projectile. Set to true if adding own projectile shooting behavior.
+		/// </summary>
+		public bool dontShoot = false;
 		/// <summary>
 		/// The projectile the cube fires. 0 is none.
 		/// </summary>
@@ -184,7 +188,7 @@ namespace Eggpack.Elements
 		/// </summary>
 		public float damageMult = 1;
 		/// <summary>
-		/// Multiplies the knockkback. Mainly used for projectiles.
+		/// Multiplies the knockback. Mainly used for projectiles.
 		/// </summary>
 		public float knockbackMult = 1;
 		/// <summary>
