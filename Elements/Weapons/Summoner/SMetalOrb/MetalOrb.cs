@@ -18,8 +18,8 @@ namespace Eggpack.Elements.Weapons.Summoner.SMetalOrb
 
 		public sealed override void SetDefaults()
 		{
-			Projectile.width = 32;
-			Projectile.height = 32;
+			Projectile.width = 20;
+			Projectile.height = 20;
 			Projectile.tileCollide = false;
 
 			Projectile.friendly = true;

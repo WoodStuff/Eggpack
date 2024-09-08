@@ -20,7 +20,7 @@ namespace Eggpack.Elements.Weapons.Summoner.SMetalOrb
 
 		public override void SetDefaults()
 		{
-			Item.damage = 5;
+			Item.damage = 4;
 			Item.knockBack = 3f;
 			Item.mana = 10; // mana cost
 			Item.width = 64;

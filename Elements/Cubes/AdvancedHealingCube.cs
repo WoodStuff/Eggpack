@@ -13,6 +13,7 @@ namespace Eggpack.Elements.Cubes
 		{
 			Item.SetShopValues(ItemRarityColor.Green2, Item.sellPrice(0, 2));
 		}
+
 		public override CubeSettings GetCubeSettings()
 		{
 			CubeSettings settings = new()
@@ -28,6 +29,7 @@ namespace Eggpack.Elements.Cubes
 
 			return settings;
 		}
+
 		public override void AddRecipes()
 		{
 			CreateRecipe()

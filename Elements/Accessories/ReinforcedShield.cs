@@ -30,7 +30,7 @@ namespace Eggpack.Elements.Accessories
 			.AddIngredient(ItemID.Shackle)
 			.AddIngredient<ThingiteShield>()
 			.AddRecipeGroup(RecipeGroupID.IronBar, 6)
-			.AddTile(TileID.TinkerersWorkbench)
+			.AddTile(TileID.Anvils)
 			.Register();
 		}
 	}
