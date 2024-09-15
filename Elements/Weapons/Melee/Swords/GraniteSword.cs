@@ -23,7 +23,7 @@ namespace Eggpack.Elements.Weapons.Melee.Swords
 		{
 			Item.CloneDefaults(ItemID.IceBlade);
 			Item.SetWeaponValues(18, 7, 3);
-			Item.SetShopValues(ItemRarityColor.Green2, Item.sellPrice(0, 1, 30, 0));
+			Item.SetShopValues(ItemRarityColor.Green2, Item.sellPrice(0, 1, 0, 0));
 			Item.DamageType = DamageClass.Melee;
 			Item.useTime = 48;
 			Item.useAnimation = 24;

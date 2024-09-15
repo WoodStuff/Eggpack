@@ -53,7 +53,7 @@ namespace Eggpack.Players
 
 				// add the buffs & debuffs
 				if (cubeSettings.buffID != 0) Player.AddBuff(cubeSettings.buffID, (int)cubeSettings.buffDuration);
-				if (cubeSettings.backfireBuffID != 0) Player.AddBuff(cubeSettings.backfireBuffID, (int)cubeSettings.backfireBuffDuration);
+				if (cubeSettings.debuffID != 0) Player.AddBuff(cubeSettings.debuffID, (int)cubeSettings.debuffDuration);
 
 				// play the sound
 				if (cubeSettings.sound != null) SoundEngine.PlaySound((SoundStyle)cubeSettings.sound, Player.Center);

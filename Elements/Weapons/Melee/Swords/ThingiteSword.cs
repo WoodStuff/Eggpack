@@ -38,6 +38,7 @@ namespace Eggpack.Elements.Weapons.Melee.Swords
                 .AddTile(TileID.Anvils)
                 .Register();
         }
+
         public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
         {
             if (!hit.Crit) return;

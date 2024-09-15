@@ -14,8 +14,9 @@ namespace Eggpack.Elements.Cubes
 	{
 		public override void CustomDefaults()
 		{
-			Item.SetShopValues(ItemRarityColor.Green2, Item.sellPrice(0, 2));
+			Item.SetShopValues(ItemRarityColor.Green2, Item.sellPrice(0, 1));
 		}
+
 		public override CubeSettings GetCubeSettings()
 		{
 			CubeSettings settings = new()
@@ -28,12 +29,13 @@ namespace Eggpack.Elements.Cubes
 				damages = true,
 				dontShoot = true,
 
-				backfireBuffID = ModContent.BuffType<WeaponExhaustion>(),
-				backfireBuffDuration = Eggpack.ToFrames(8),
+				debuffID = ModContent.BuffType<WeaponExhaustion>(),
+				debuffDuration = Eggpack.ToFrames(8),
 			};
 
 			return settings;
 		}
+
 		public override void OnActivate(Player player)
 		{
 			CubeSettings cubeSettings = GetModifiedStats(player);
@@ -52,6 +54,7 @@ namespace Eggpack.Elements.Cubes
 				);
 			}
 		}
+
 		public override void AddRecipes()
 		{
 			CreateRecipe()

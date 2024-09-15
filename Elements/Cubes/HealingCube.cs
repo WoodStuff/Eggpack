@@ -11,7 +11,7 @@ namespace Eggpack.Elements.Cubes
 	{
 		public override void CustomDefaults()
 		{
-			Item.SetShopValues(ItemRarityColor.Blue1, Item.sellPrice(0, 1, 50));
+			Item.SetShopValues(ItemRarityColor.Blue1, Item.sellPrice(0, 0, 50));
 		}
 		public override CubeSettings GetCubeSettings()
 		{
@@ -22,8 +22,8 @@ namespace Eggpack.Elements.Cubes
 
 				healLife = 25,
 
-				backfireBuffID = ModContent.BuffType<Paperskin>(),
-				backfireBuffDuration = Eggpack.ToFrames(8),
+				debuffID = ModContent.BuffType<Paperskin>(),
+				debuffDuration = Eggpack.ToFrames(8),
 			};
 
 			return settings;

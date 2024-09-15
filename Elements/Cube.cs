@@ -58,8 +58,8 @@ namespace Eggpack.Elements
 				CubeSettings cube_stats = GetCubeSettings();
 					 if (prefix_stats.damage != 1 && !cube_stats.damages) prefixes.Remove(id);
 				else if (prefix_stats.knockback != 1 && !cube_stats.damages) prefixes.Remove(id);
-				else if (prefix_stats.buffDuration != 1 && cube_stats.buffID == 0) prefixes.Remove(id);
-				else if (prefix_stats.backfireBuffDuration != 1 && cube_stats.backfireBuffID == 0) prefixes.Remove(id);
+				else if (prefix_stats.buffDuration != 1 && cube_stats.buffID == 0 && !cube_stats.buffPrefix) prefixes.Remove(id);
+				else if (prefix_stats.debuffDuration != 1 && cube_stats.debuffID == 0 && !cube_stats.debuffPrefix) prefixes.Remove(id);
 				else if (prefix_stats.lifeCost != 1 && cube_stats.requireLife == 0) prefixes.Remove(id);
 				else if (prefix_stats.healing != 1 && cube_stats.healLife == 0) prefixes.Remove(id);
 				else if (prefix_stats.projectileSpeed != 1 && cube_stats.projectileID == 0) prefixes.Remove(id);
@@ -99,7 +99,7 @@ namespace Eggpack.Elements
 				modifiers.damageMult *= pref.GetModifiedStats().damage;
 				modifiers.knockbackMult *= pref.GetModifiedStats().knockback;
 				modifiers.buffDuration *= pref.GetModifiedStats().buffDuration;
-				modifiers.backfireBuffDuration *= pref.GetModifiedStats().backfireBuffDuration;
+				modifiers.debuffDuration *= pref.GetModifiedStats().debuffDuration;
 				modifiers.requireLife = (int)(modifiers.manaCost * pref.GetModifiedStats().lifeCost);
 				modifiers.healLife = (int)(modifiers.healLife * pref.GetModifiedStats().healing);
 				modifiers.projectileSpeed *= pref.GetModifiedStats().projectileSpeed;
@@ -125,7 +125,7 @@ namespace Eggpack.Elements
 				modifiers.damageMult *= pref.GetModifiedStats().damage;
 				modifiers.knockbackMult *= pref.GetModifiedStats().knockback;
 				modifiers.buffDuration *= pref.GetModifiedStats().buffDuration;
-				modifiers.backfireBuffDuration *= pref.GetModifiedStats().backfireBuffDuration;
+				modifiers.debuffDuration *= pref.GetModifiedStats().debuffDuration;
 				modifiers.requireLife = (int)(modifiers.manaCost * pref.GetModifiedStats().lifeCost);
 				modifiers.healLife = (int)(modifiers.healLife * pref.GetModifiedStats().healing);
 				modifiers.projectileSpeed *= pref.GetModifiedStats().projectileSpeed;
@@ -197,6 +197,15 @@ namespace Eggpack.Elements
 		public bool damages = false;
 
 		/// <summary>
+		/// True if the cube should get buff prefixes even if it doesn't give any buffs.
+		/// </summary>
+		public bool buffPrefix = false;
+		/// <summary>
+		/// True if the cube should get debuff prefixes even if it doesn't give any debuffs.
+		/// </summary>
+		public bool debuffPrefix = false;
+
+		/// <summary>
 		/// A sound can be played on cube use, this will be the SoundStyle for it.
 		/// </summary>
 		public SoundStyle? sound = null;
@@ -212,11 +221,11 @@ namespace Eggpack.Elements
 		/// <summary>
 		/// The debuff the cube gives you when used, since pre-ML can't get too easy. 0 is none.
 		/// </summary>
-		public int backfireBuffID;
+		public int debuffID;
 		/// <summary>
 		/// The duration of the cube's debuff, in frames. Use <c>Eggpack.ToFrames(seconds)</c> for seconds.
 		/// </summary>
-		public float backfireBuffDuration;
+		public float debuffDuration;
 		/// <summary>
 		/// How much HP the cube damages you for when used. 0 is none.
 		/// </summary>

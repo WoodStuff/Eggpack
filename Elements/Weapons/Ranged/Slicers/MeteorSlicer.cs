@@ -17,7 +17,7 @@ namespace Eggpack.Elements.Weapons.Ranged.Slicers
 		public override void SetDefaults()
 		{
 			Item.DefaultToThrownWeapon(ModContent.ProjectileType<MeteorSlicerProjectile>(), 18, 12);
-			Item.SetWeaponValues(22, 2.5f, 4);
+			Item.SetWeaponValues(23, 2.5f, 4);
 			Item.SetShopValues(ItemRarityColor.Blue1, Item.sellPrice(0, 0, 0, 75));
 
 			Item.width = 32;

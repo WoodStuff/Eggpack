@@ -11,7 +11,6 @@ namespace Eggpack.Elements.Accessories
 	{
 		public override void SetStaticDefaults()
 		{
-			// Tooltip.SetDefault("Increases your max number of minions by 3\n16% increased summon damage");
 			Item.ResearchUnlockCount = 1;
 		}
 		public override void SetDefaults()

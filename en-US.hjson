@@ -1,0 +1,339 @@
+Mods: {
+	Eggpack: {
+		"Keybinds.Cube Ability.DisplayName": Use Cube
+		WorldGen.ThingiteOrePassMessage: Generating thingite
+
+		Tiles: {
+			ThingiteOreTile.MapEntry: Thingite
+			Yolkifier.MapEntry: Yolkifier
+		}
+
+		Buffs: {
+			CubeSickness: {
+				DisplayName: Cube Sickness
+				Description: Cannot use any cubes
+			}
+
+			WeaponExhaustion: {
+				DisplayName: Weapon Exhaustion
+				Description: Weapons are slowed down by 25%
+			}
+
+			MetalOrbBuff: {
+				DisplayName: Metal Orb Buff
+				Description: The metal orb will fight for you
+			}
+
+			WoodenWhipDebuff: {
+				DisplayName: Wooden Whip Debuff
+				Description: Marked by the Wooden Whip
+			}
+
+			Paperskin: {
+				DisplayName: Paperskin
+				Description: Defense lowered by 8
+			}
+		}
+
+		Items: {
+			BladeSharpener: {
+				DisplayName: Blade Sharpener
+				Tooltip: +4% melee critical strike chance
+			}
+
+			HellstoneBladeSharpener: {
+				DisplayName: Hellstone Blade Sharpener
+				Tooltip:
+					'''
+					+2% melee damage, +6% melee critical strike chance
+					50% chance to set struck enemies on fire
+					'''
+			}
+
+			HellstoneShield: {
+				DisplayName: Hellstone Shield
+				Tooltip: +5% critical strike chance
+			}
+
+			LuckyClover: {
+				DisplayName: Lucky Clover
+				Tooltip: +4% critical strike chance
+			}
+
+			ManaRing: {
+				DisplayName: Mana Ring
+				Tooltip: -3% mana cost
+			}
+
+			PygmyEmblem: {
+				DisplayName: Pygmy Emblem
+				Tooltip:
+					'''
+					Increases your max number of minions by 1
+					12% increased summon damage
+					'''
+			}
+
+			ReinforcedShield: {
+				DisplayName: Reinforced Shield
+				Tooltip: ""
+			}
+
+			SpeedRing: {
+				DisplayName: Speed Ring
+				Tooltip: +10% movement speed
+			}
+
+			TheBookOfTheDead: {
+				DisplayName: The Book Of The Dead
+				Tooltip:
+					'''
+					Increases your max number of minions by 3
+					16% increased summon damage
+					'''
+			}
+
+			ThingiteShield: {
+				DisplayName: Thingite Shield
+				Tooltip: ""
+			}
+
+			WoodenCrosshair: {
+				DisplayName: Wooden Crosshair
+				Tooltip: +2% critical strike chance
+			}
+
+			WoodenShield: {
+				DisplayName: Wooden Shield
+				Tooltip: ""
+			}
+
+			ThingiteBreastplate: {
+				DisplayName: Thingite Breastplate
+				Tooltip: ""
+			}
+
+			ThingiteGreaves: {
+				DisplayName: Thingite Greaves
+				Tooltip: ""
+			}
+
+			ThingiteHelmet: {
+				DisplayName: Thingite Helmet
+				Tooltip: ""
+			}
+
+			ThingiteCube: {
+				DisplayName: Thingite Cube
+				CubeTooltip: Releases a Thingite Burst that does 60 damage, but slows down weapons by 25% for 10 seconds
+				Tooltip: ""
+			}
+
+			ThingiteBar: {
+				DisplayName: Thingite Bar
+				Tooltip: ""
+			}
+
+			ThingiteOre: {
+				DisplayName: Thingite Ore
+				Tooltip: ""
+			}
+
+			YolkShard: {
+				DisplayName: Yolk Shard
+				Tooltip: ""
+			}
+
+			ThingiteAxe: {
+				DisplayName: Thingite Axe
+				Tooltip: ""
+			}
+
+			ThingiteHammer: {
+				DisplayName: Thingite Hammer
+				Tooltip: ""
+			}
+
+			ThingitePickaxe: {
+				DisplayName: Thingite Pickaxe
+				Tooltip: ""
+			}
+
+			EggSplatter: {
+				DisplayName: Egg Splatter
+				Tooltip: Summons the Ruler of Eggs when striking a Wild Egg
+			}
+
+			ThingiteDagger: {
+				DisplayName: Thingite Dagger
+				Tooltip: Exceptionally quick
+			}
+
+			ThingiteSword: {
+				DisplayName: Thingite Sword
+				Tooltip: Critical strikes weaken enemies
+			}
+
+			ThingiteBow: {
+				DisplayName: Thingite Bow
+				Tooltip: ""
+			}
+
+			MetalStaff: {
+				DisplayName: Metal Staff
+				Tooltip: Summons a metal orb to fight for you
+			}
+
+			WoodenWhip: {
+				DisplayName: Wooden Whip
+				Tooltip: '''"Simple. You form it into a whip."'''
+			}
+
+			ThingiteCrosshair: {
+				DisplayName: Thingite Crosshair
+				Tooltip: +5% critical strike chance
+			}
+
+			ClayTip: {
+				DisplayName: Clay Tip
+				Tooltip: +4% ranged critical strike chance
+			}
+
+			GraniteStaff: {
+				DisplayName: Granite Staff
+				Tooltip: Shoots three granite energy bolts
+			}
+
+			GraniteSword: {
+				DisplayName: Granite Sword
+				Tooltip: Shoots a granite energy bolt
+			}
+
+			RulerOfEggsBag: {
+				DisplayName: Ruler Of Eggs Bag
+				Tooltip: ""
+			}
+
+			SlimeTrident: {
+				DisplayName: Slime Trident
+				Tooltip: ""
+			}
+
+			LifeRing: {
+				DisplayName: Life Ring
+				Tooltip: +20 max life
+			}
+
+			JewelRing: {
+				DisplayName: Jewel Ring
+				Tooltip:
+					'''
+					+20 max life
+					+10% movement speed
+					-3% mana cost
+					'''
+			}
+
+			ThingiteSlicer: {
+				DisplayName: Thingite Slicer
+				Tooltip: Critical strikes deal triple damage
+			}
+
+			MeteorSlicer: {
+				DisplayName: Meteor Slicer
+				Tooltip: Critical strikes deal triple damage
+			}
+
+			Yolkifier: {
+				DisplayName: Yolkifier
+				Tooltip: Allows crafting of egg-themed items
+			}
+
+			HealingCube: {
+				DisplayName: Healing Cube
+				CubeTooltip: Heals the user for 25 life, but reduces defense by 8 for 8 seconds
+				Tooltip: ""
+			}
+
+			OutburstCube: {
+				DisplayName: Outburst Cube
+				CubeTooltip: Releases 8 Yolk Bursts in a circle which do 60 damage each, but slows down weapons by 25% for 8 seconds
+				Tooltip: ""
+			}
+
+			ObsidianTip: {
+				DisplayName: Obsidian Tip
+				Tooltip: +2% ranged damage, +6% ranged critical strike chance
+			}
+
+			AdvancedHealingCube: {
+				DisplayName: Advanced Healing Cube
+				CubeTooltip: Heals the user for 50 life, but reduces defense by 8 for 12 seconds
+				Tooltip: ""
+			}
+
+			HellstoneCube: {
+				DisplayName: Hellstone Cube
+				CubeTooltip: Sets everyone around (and including) the user on fire
+				Tooltip: ""
+			}
+		}
+
+		NPCs: {
+			WildEgg.DisplayName: Wild Egg
+			LoyalEgg.DisplayName: Wild Egg
+
+			RulerOfEggs: {
+				DisplayName: Ruler Of Eggs
+				BossChecklistIntegration.SpawnInfo: Strike a Wild Egg with [i:Eggpack/EggSplatter]
+			}
+		}
+
+		Prefixes: {
+			Fast.DisplayName: Fast
+			Quick.DisplayName: Quick
+			Empowered.DisplayName: Empowered
+			Powerful.DisplayName: Powerful
+			Broken.DisplayName: Broken
+			Charged.DisplayName: Charged
+			Crude.DisplayName: Crude
+			Efficient.DisplayName: Efficient
+			Energized.DisplayName: Energized
+			Exhaustive.DisplayName: Exhaustive
+			Forceful.DisplayName: Forceful
+			Frugal.DisplayName: Frugal
+			Generous.DisplayName: Generous
+			Healthy.DisplayName: Healthy
+			Impatient.DisplayName: Impatient
+			Inferior.DisplayName: Inferior
+			Intense.DisplayName: Intense
+			Lazy.DisplayName: Lazy
+			Legendary.DisplayName: Legendary
+			Lengthened.DisplayName: Lengthened
+			Merciful.DisplayName: Merciful
+			Mythic.DisplayName: Mythic
+			Punishing.DisplayName: Punishing
+			Rapid.DisplayName: Rapid
+			Sacrificial.DisplayName: Sacrificial
+			Sharp.DisplayName: Sharp
+			Slow.DisplayName: Slow
+			Spherical.DisplayName: Spherical
+			Wasteful.DisplayName: Wasteful
+			Weak.DisplayName: Weak
+		}
+
+		Projectiles: {
+			ThingiteBurst.DisplayName: Thingite Burst
+			MetalOrb.DisplayName: Metal Orb
+			WoodenWhipProjectile.DisplayName: Wooden Whip
+			GraniteStaffProjectile.DisplayName: Magic Granite Orb
+			GraniteSwordProjectile.DisplayName: Sharp Granite Orb
+			YolkShardProjectile.DisplayName: Yolk Shard
+			SlimeTridentProjectile.DisplayName: Slime Trident
+			ThingiteSlicerProjectile.DisplayName: Thingite Slicer
+			MeteorSlicerProjectile.DisplayName: Meteor Slicer
+			YolkBurst.DisplayName: Yolk Burst
+			YolkBurstFriendly.DisplayName: Yolk Burst
+		}
+	}
+}

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Terraria;
 using Terraria.ModLoader;
 
 namespace Eggpack.Elements.Prefixes.Cubes
@@ -14,6 +15,11 @@ namespace Eggpack.Elements.Prefixes.Cubes
 		/// </summary>
 		/// <returns>What should be modified in the cube.</returns>
 		public abstract CubePrefixModifiers GetModifiedStats();
+
+		/*public override bool CanRoll(Item item)
+		{
+			return 
+		}*/
 	}
 
 	/// <summary>
@@ -26,7 +32,7 @@ namespace Eggpack.Elements.Prefixes.Cubes
 		public float damage = 1;
 		public float knockback = 1;
 		public float buffDuration = 1;
-		public float backfireBuffDuration = 1;
+		public float debuffDuration = 1;
 		public float lifeCost = 1;
 		public float healing = 1;
 		public float projectileSpeed = 1;

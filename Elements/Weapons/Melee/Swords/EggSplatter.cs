@@ -28,7 +28,7 @@ namespace Eggpack.Elements.Weapons.Melee.Swords
             Item.useAnimation = 18;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.knockBack = 5;
-            Item.value = Item.sellPrice(0, 7, 50, 0);
+            Item.value = Item.sellPrice(0, 0, 50, 0);
             Item.rare = ItemRarityID.Green;
             Item.UseSound = SoundID.Item1;
         }

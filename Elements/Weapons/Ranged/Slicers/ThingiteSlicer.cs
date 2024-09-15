@@ -17,7 +17,7 @@ namespace Eggpack.Elements.Weapons.Ranged.Slicers
 		public override void SetDefaults()
 		{
 			Item.DefaultToThrownWeapon(ModContent.ProjectileType<ThingiteSlicerProjectile>(), 18, 10);
-			Item.SetWeaponValues(14, 2, 4);
+			Item.SetWeaponValues(15, 2, 4);
 			Item.SetShopValues(ItemRarityColor.Blue1, Item.sellPrice(0, 0, 0, 50));
 
 			Item.width = 32;

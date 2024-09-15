@@ -14,7 +14,7 @@ namespace Eggpack.Elements.Prefixes.Cubes
 			return new()
 			{
 				buffDuration = 1.25f,
-				backfireBuffDuration = 1.25f
+				debuffDuration = 1.25f
 			};
 		}
 		public override void ModifyValue(ref float valueMult)

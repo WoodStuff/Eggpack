@@ -12,6 +12,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
+using Terraria.Audio;
 
 namespace Eggpack.Elements.NPCs.RulerOfEggsBoss
 {
@@ -139,6 +140,8 @@ namespace Eggpack.Elements.NPCs.RulerOfEggsBoss
 			NPC.boss = true;
 			NPC.npcSlots = 10f;
 			NPC.aiStyle = -1;
+			NPC.HitSound = SoundID.NPCHit1;
+			NPC.DeathSound = SoundID.NPCDeath1;
 
 			if (!Main.dedServ)
 			{

@@ -26,9 +26,9 @@ namespace Eggpack.Elements.Projectiles.Slicers
 		{
 			Projectile.ai[0]++;
 
-			if (Projectile.ai[0] > 10f)
+			if (Projectile.ai[0] > 15f)
 			{
-				Projectile.velocity.Y += 0.25f;
+				Projectile.velocity.Y += 0.2f;
 				if (Projectile.velocity.Y > 16f) Projectile.velocity.Y = 16f;
 			}
 

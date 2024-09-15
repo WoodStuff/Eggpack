@@ -16,7 +16,7 @@ namespace Eggpack.Elements.Projectiles
 			Projectile.damage = 60;
 			Projectile.knockBack = 4;
 			Projectile.DamageType = DamageClass.Generic;
-			Projectile.penetrate = 2;
+			Projectile.penetrate = 5;
 			Projectile.tileCollide = true;
 			Projectile.friendly = true;
 			Projectile.timeLeft = 180;

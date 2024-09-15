@@ -14,6 +14,7 @@
     <None Remove="Elements\Accessories\ReinforcedShield.cs.bak" />
     <None Remove="Elements\Accessories\ThingiteShield.cs.bak" />
     <None Remove="Elements\Accessories\WoodenShield.cs.bak" />
+    <None Remove="Elements\Cubes\HellstoneCube.png" />
     <None Remove="Elements\NPCs\RulerOfEggsBoss\LoyalEgg.png" />
     <None Remove="Elements\Projectiles\GraniteSwordProjectile.png" />
     <None Remove="Elements\Projectiles\Slicers\MeteorSlicerProjectile.png" />

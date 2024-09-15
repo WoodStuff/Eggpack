@@ -21,7 +21,7 @@ namespace Eggpack.Elements.NPCs.RulerOfEggsBoss
             NPC.height = 32;
             NPC.damage = 30;
             NPC.defense = 10;
-            NPC.lifeMax = 150;
+            NPC.lifeMax = 75;
             NPC.HitSound = SoundID.NPCHit1;
             NPC.DeathSound = SoundID.NPCDeath1;
             NPC.value = 40;

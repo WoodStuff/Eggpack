@@ -13,7 +13,7 @@ namespace Eggpack.Elements.Cubes
 	{
 		public override void CustomDefaults()
 		{
-			Item.SetShopValues(ItemRarityColor.Blue1, Item.sellPrice(0, 1));
+			Item.SetShopValues(ItemRarityColor.Blue1, Item.sellPrice(0, 0, 50));
 		}
 		public override CubeSettings GetCubeSettings()
 		{
@@ -26,8 +26,8 @@ namespace Eggpack.Elements.Cubes
 				projectileSpeed = 10,
 				damages = true,
 
-				backfireBuffID = ModContent.BuffType<WeaponExhaustion>(),
-				backfireBuffDuration = Eggpack.ToFrames(10),
+				debuffID = ModContent.BuffType<WeaponExhaustion>(),
+				debuffDuration = Eggpack.ToFrames(10),
 			};
 
 			return settings;
