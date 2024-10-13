@@ -1,5 +1,6 @@
-﻿using Eggpack.Elements.Prefixes.Cubes;
-using Eggpack.Players;
+﻿using Eggpack.Common;
+using Eggpack.Common.Players;
+using Eggpack.Elements.Prefixes.Cubes;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.Audio;
@@ -9,10 +10,10 @@ using Terraria.Utilities;
 
 namespace Eggpack.Elements
 {
-	/// <summary>
-	/// A cube item. This, when equipped, allows you to have active abilities.
-	/// </summary>
-	public abstract class Cube : ModItem
+    /// <summary>
+    /// A cube item. This, when equipped, allows you to have active abilities.
+    /// </summary>
+    public abstract class Cube : ModItem
 	{
 		public override void SetStaticDefaults()
 		{

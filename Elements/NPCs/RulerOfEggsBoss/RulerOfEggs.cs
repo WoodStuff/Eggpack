@@ -1,8 +1,8 @@
-﻿using Eggpack.Elements.Items;
+﻿using Eggpack.Common.Systems;
+using Eggpack.Elements.Items;
 using Eggpack.Elements.Items.Bags;
 using Eggpack.Elements.Items.Tiles;
 using Eggpack.Elements.Projectiles;
-using Eggpack.Systems;
 using Microsoft.Xna.Framework;
 using System;
 using System.IO;
@@ -15,7 +15,7 @@ using Terraria.ModLoader;
 
 namespace Eggpack.Elements.NPCs.RulerOfEggsBoss
 {
-	[AutoloadBossHead]
+    [AutoloadBossHead]
 	public class RulerOfEggs : ModNPC
 	{
 		/// <summary>

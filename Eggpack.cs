@@ -1,10 +1,10 @@
-using Eggpack.Systems;
+using Eggpack.Common.Systems;
 using System;
 using Terraria.ModLoader;
 
 namespace Eggpack
 {
-	public class Eggpack : Mod
+    public class Eggpack : Mod
 	{
 		public static float ToFrames(float secs)
 		{

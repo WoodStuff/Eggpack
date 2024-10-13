@@ -1,11 +1,11 @@
-using Eggpack.Players;
+using Eggpack.Common.Players;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace Eggpack.Elements.Accessories
 {
-	public class HellstoneBladeSharpener : ModItem
+    public class HellstoneBladeSharpener : ModItem
 	{
 		public override void SetStaticDefaults()
 		{

@@ -1,6 +1,6 @@
 ﻿using Terraria.ModLoader;
 
-namespace Eggpack.Systems
+namespace Eggpack.Common.Systems
 {
 	/// <summary>
 	/// Creates the mod's keybinds.

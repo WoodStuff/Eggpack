@@ -283,6 +283,11 @@ Mods: {
 				CubeTooltip: Fires a large rock which splits into three and seeks enemies
 				Tooltip: ""
 			}
+
+			Hyperborean: {
+				DisplayName: Hyperborean
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
@@ -342,6 +347,7 @@ Mods: {
 			YolkBurstFriendly.DisplayName: Yolk Burst
 			PearlstoneRockBig.DisplayName: Pearlstone Rock
 			PearlstoneRockSmall.DisplayName: Pearlstone Pebble
+			HyperboreanProjectile.DisplayName: Hyperborean Projectile
 		}
 	}
 }

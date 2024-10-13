@@ -29,4 +29,7 @@
     <None Remove="ModWorldGen.cs.bak" />
     <None Remove="TileUtils.cs.bak" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Elements\NewFolder\" />
+  </ItemGroup>
 </Project>
