@@ -1,10 +1,7 @@
-using Eggpack.Elements.Tiles;
-using Terraria;
-using Terraria.Localization;
-using Terraria.ModLoader;
-using Terraria.ID;
-using Terraria.GameContent.Creative;
 using Eggpack.Players;
+using Terraria;
+using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace Eggpack.Elements.Accessories
 {

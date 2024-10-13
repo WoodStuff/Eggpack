@@ -1,5 +1,4 @@
-﻿using System;
-using Terraria;
+﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -23,19 +22,19 @@ namespace Eggpack.Systems
 					|| Main.tile[chest.x, chest.y].WallType != WallID.GraniteUnsafe) continue;
 
 				Main.tile[chest.x, chest.y].TileFrameX = 50 * 36;
-				Main.tile[chest.x+1, chest.y].TileFrameX = 50 * 36 + 18;
-				Main.tile[chest.x, chest.y+1].TileFrameX = 50 * 36;
-				Main.tile[chest.x+1, chest.y+1].TileFrameX = 50 * 36 + 18;
+				Main.tile[chest.x + 1, chest.y].TileFrameX = 50 * 36 + 18;
+				Main.tile[chest.x, chest.y + 1].TileFrameX = 50 * 36;
+				Main.tile[chest.x + 1, chest.y + 1].TileFrameX = 50 * 36 + 18;
 			}
 
 			// add chest loot
 			foreach (var chest in Main.chest)
-            {
+			{
 				if (chest == null || Main.tile[chest.x, chest.y].TileType != TileID.Containers) continue;
 				switch (Main.tile[chest.x, chest.y].TileFrameX)
 				{
 					case 50 * 36: // granite chest
-						// shift all chest items if the first slot isn't free and avoid shifting it if it's empty
+								  // shift all chest items if the first slot isn't free and avoid shifting it if it's empty
 						if (!(chest.item.Length == 0 || chest.item[0] == null || chest.item[0].IsAir))
 						{
 							ShiftChestItems(chest);
@@ -58,8 +57,8 @@ namespace Eggpack.Systems
 						break;
 				}
 
-            }
-        }
+			}
+		}
 		private void ShiftChestItems(Chest chest)
 		{
 			for (int k = 39; k > 0; k--)

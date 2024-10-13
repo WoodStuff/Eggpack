@@ -1,9 +1,8 @@
-﻿using Terraria.Enums;
+﻿using Eggpack.Elements.Projectiles.Slicers;
+using Terraria;
+using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria;
-using Eggpack.Elements.Projectiles.Slicers;
-using Eggpack.Elements.Items;
 
 namespace Eggpack.Elements.Weapons.Ranged.Slicers
 {

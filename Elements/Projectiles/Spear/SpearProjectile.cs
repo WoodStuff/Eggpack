@@ -1,7 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
-using Terraria.ID;
-using Terraria.ModLoader;
 using Terraria;
+using Terraria.ModLoader;
 
 namespace Eggpack.Elements.Projectiles.Spear
 {

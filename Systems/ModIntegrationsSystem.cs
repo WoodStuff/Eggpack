@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using Terraria.ModLoader;
+﻿using Eggpack.Elements.Items;
+using Eggpack.Elements.Items.Tiles;
 using Eggpack.Elements.NPCs.RulerOfEggsBoss;
 using Eggpack.Elements.Weapons.Melee.Swords;
-using Eggpack.Elements.Items;
-using Eggpack.Elements.Items.Tiles;
+using System;
+using System.Collections.Generic;
+using Terraria.ModLoader;
 
 namespace Eggpack.Systems
 {
@@ -36,7 +36,7 @@ namespace Eggpack.Systems
 			[
 				ModContent.ItemType<YolkShard>(),
 				ModContent.ItemType<Yolkifier>(),
-            ];
+			];
 
 			bossChecklistMod.Call(
 				"LogBoss",

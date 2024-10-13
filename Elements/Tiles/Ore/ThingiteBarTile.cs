@@ -1,13 +1,12 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
 namespace Eggpack.Elements.Tiles.Ore
 {
-    public class ThingiteBarTile : ModTile
+	public class ThingiteBarTile : ModTile
 	{
 		public override void SetStaticDefaults()
 		{

@@ -12,7 +12,6 @@ using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.Audio;
 
 namespace Eggpack.Elements.NPCs.RulerOfEggsBoss
 {
@@ -373,11 +372,12 @@ namespace Eggpack.Elements.NPCs.RulerOfEggsBoss
 				NPC.velocity = moveVector * speed;
 
 				float percent = ReverseClamp(SummonStartLocation.X, TargetLocation.X, NPC.Center.X);
-				if (Summoned / 3 + 1f/6 < percent && percent < 1) // if its time to summon an egg
+				if (Summoned / 3 + 1f / 6 < percent && percent < 1) // if its time to summon an egg
 				{
 					Summoned++;
 
-					if (Main.netMode != NetmodeID.MultiplayerClient) {
+					if (Main.netMode != NetmodeID.MultiplayerClient)
+					{
 						NPC.NewNPC(
 							NPC.GetSource_FromAI(),
 							(int)NPC.Center.X,

@@ -1,20 +1,17 @@
-﻿using Eggpack.Elements.Tiles;
-using Terraria;
-using Terraria.Localization;
-using Terraria.ModLoader;
+﻿using Terraria;
 using Terraria.ID;
-using Terraria.GameContent.Creative;
+using Terraria.ModLoader;
 
 namespace Eggpack.Elements.Accessories
 {
 	[AutoloadEquip(EquipType.Shield)]
 	public class WoodenShield : ModItem
 	{
-        public override void SetStaticDefaults()
-        {
+		public override void SetStaticDefaults()
+		{
 			Item.ResearchUnlockCount = 1;
 		}
-        public override void SetDefaults()
+		public override void SetDefaults()
 		{
 			Item.width = 32;
 			Item.height = 32;

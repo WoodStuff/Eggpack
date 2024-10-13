@@ -1,7 +1,4 @@
-﻿using Microsoft.Xna.Framework;
-using System;
-using Terraria;
-using Terraria.ID;
+﻿using Terraria;
 using Terraria.ModLoader;
 
 namespace Eggpack.Elements.Weapons.Summoner.SMetalOrb

@@ -1,13 +1,10 @@
-﻿using Terraria;
+﻿using Eggpack.Elements.Items;
+using Terraria;
+using Terraria.GameContent.Bestiary;
+using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
-using System;
 using Terraria.ModLoader.Utilities;
-using Terraria.GameContent.ItemDropRules;
-using Terraria.GameContent.Bestiary;
-using Eggpack.Elements.Items;
-using Terraria.DataStructures;
-using Eggpack.Elements.NPCs.RulerOfEggsBoss;
 
 namespace Eggpack.Elements.NPCs
 {

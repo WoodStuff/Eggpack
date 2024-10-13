@@ -1,6 +1,5 @@
 ﻿using Terraria;
 using Terraria.DataStructures;
-using Terraria.ModLoader;
 
 namespace Eggpack
 {

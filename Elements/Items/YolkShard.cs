@@ -1,8 +1,6 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Eggpack;
-using Terraria.GameContent.Creative;
 
 namespace Eggpack.Elements.Items
 {

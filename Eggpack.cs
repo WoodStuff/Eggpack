@@ -1,6 +1,6 @@
-using Terraria.ModLoader;
-using System;
 using Eggpack.Systems;
+using System;
+using Terraria.ModLoader;
 
 namespace Eggpack
 {

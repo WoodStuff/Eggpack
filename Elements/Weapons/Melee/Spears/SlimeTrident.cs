@@ -1,11 +1,6 @@
-using Eggpack.Elements.Items;
-using Eggpack.Elements.Projectiles;
 using Eggpack.Elements.Projectiles.Spear;
-using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.Enums;
-using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -23,7 +18,7 @@ namespace Eggpack.Elements.Weapons.Melee.Spears
 		{
 			Item.DefaultToSpear(ModContent.ProjectileType<SlimeTridentProjectile>(), 6, 32);
 			Item.SetWeaponValues(24, 5, 0);
-			Item.SetShopValues(ItemRarityColor.Blue1, Item.sellPrice(0, 0, 30, 0););
+			Item.SetShopValues(ItemRarityColor.Blue1, Item.sellPrice(0, 0, 30, 0));
 			Item.DamageType = DamageClass.Melee;
 
 			Item.width = 40;

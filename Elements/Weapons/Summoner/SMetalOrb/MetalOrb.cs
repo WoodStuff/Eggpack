@@ -11,7 +11,7 @@ namespace Eggpack.Elements.Weapons.Summoner.SMetalOrb
 		public override void SetStaticDefaults()
 		{
 			ProjectileID.Sets.MinionTargettingFeature[Projectile.type] = true;
-			Main.projPet[Projectile.type] = true; 
+			Main.projPet[Projectile.type] = true;
 			ProjectileID.Sets.MinionSacrificable[Projectile.type] = true;
 			ProjectileID.Sets.CultistIsResistantTo[Projectile.type] = true;
 		}
@@ -117,64 +117,64 @@ namespace Eggpack.Elements.Weapons.Summoner.SMetalOrb
 						Projectile.velocity.Y += overlapVelocity;
 					}
 				}
-            }
-        }
+			}
+		}
 
-        private void SearchForTargets(Player owner, out bool foundTarget, out float distanceFromTarget, out Vector2 targetCenter)
-        {
-            // Starting search distance
-            distanceFromTarget = 700f;
-            targetCenter = Projectile.position;
-            foundTarget = false;
+		private void SearchForTargets(Player owner, out bool foundTarget, out float distanceFromTarget, out Vector2 targetCenter)
+		{
+			// Starting search distance
+			distanceFromTarget = 700f;
+			targetCenter = Projectile.position;
+			foundTarget = false;
 
-            // This code is required if your minion weapon has the targeting feature
-            if (owner.HasMinionAttackTargetNPC)
-            {
-                NPC npc = Main.npc[owner.MinionAttackTargetNPC];
-                float between = Vector2.Distance(npc.Center, Projectile.Center);
+			// This code is required if your minion weapon has the targeting feature
+			if (owner.HasMinionAttackTargetNPC)
+			{
+				NPC npc = Main.npc[owner.MinionAttackTargetNPC];
+				float between = Vector2.Distance(npc.Center, Projectile.Center);
 
-                // Reasonable distance away so it doesn't target across multiple screens
-                if (between < 2000f)
-                {
-                    distanceFromTarget = between;
-                    targetCenter = npc.Center;
-                    foundTarget = true;
-                }
-            }
+				// Reasonable distance away so it doesn't target across multiple screens
+				if (between < 2000f)
+				{
+					distanceFromTarget = between;
+					targetCenter = npc.Center;
+					foundTarget = true;
+				}
+			}
 
-            if (!foundTarget)
-            {
-                // This code is required either way, used for finding a target
-                for (int i = 0; i < Main.maxNPCs; i++)
-                {
-                    NPC npc = Main.npc[i];
+			if (!foundTarget)
+			{
+				// This code is required either way, used for finding a target
+				for (int i = 0; i < Main.maxNPCs; i++)
+				{
+					NPC npc = Main.npc[i];
 
-                    if (npc.CanBeChasedBy())
-                    {
-                        float between = Vector2.Distance(npc.Center, Projectile.Center);
-                        bool closest = Vector2.Distance(Projectile.Center, targetCenter) > between;
-                        bool inRange = between < distanceFromTarget;
-                        bool lineOfSight = Collision.CanHitLine(Projectile.position, Projectile.width, Projectile.height, npc.position, npc.width, npc.height);
-                        // Additional check for this specific minion behavior, otherwise it will stop attacking once it dashed through an enemy while flying though tiles afterwards
-                        // The number depends on various parameters seen in the movement code below. Test different ones out until it works alright
-                        bool closeThroughWall = between < 100f;
+					if (npc.CanBeChasedBy())
+					{
+						float between = Vector2.Distance(npc.Center, Projectile.Center);
+						bool closest = Vector2.Distance(Projectile.Center, targetCenter) > between;
+						bool inRange = between < distanceFromTarget;
+						bool lineOfSight = Collision.CanHitLine(Projectile.position, Projectile.width, Projectile.height, npc.position, npc.width, npc.height);
+						// Additional check for this specific minion behavior, otherwise it will stop attacking once it dashed through an enemy while flying though tiles afterwards
+						// The number depends on various parameters seen in the movement code below. Test different ones out until it works alright
+						bool closeThroughWall = between < 100f;
 
-                        if (((closest && inRange) || !foundTarget) && (lineOfSight || closeThroughWall))
-                        {
-                            distanceFromTarget = between;
-                            targetCenter = npc.Center;
-                            foundTarget = true;
-                        }
-                    }
-                }
-            }
+						if (((closest && inRange) || !foundTarget) && (lineOfSight || closeThroughWall))
+						{
+							distanceFromTarget = between;
+							targetCenter = npc.Center;
+							foundTarget = true;
+						}
+					}
+				}
+			}
 
-            // friendly needs to be set to true so the minion can deal contact damage
-            // friendly needs to be set to false so it doesn't damage things like target dummies while idling
-            // Both things depend on if it has a target or not, so it's just one assignment here
-            // You don't need this assignment if your minion is shooting things instead of dealing contact damage
-            Projectile.friendly = foundTarget;
-        }
+			// friendly needs to be set to true so the minion can deal contact damage
+			// friendly needs to be set to false so it doesn't damage things like target dummies while idling
+			// Both things depend on if it has a target or not, so it's just one assignment here
+			// You don't need this assignment if your minion is shooting things instead of dealing contact damage
+			Projectile.friendly = foundTarget;
+		}
 
 		private void Movement(bool foundTarget, float distanceFromTarget, Vector2 targetCenter, float distanceToIdlePosition, Vector2 vectorToIdlePosition)
 		{

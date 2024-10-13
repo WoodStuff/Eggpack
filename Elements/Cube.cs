@@ -3,7 +3,6 @@ using Eggpack.Players;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.Audio;
-using Terraria.GameContent.Creative;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.Utilities;
@@ -56,7 +55,7 @@ namespace Eggpack.Elements
 				CubePrefix prefix = PrefixLoader.GetPrefix(id) as CubePrefix;
 				CubePrefixModifiers prefix_stats = prefix.GetModifiedStats();
 				CubeSettings cube_stats = GetCubeSettings();
-					 if (prefix_stats.damage != 1 && !cube_stats.damages) prefixes.Remove(id);
+				if (prefix_stats.damage != 1 && !cube_stats.damages) prefixes.Remove(id);
 				else if (prefix_stats.knockback != 1 && !cube_stats.damages) prefixes.Remove(id);
 				else if (prefix_stats.buffDuration != 1 && cube_stats.buffID == 0 && !cube_stats.buffPrefix) prefixes.Remove(id);
 				else if (prefix_stats.debuffDuration != 1 && cube_stats.debuffID == 0 && !cube_stats.debuffPrefix) prefixes.Remove(id);

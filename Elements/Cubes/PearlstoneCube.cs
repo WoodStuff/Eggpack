@@ -8,21 +8,21 @@ using Terraria.ModLoader;
 
 namespace Eggpack.Elements.Cubes
 {
-	public class ThingiteCube : Cube
+	public class PearlstoneCube : Cube
 	{
 		public override void CustomDefaults()
 		{
-			Item.SetShopValues(ItemRarityColor.Blue1, Item.sellPrice(0, 0, 50));
+			Item.SetShopValues(ItemRarityColor.LightRed4, Item.sellPrice(0, 1));
 		}
 		public override CubeSettings GetCubeSettings()
 		{
 			CubeSettings settings = new()
 			{
-				cooldown = Eggpack.ToFrames(20),
-				manaCost = 40,
+				cooldown = Eggpack.ToFrames(1),
+				manaCost = 50,
 
-				projectileID = ModContent.ProjectileType<ThingiteBurst>(),
-				projectileSpeed = 10,
+				projectileID = ModContent.ProjectileType<PearlstoneRockBig>(),
+				projectileSpeed = 14,
 				damages = true,
 
 				debuffID = ModContent.BuffType<WeaponExhaustion>(),

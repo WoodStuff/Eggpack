@@ -1,15 +1,7 @@
-﻿using Terraria;
+﻿using Eggpack.Elements.Weapons.Summoner.Whips.Projectiles;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using System;
-using System.Collections.Generic;
-using Terraria.Audio;
-using Terraria.Enums;
-using Terraria.GameContent;
-using Terraria.GameContent.Creative;
-using Eggpack.Elements.Weapons.Summoner.Whips.Projectiles;
 
 namespace Eggpack.Elements.Weapons.Summoner.Whips
 {
@@ -17,7 +9,6 @@ namespace Eggpack.Elements.Weapons.Summoner.Whips
 	{
 		public override void SetStaticDefaults()
 		{
-			// Tooltip.SetDefault("'Simple. You form it into a whip.'");
 			Item.ResearchUnlockCount = 1;
 		}
 
@@ -25,7 +16,6 @@ namespace Eggpack.Elements.Weapons.Summoner.Whips
 		{
 			Item.DefaultToWhip(ModContent.ProjectileType<WoodenWhipProjectile>(), 11, 0.5f, 2);
 
-			Item.shootSpeed = 2;
 			Item.rare = ItemRarityID.White;
 		}
 

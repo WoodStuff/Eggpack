@@ -1,16 +1,12 @@
 ﻿using Microsoft.Xna.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace Eggpack.Elements.Projectiles.Slicers
 {
-	public class MeteorSlicerProjectile : ModProjectile
+	public class MeteorSlicerProjectile : SlicerProjectile
 	{
 		public override void SetDefaults()
 		{
@@ -22,16 +18,8 @@ namespace Eggpack.Elements.Projectiles.Slicers
 			Projectile.penetrate = 5;
 		}
 
-		public override void AI()
+		public override bool PreAI()
 		{
-			Projectile.ai[0]++;
-
-			if (Projectile.ai[0] > 15f)
-			{
-				Projectile.velocity.Y += 0.2f;
-				if (Projectile.velocity.Y > 16f) Projectile.velocity.Y = 16f;
-			}
-
 			if (Main.rand.NextBool(2))
 			{
 				Dust.NewDust(
@@ -45,13 +33,9 @@ namespace Eggpack.Elements.Projectiles.Slicers
 				);
 			}
 
-			Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;
+			return true;
 		}
 
-		public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
-		{
-			modifiers.CritDamage += 1f;
-		}
 		public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
 		{
 			target.AddBuff(BuffID.OnFire, 2 * 60);

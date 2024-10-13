@@ -1,16 +1,13 @@
-﻿using Eggpack.Elements.Tiles;
+﻿using Eggpack.Elements.Items;
 using Terraria;
-using Terraria.Localization;
-using Terraria.ModLoader;
 using Terraria.ID;
-using Terraria.GameContent.Creative;
-using Eggpack.Elements.Items;
+using Terraria.ModLoader;
 
 namespace Eggpack.Elements.Accessories
 {
 	public class ThingiteCrosshair : ModItem
 	{
-        public override void SetStaticDefaults()
+		public override void SetStaticDefaults()
 		{
 			Item.ResearchUnlockCount = 1;
 		}

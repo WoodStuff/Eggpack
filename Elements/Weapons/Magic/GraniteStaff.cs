@@ -1,11 +1,8 @@
 ﻿using Eggpack.Elements.Projectiles;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Audio;
-using System;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
-using Terraria.GameContent.Creative;
 using Terraria.ModLoader;
 
 namespace Eggpack.Elements.Weapons.Magic

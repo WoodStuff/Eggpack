@@ -1,9 +1,6 @@
-using Eggpack.Elements.Tiles;
 using Terraria;
-using Terraria.Localization;
-using Terraria.ModLoader;
 using Terraria.ID;
-using Terraria.GameContent.Creative;
+using Terraria.ModLoader;
 
 namespace Eggpack.Elements.Accessories
 {
@@ -38,5 +35,5 @@ namespace Eggpack.Elements.Accessories
 			player.maxMinions += 3;
 			player.GetKnockback(DamageClass.Summon).Flat += 2f;
 		}
-    }
+	}
 }

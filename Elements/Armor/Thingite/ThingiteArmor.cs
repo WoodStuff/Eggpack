@@ -1,20 +1,18 @@
-﻿using Terraria;
-using Terraria.ModLoader;
+﻿using Eggpack.Elements.Items;
+using Terraria;
 using Terraria.ID;
-using System;
-using Terraria.GameContent.Creative;
-using Eggpack.Elements.Items;
+using Terraria.ModLoader;
 
 namespace Eggpack.Elements.Armor.Thingite
 {
 	[AutoloadEquip(EquipType.Head)]
 	public class ThingiteHelmet : ModItem
 	{
-        public override void SetStaticDefaults()
-        {
+		public override void SetStaticDefaults()
+		{
 			Item.ResearchUnlockCount = 1;
 		}
-        public override void SetDefaults()
+		public override void SetDefaults()
 		{
 			Item.width = 26;
 			Item.height = 22;
@@ -48,11 +46,11 @@ namespace Eggpack.Elements.Armor.Thingite
 	[AutoloadEquip(EquipType.Body)]
 	public class ThingiteBreastplate : ModItem
 	{
-        public override void SetStaticDefaults()
-        {
+		public override void SetStaticDefaults()
+		{
 			Item.ResearchUnlockCount = 1;
 		}
-        public override void SetDefaults()
+		public override void SetDefaults()
 		{
 			Item.width = 26;
 			Item.height = 18;
@@ -74,11 +72,11 @@ namespace Eggpack.Elements.Armor.Thingite
 	[AutoloadEquip(EquipType.Legs)]
 	public class ThingiteGreaves : ModItem
 	{
-        public override void SetStaticDefaults()
-        {
+		public override void SetStaticDefaults()
+		{
 			Item.ResearchUnlockCount = 1;
 		}
-        public override void SetDefaults()
+		public override void SetDefaults()
 		{
 			Item.width = 22;
 			Item.height = 18;

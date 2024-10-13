@@ -1,16 +1,12 @@
 ﻿using Microsoft.Xna.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace Eggpack.Elements.Projectiles.Slicers
 {
-	public class ThingiteSlicerProjectile : ModProjectile
+	public class ThingiteSlicerProjectile : SlicerProjectile
 	{
 		public override void SetDefaults()
 		{
@@ -20,24 +16,6 @@ namespace Eggpack.Elements.Projectiles.Slicers
 			Projectile.width = 10;
 			Projectile.height = 10;
 			Projectile.penetrate = 2;
-		}
-
-		public override void AI()
-		{
-			Projectile.ai[0]++;
-
-			if (Projectile.ai[0] > 15f)
-			{
-				Projectile.velocity.Y += 0.2f;
-				if (Projectile.velocity.Y > 16f) Projectile.velocity.Y = 16f;
-			}
-
-			Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;
-		}
-
-		public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
-		{
-			modifiers.CritDamage += 1f;
 		}
 
 		public override void OnKill(int timeLeft)

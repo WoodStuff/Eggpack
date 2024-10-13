@@ -1,7 +1,7 @@
-﻿using Terraria.ID;
-using Terraria.ModLoader;
-using Terraria;
+﻿using Terraria;
 using Terraria.Enums;
+using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace Eggpack.Elements.Items.Tiles
 {

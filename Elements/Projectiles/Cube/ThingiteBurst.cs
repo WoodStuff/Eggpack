@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Eggpack.Elements.Projectiles
+namespace Eggpack.Elements.Projectiles.Cube
 {
 	/// <summary>
 	/// A projectile fired by the Thingite Cube.
@@ -44,22 +44,16 @@ namespace Eggpack.Elements.Projectiles
 		{
 			Projectile.penetrate--;
 			if (Projectile.penetrate <= 0)
-			{
 				Projectile.Kill();
-			}
 			else
 			{
 				Collision.HitTiles(Projectile.position, Projectile.velocity, Projectile.width, Projectile.height);
 
 				if (Math.Abs(Projectile.velocity.X - oldVelocity.X) > float.Epsilon)
-				{
 					Projectile.velocity.X = -oldVelocity.X;
-				}
 
 				if (Math.Abs(Projectile.velocity.Y - oldVelocity.Y) > float.Epsilon)
-				{
 					Projectile.velocity.Y = -oldVelocity.Y;
-				}
 			}
 
 			return false;

@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Eggpack.Elements.Projectiles
+namespace Eggpack.Elements.Projectiles.Cube
 {
 	/// <summary>
 	/// A yolk burst fired from the Outburst Cube.

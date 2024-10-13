@@ -19,7 +19,8 @@ namespace Eggpack.Elements.Items.Bags
 			Item.ResearchUnlockCount = 3;
 		}
 
-		public override void SetDefaults() {
+		public override void SetDefaults()
+		{
 			Item.maxStack = Item.CommonMaxStack;
 			Item.consumable = true;
 			Item.width = 24;

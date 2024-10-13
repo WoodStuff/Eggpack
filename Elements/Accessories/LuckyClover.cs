@@ -1,15 +1,12 @@
-﻿using Eggpack.Elements.Tiles;
-using Terraria;
-using Terraria.Localization;
-using Terraria.ModLoader;
+﻿using Terraria;
 using Terraria.ID;
-using Terraria.GameContent.Creative;
+using Terraria.ModLoader;
 
 namespace Eggpack.Elements.Accessories
 {
 	public class LuckyClover : ModItem
 	{
-        public override void SetStaticDefaults()
+		public override void SetStaticDefaults()
 		{
 			Item.ResearchUnlockCount = 1;
 		}

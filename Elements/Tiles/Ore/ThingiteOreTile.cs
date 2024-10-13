@@ -9,7 +9,7 @@ using Terraria.WorldBuilding;
 
 namespace Eggpack.Elements.Tiles.Ore
 {
-    public class ThingiteOreTile : ModTile
+	public class ThingiteOreTile : ModTile
 	{
 		public override void SetStaticDefaults()
 		{

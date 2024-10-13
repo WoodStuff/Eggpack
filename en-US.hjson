@@ -277,6 +277,12 @@ Mods: {
 				CubeTooltip: Sets everyone around (and including) the user on fire
 				Tooltip: ""
 			}
+
+			PearlstoneCube: {
+				DisplayName: Pearlstone Cube
+				CubeTooltip: Fires a large rock which splits into three and seeks enemies
+				Tooltip: ""
+			}
 		}
 
 		NPCs: {
@@ -334,6 +340,8 @@ Mods: {
 			MeteorSlicerProjectile.DisplayName: Meteor Slicer
 			YolkBurst.DisplayName: Yolk Burst
 			YolkBurstFriendly.DisplayName: Yolk Burst
+			PearlstoneRockBig.DisplayName: Pearlstone Rock
+			PearlstoneRockSmall.DisplayName: Pearlstone Pebble
 		}
 	}
 }

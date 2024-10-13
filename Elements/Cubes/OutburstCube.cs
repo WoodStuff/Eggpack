@@ -1,6 +1,6 @@
 ﻿using Eggpack.Elements.Buffs;
 using Eggpack.Elements.Items;
-using Eggpack.Elements.Projectiles;
+using Eggpack.Elements.Projectiles.Cube;
 using Eggpack.Elements.Tiles;
 using Microsoft.Xna.Framework;
 using System;
@@ -41,8 +41,8 @@ namespace Eggpack.Elements.Cubes
 			CubeSettings cubeSettings = GetModifiedStats(player);
 
 			Projectile projectile = ModContent.GetModProjectile(cubeSettings.projectileID).Projectile;
-            for (int i = 0; i < 8; i++)
-            {
+			for (int i = 0; i < 8; i++)
+			{
 				Projectile.NewProjectile(
 					player.GetSource_Accessory(Item),
 					player.Center,

@@ -1,8 +1,4 @@
-﻿using Terraria.ModLoader;
-using Eggpack.Elements;
-using Terraria;
-
-namespace Eggpack.Elements.Prefixes.Cubes
+﻿namespace Eggpack.Elements.Prefixes.Cubes
 {
 	/// <summary>
 	/// A positive cube prefix that gives -10% cooldown duration.

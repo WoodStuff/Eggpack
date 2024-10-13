@@ -1,9 +1,8 @@
-﻿using Terraria;
-using Terraria.ModLoader;
-using Terraria.Localization;
-using Terraria.ID;
+﻿using Eggpack.Elements.Accessories;
 using Eggpack.Elements.Items;
-using Eggpack.Elements.Accessories;
+using Terraria;
+using Terraria.ID;
+using Terraria.ModLoader;
 
 namespace Eggpack
 {

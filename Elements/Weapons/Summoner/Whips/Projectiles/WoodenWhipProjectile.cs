@@ -76,7 +76,7 @@ namespace Eggpack.Elements.Weapons.Summoner.Whips.Projectiles
 			{
 				// These two values are set to suit this projectile's sprite, but won't necessarily work for your own.
 				// You can change them if they don't!
-				Rectangle frame = new(0, 0, 10, 26);
+				Rectangle frame = new(0, 0, 10, 32);
 				Vector2 origin = new(5, 8);
 				float scale = 1;
 

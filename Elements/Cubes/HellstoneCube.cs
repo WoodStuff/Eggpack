@@ -21,7 +21,7 @@ namespace Eggpack.Elements.Cubes
 		{
 			CubeSettings settings = new()
 			{
-				cooldown = Eggpack.ToFrames(1),
+				cooldown = Eggpack.ToFrames(25),
 				manaCost = 50,
 
 				buffDuration = 5,

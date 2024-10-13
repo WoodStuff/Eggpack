@@ -1,5 +1,4 @@
 ﻿using Eggpack.Elements.Buffs;
-using Eggpack.Elements.Items;
 using Terraria;
 using Terraria.Enums;
 using Terraria.ID;
