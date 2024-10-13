@@ -10,6 +10,7 @@ namespace Eggpack.Common.Systems
     public class ChestLootSystem : ModSystem
     {
         private int graniteCounter = 0;
+
         public override void PostWorldGen()
         {
             // change gold chests into granite chests

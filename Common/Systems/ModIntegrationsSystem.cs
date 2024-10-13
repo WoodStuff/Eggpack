@@ -49,8 +49,6 @@ namespace Eggpack.Common.Systems
                     ["collectibles"] = collectibles,
                 }
             );
-
-            // more stuff here
         }
     }
 }

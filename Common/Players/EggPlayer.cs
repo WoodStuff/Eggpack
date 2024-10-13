@@ -22,8 +22,7 @@ namespace Eggpack.Common.Players
         }
         public override void OnHitNPCWithItem(Item item, NPC target, NPC.HitInfo hit, int damageDone)
         {
-            Random rng = new();
-            if (hasHellSharpener && rng.Next(2) == 0) target.AddBuff(BuffID.OnFire, 180);
+            if (hasHellSharpener && Main.rand.NextBool()) target.AddBuff(BuffID.OnFire, 180);
         }
     }
 }
