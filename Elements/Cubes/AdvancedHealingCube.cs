@@ -4,39 +4,38 @@ using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Eggpack.Elements.Cubes
+namespace Eggpack.Elements.Cubes;
+
+public class AdvancedHealingCube : Cube
 {
-	public class AdvancedHealingCube : Cube
+	public override void CustomDefaults()
 	{
-		public override void CustomDefaults()
+		Item.SetShopValues(ItemRarityColor.Green2, Item.sellPrice(0, 1, 50));
+	}
+
+	public override CubeSettings GetCubeSettings()
+	{
+		CubeSettings settings = new()
 		{
-			Item.SetShopValues(ItemRarityColor.Green2, Item.sellPrice(0, 1, 50));
-		}
+			cooldown = Eggpack.ToFrames(30),
+			manaCost = 30,
 
-		public override CubeSettings GetCubeSettings()
-		{
-			CubeSettings settings = new()
-			{
-				cooldown = Eggpack.ToFrames(30),
-				manaCost = 30,
+			healLife = 50,
 
-				healLife = 50,
+			debuffID = ModContent.BuffType<Paperskin>(),
+			debuffDuration = Eggpack.ToFrames(12),
+		};
 
-				debuffID = ModContent.BuffType<Paperskin>(),
-				debuffDuration = Eggpack.ToFrames(12),
-			};
+		return settings;
+	}
 
-			return settings;
-		}
-
-		public override void AddRecipes()
-		{
-			CreateRecipe()
-				.AddIngredient<HealingCube>()
-				.AddRecipeGroup(ModRecipeGroup.EvilMaterials, 12)
-				.AddIngredient(ItemID.LifeCrystal)
-				.AddTile(TileID.Anvils)
-				.Register();
-		}
+	public override void AddRecipes()
+	{
+		CreateRecipe()
+			.AddIngredient<HealingCube>()
+			.AddRecipeGroup(ModRecipeGroup.EvilMaterials, 12)
+			.AddIngredient(ItemID.LifeCrystal)
+			.AddTile(TileID.Anvils)
+			.Register();
 	}
 }

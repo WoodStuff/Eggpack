@@ -1,15 +1,14 @@
 using Terraria;
 using Terraria.ID;
 
-namespace Eggpack.Elements.Projectiles.Spear
+namespace Eggpack.Elements.Projectiles.Spear;
+
+public class SlimeTridentProjectile : SpearProjectile
 {
-	public class SlimeTridentProjectile : SpearProjectile
+	protected override float HoldoutRangeMin => 48f;
+	protected override float HoldoutRangeMax => 128;
+	public override void SetDefaults()
 	{
-		protected override float HoldoutRangeMin => 48f;
-		protected override float HoldoutRangeMax => 128;
-		public override void SetDefaults()
-		{
-			Projectile.CloneDefaults(ProjectileID.Spear);
-		}
+		Projectile.CloneDefaults(ProjectileID.Spear);
 	}
 }

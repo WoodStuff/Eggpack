@@ -2,29 +2,28 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Eggpack.Elements.Weapons.Summoner.Whips.Debuffs
+namespace Eggpack.Elements.Weapons.Summoner.Whips.Debuffs;
+
+public class WoodenWhipDebuff : ModBuff
 {
-	public class WoodenWhipDebuff : ModBuff
-	{
-		public static readonly int TagDamage = 5;
+	public static readonly int TagDamage = 5;
 
-		public override void SetStaticDefaults()
-		{
-			BuffID.Sets.IsATagBuff[Type] = true;
-		}
+	public override void SetStaticDefaults()
+	{
+		BuffID.Sets.IsATagBuff[Type] = true;
 	}
+}
 
-	public class WoodenWhipDebuffNPC : GlobalNPC
+public class WoodenWhipDebuffNPC : GlobalNPC
+{
+	public override void ModifyHitByProjectile(NPC npc, Projectile projectile, ref NPC.HitModifiers modifiers)
 	{
-		public override void ModifyHitByProjectile(NPC npc, Projectile projectile, ref NPC.HitModifiers modifiers)
-		{
-			if (projectile.npcProj || projectile.trap || !projectile.IsMinionOrSentryRelated) return;
+		if (projectile.npcProj || projectile.trap || !projectile.IsMinionOrSentryRelated) return;
 
-			var projTagMultiplier = ProjectileID.Sets.SummonTagDamageMultiplier[projectile.type];
-			if (npc.HasBuff<WoodenWhipDebuff>())
-			{
-				modifiers.FlatBonusDamage += WoodenWhipDebuff.TagDamage * projTagMultiplier;
-			}
+		var projTagMultiplier = ProjectileID.Sets.SummonTagDamageMultiplier[projectile.type];
+		if (npc.HasBuff<WoodenWhipDebuff>())
+		{
+			modifiers.FlatBonusDamage += WoodenWhipDebuff.TagDamage * projTagMultiplier;
 		}
 	}
 }

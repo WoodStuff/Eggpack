@@ -1,17 +1,16 @@
 ﻿using Terraria;
 using Terraria.ModLoader;
 
-namespace Eggpack.Elements.Buffs
+namespace Eggpack.Elements.Buffs;
+
+public class WeaponExhaustion : ModBuff
 {
-	public class WeaponExhaustion : ModBuff
+	public override void SetStaticDefaults()
 	{
-		public override void SetStaticDefaults()
-		{
-			Main.debuff[Type] = true;
-		}
-		public override void Update(Player player, ref int buffIndex)
-		{
-			player.GetAttackSpeed(DamageClass.Generic) *= 0.75f;
-		}
+		Main.debuff[Type] = true;
+	}
+	public override void Update(Player player, ref int buffIndex)
+	{
+		player.GetAttackSpeed(DamageClass.Generic) *= 0.75f;
 	}
 }

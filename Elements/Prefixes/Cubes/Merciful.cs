@@ -1,24 +1,23 @@
-﻿namespace Eggpack.Elements.Prefixes.Cubes
+﻿namespace Eggpack.Elements.Prefixes.Cubes;
+
+/// <summary>
+/// A positive cube prefix.
+/// </summary>
+public class Merciful : CubePrefix
 {
-	/// <summary>
-	/// A positive cube prefix.
-	/// </summary>
-	public class Merciful : CubePrefix
+	public override CubePrefixModifiers GetModifiedStats()
 	{
-		public override CubePrefixModifiers GetModifiedStats()
+		return new()
 		{
-			return new()
-			{
-				debuffDuration = 0.8f
-			};
-		}
-		public override void ModifyValue(ref float valueMult)
-		{
-			valueMult *= 1.2f;
-		}
-		public override void SetStaticDefaults()
-		{
-			Cube.CubePrefixes.Add(Type);
-		}
+			debuffDuration = 0.8f
+		};
+	}
+	public override void ModifyValue(ref float valueMult)
+	{
+		valueMult *= 1.2f;
+	}
+	public override void SetStaticDefaults()
+	{
+		Cube.CubePrefixes.Add(Type);
 	}
 }

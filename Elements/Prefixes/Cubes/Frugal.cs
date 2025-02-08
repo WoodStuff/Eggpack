@@ -1,25 +1,24 @@
-﻿namespace Eggpack.Elements.Prefixes.Cubes
+﻿namespace Eggpack.Elements.Prefixes.Cubes;
+
+/// <summary>
+/// A neutral cube prefix.
+/// </summary>
+public class Frugal : CubePrefix
 {
-	/// <summary>
-	/// A neutral cube prefix.
-	/// </summary>
-	public class Frugal : CubePrefix
+	public override CubePrefixModifiers GetModifiedStats()
 	{
-		public override CubePrefixModifiers GetModifiedStats()
+		return new()
 		{
-			return new()
-			{
-				manaCost = 0.75f,
-				cooldown = 1.1f
-			};
-		}
-		public override void ModifyValue(ref float valueMult)
-		{
-			valueMult *= 1.35f;
-		}
-		public override void SetStaticDefaults()
-		{
-			Cube.CubePrefixes.Add(Type);
-		}
+			manaCost = 0.75f,
+			cooldown = 1.1f
+		};
+	}
+	public override void ModifyValue(ref float valueMult)
+	{
+		valueMult *= 1.35f;
+	}
+	public override void SetStaticDefaults()
+	{
+		Cube.CubePrefixes.Add(Type);
 	}
 }

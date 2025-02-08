@@ -1,27 +1,26 @@
-﻿namespace Eggpack.Elements.Prefixes.Cubes
+﻿namespace Eggpack.Elements.Prefixes.Cubes;
+
+/// <summary>
+/// A negative cube prefix.
+/// </summary>
+public class Weak : CubePrefix
 {
-	/// <summary>
-	/// A negative cube prefix.
-	/// </summary>
-	public class Weak : CubePrefix
+	public override CubePrefixModifiers GetModifiedStats()
 	{
-		public override CubePrefixModifiers GetModifiedStats()
+		return new()
 		{
-			return new()
-			{
-				manaCost = 1.1f,
-				cooldown = 1.1f,
-				damage = 0.8f,
-				knockback = 0.85f
-			};
-		}
-		public override void ModifyValue(ref float valueMult)
-		{
-			valueMult *= 0.35f;
-		}
-		public override void SetStaticDefaults()
-		{
-			Cube.CubePrefixes.Add(Type);
-		}
+			manaCost = 1.1f,
+			cooldown = 1.1f,
+			damage = 0.8f,
+			knockback = 0.85f
+		};
+	}
+	public override void ModifyValue(ref float valueMult)
+	{
+		valueMult *= 0.35f;
+	}
+	public override void SetStaticDefaults()
+	{
+		Cube.CubePrefixes.Add(Type);
 	}
 }

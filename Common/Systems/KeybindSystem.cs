@@ -1,22 +1,21 @@
 ﻿using Terraria.ModLoader;
 
-namespace Eggpack.Common.Systems
+namespace Eggpack.Common.Systems;
+
+/// <summary>
+/// Creates the mod's keybinds.
+/// </summary>
+public class KeybindSystem : ModSystem
 {
-	/// <summary>
-	/// Creates the mod's keybinds.
-	/// </summary>
-	public class KeybindSystem : ModSystem
+	public static ModKeybind CubeAbility { get; private set; }
+
+	public override void Load()
 	{
-		public static ModKeybind CubeAbility { get; private set; }
+		CubeAbility = KeybindLoader.RegisterKeybind(Mod, "Cube Ability", "Z");
+	}
 
-		public override void Load()
-		{
-			CubeAbility = KeybindLoader.RegisterKeybind(Mod, "Cube Ability", "Z");
-		}
-
-		public override void Unload()
-		{
-			CubeAbility = null;
-		}
+	public override void Unload()
+	{
+		CubeAbility = null;
 	}
 }

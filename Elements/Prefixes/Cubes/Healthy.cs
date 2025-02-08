@@ -1,24 +1,23 @@
-﻿namespace Eggpack.Elements.Prefixes.Cubes
+﻿namespace Eggpack.Elements.Prefixes.Cubes;
+
+/// <summary>
+/// A positive cube prefix.
+/// </summary>
+public class Healthy : CubePrefix
 {
-	/// <summary>
-	/// A positive cube prefix.
-	/// </summary>
-	public class Healthy : CubePrefix
+	public override CubePrefixModifiers GetModifiedStats()
 	{
-		public override CubePrefixModifiers GetModifiedStats()
+		return new()
 		{
-			return new()
-			{
-				healing = 1.5f
-			};
-		}
-		public override void ModifyValue(ref float valueMult)
-		{
-			valueMult *= 1.3f;
-		}
-		public override void SetStaticDefaults()
-		{
-			Cube.CubePrefixes.Add(Type);
-		}
+			healing = 1.5f
+		};
+	}
+	public override void ModifyValue(ref float valueMult)
+	{
+		valueMult *= 1.3f;
+	}
+	public override void SetStaticDefaults()
+	{
+		Cube.CubePrefixes.Add(Type);
 	}
 }
