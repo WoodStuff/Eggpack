@@ -269,6 +269,28 @@ Items: {
 		CubeTooltip: Heals the user for 50 life, but reduces defense by 8 for 12 seconds
 		Tooltip: ""
 	}
+
+	HellstoneCube: {
+		DisplayName: Hellstone Cube
+		CubeTooltip: Sets everyone around (and including) the user on fire
+		Tooltip: ""
+	}
+
+	PearlstoneCube: {
+		DisplayName: Pearlstone Cube
+		CubeTooltip: Fires a large rock which splits into three and seeks enemies
+		Tooltip: ""
+	}
+
+	Hyperborean: {
+		DisplayName: Hyperborean
+		Tooltip: ""
+	}
+
+	YolkDagger: {
+		DisplayName: Yolk Dagger
+		Tooltip: ""
+	}
 }
 
 NPCs: {
@@ -317,13 +339,17 @@ Prefixes: {
 Projectiles: {
 	ThingiteBurst.DisplayName: Thingite Burst
 	MetalOrb.DisplayName: Metal Orb
-	WoodenWhipProjectile.DisplayName: Wooden Whip Projectile
-	GraniteStaffProjectile.DisplayName: Granite Staff Projectile
-	GraniteSwordProjectile.DisplayName: Granite Sword Projectile
-	YolkShardProjectile.DisplayName: Yolk Shard Projectile
-	SlimeTridentProjectile.DisplayName: Slime Trident Projectile
-	ThingiteSlicerProjectile.DisplayName: Thingite Slicer Projectile
-	MeteorSlicerProjectile.DisplayName: Meteor Slicer Projectile
+	WoodenWhipProjectile.DisplayName: Wooden Whip
+	GraniteStaffProjectile.DisplayName: Magic Granite Orb
+	GraniteSwordProjectile.DisplayName: Sharp Granite Orb
+	YolkShardProjectile.DisplayName: Yolk Shard
+	SlimeTridentProjectile.DisplayName: Slime Trident
+	ThingiteSlicerProjectile.DisplayName: Thingite Slicer
+	MeteorSlicerProjectile.DisplayName: Meteor Slicer
 	YolkBurst.DisplayName: Yolk Burst
-	YolkBurstFriendly.DisplayName: Yolk Burst Friendly
+	YolkBurstFriendly.DisplayName: Yolk Burst
+	PearlstoneRockBig.DisplayName: Pearlstone Rock
+	PearlstoneRockSmall.DisplayName: Pearlstone Pebble
+	HyperboreanProjectile.DisplayName: Hyperborean Projectile
+	YolkDaggerProjectile.DisplayName: Yolk Dagger Projectile
 }

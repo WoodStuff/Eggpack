@@ -22,6 +22,11 @@ namespace Eggpack.Elements.Projectiles.Cube
 
 		public ref float Timer => ref Projectile.ai[1];
 
+		public override void SetStaticDefaults()
+		{
+			ProjectileID.Sets.CultistIsResistantTo[Projectile.type] = true;
+		}
+
 		public override void SetDefaults()
 		{
 			Projectile.DamageType = DamageClass.Generic;
