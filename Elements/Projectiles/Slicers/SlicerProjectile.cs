@@ -9,8 +9,17 @@ namespace Eggpack.Elements.Projectiles.Slicers
 	/// </summary>
 	public abstract class SlicerProjectile : ModProjectile
 	{
+		/// <summary>
+		/// Delay after which the projectile falls.
+		/// </summary>
 		protected virtual float GravityDelay => 15f;
+		/// <summary>
+		/// The force of gravity.
+		/// </summary>
 		protected virtual float GravityForce => 0.2f;
+		/// <summary>
+		/// Maximum falling speed.
+		/// </summary>
 		protected virtual float MaxFallSpeed => 16f;
 
 		public override void AI()

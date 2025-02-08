@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace Eggpack.Elements.Projectiles.Slicers
 {
-	public class ThingiteSlicerProjectile : SlicerProjectile
+	public class YolkDaggerProjectile : SlicerProjectile
 	{
 		protected override float GravityDelay => 15f;
 		protected override float GravityForce => 0.2f;
@@ -31,7 +31,7 @@ namespace Eggpack.Elements.Projectiles.Slicers
 					new Vector2(Projectile.position.X, Projectile.position.Y),
 					Projectile.width,
 					Projectile.height,
-					DustID.Marble,
+					DustID.Honey,
 					new Vector2(0, 1).RotatedBy(Math.PI * 2 / particles).X * 3,
 					new Vector2(0, 1).RotatedBy(Math.PI * 2 / particles).Y * 3
 				);

@@ -8,6 +8,10 @@ namespace Eggpack.Elements.Projectiles.Slicers
 {
 	public class MeteorSlicerProjectile : SlicerProjectile
 	{
+		protected override float GravityDelay => 15f;
+		protected override float GravityForce => 0.2f;
+		protected override float MaxFallSpeed => 16f;
+
 		public override void SetDefaults()
 		{
 			Projectile.friendly = true;
