@@ -9,6 +9,7 @@ public class WeaponExhaustion : ModBuff
 	{
 		Main.debuff[Type] = true;
 	}
+
 	public override void Update(Player player, ref int buffIndex)
 	{
 		player.GetAttackSpeed(DamageClass.Generic) *= 0.75f;
