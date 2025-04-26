@@ -27,10 +27,7 @@ public class YolkDagger : ModItem
 		Item.noUseGraphic = true;
 	}
 
-	public override bool ConsumeItem(Player player)
-	{
-		return Main.rand.NextFloat() >= 0.33f;
-	}
+	public override bool ConsumeItem(Player player) => Main.rand.NextFloat() >= 0.33f;
 
 	public override void AddRecipes()
 	{

@@ -49,7 +49,7 @@ public class PearlstoneRockSmall : ModProjectile
 			return;
 		}
 
-		if (HomingTarget == null) HomingTarget = FindClosestNPC(maxDetectRadius);
+		HomingTarget ??= FindClosestNPC(maxDetectRadius);
 
 		if (HomingTarget != null && !IsValidTarget(HomingTarget)) HomingTarget = null;
 

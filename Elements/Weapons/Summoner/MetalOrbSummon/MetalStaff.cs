@@ -4,7 +4,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Eggpack.Elements.Weapons.Summoner.SMetalOrb;
+namespace Eggpack.Elements.Weapons.Summoner.MetalOrbSummon;
 
 public class MetalStaff : ModItem
 {

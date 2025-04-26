@@ -19,6 +19,7 @@ public abstract class Cube : ModItem
 	{
 		Item.ResearchUnlockCount = 1;
 	}
+
 	public override void SetDefaults()
 	{
 		Item.maxStack = 1;

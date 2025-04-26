@@ -14,6 +14,7 @@ public class ThingiteCube : Cube
 	{
 		Item.SetShopValues(ItemRarityColor.Blue1, Item.sellPrice(0, 0, 50));
 	}
+
 	public override CubeSettings GetCubeSettings()
 	{
 		CubeSettings settings = new()

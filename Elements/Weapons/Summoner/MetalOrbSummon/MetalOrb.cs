@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Eggpack.Elements.Weapons.Summoner.SMetalOrb;
+namespace Eggpack.Elements.Weapons.Summoner.MetalOrbSummon;
 
 public class MetalOrb : ModProjectile
 {
@@ -37,9 +37,7 @@ public class MetalOrb : ModProjectile
 		Player owner = Main.player[Projectile.owner];
 
 		if (!CheckActive(owner))
-		{
 			return;
-		}
 
 		GeneralBehavior(owner, out Vector2 vectorToIdlePosition, out float distanceToIdlePosition);
 		SearchForTargets(owner, out bool foundTarget, out float distanceFromTarget, out Vector2 targetCenter);
@@ -57,9 +55,7 @@ public class MetalOrb : ModProjectile
 		}
 
 		if (owner.HasBuff(ModContent.BuffType<MetalOrbBuff>()))
-		{
 			Projectile.timeLeft = 2;
-		}
 
 		return true;
 	}
@@ -100,18 +96,14 @@ public class MetalOrb : ModProjectile
 			if (i != Projectile.whoAmI && other.active && other.owner == Projectile.owner && Math.Abs(Projectile.position.X - other.position.X) + Math.Abs(Projectile.position.Y - other.position.Y) < Projectile.width)
 			{
 				if (Projectile.position.X < other.position.X)
-				{
 					Projectile.velocity.X -= overlapVelocity;
-				}
 				else
 				{
 					Projectile.velocity.X += overlapVelocity;
 				}
 
 				if (Projectile.position.Y < other.position.Y)
-				{
 					Projectile.velocity.Y -= overlapVelocity;
-				}
 				else
 				{
 					Projectile.velocity.Y += overlapVelocity;
@@ -159,7 +151,7 @@ public class MetalOrb : ModProjectile
 					// The number depends on various parameters seen in the movement code below. Test different ones out until it works alright
 					bool closeThroughWall = between < 100f;
 
-					if (((closest && inRange) || !foundTarget) && (lineOfSight || closeThroughWall))
+					if ((closest && inRange || !foundTarget) && (lineOfSight || closeThroughWall))
 					{
 						distanceFromTarget = between;
 						targetCenter = npc.Center;
