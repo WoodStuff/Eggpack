@@ -18,7 +18,7 @@ public class PearlstoneCube : Cube
 	{
 		CubeSettings settings = new()
 		{
-			cooldown = Eggpack.ToFrames(1),
+			cooldown = Eggpack.ToFrames(20),
 			manaCost = 50,
 
 			projectileID = ModContent.ProjectileType<PearlstoneRockBig>(),
