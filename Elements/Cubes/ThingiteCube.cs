@@ -19,7 +19,7 @@ public class ThingiteCube : Cube
 	{
 		CubeSettings settings = new()
 		{
-			cooldown = Eggpack.ToFrames(20),
+			cooldown = Eggpack.ToFrames(15),
 			manaCost = 40,
 
 			projectileID = ModContent.ProjectileType<ThingiteBurst>(),

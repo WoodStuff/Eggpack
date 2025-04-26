@@ -123,7 +123,7 @@ Items: {
 
 	ThingiteCube: {
 		DisplayName: Thingite Cube
-		CubeTooltip: Releases a Thingite Burst that does 60 damage, but slows down weapons by 25% for 10 seconds
+		CubeTooltip: Releases a Thingite Burst that does 80 damage, but slows down weapons by 25% for 10 seconds
 		Tooltip: ""
 	}
 
@@ -255,7 +255,7 @@ Items: {
 
 	OutburstCube: {
 		DisplayName: Outburst Cube
-		CubeTooltip: Releases 8 Yolk Bursts in a circle which do 60 damage each, but slows down weapons by 25% for 8 seconds
+		CubeTooltip: Releases 8 Yolk Bursts in a circle which do 80 damage each, but slows down weapons by 25% for 8 seconds
 		Tooltip: ""
 	}
 
@@ -289,7 +289,7 @@ Items: {
 
 	YolkDagger: {
 		DisplayName: Yolk Dagger
-		Tooltip: ""
+		Tooltip: Critical strikes deal triple damage
 	}
 }
 

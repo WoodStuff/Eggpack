@@ -17,7 +17,7 @@ public class AdvancedHealingCube : Cube
 	{
 		CubeSettings settings = new()
 		{
-			cooldown = Eggpack.ToFrames(30),
+			cooldown = Eggpack.ToFrames(25),
 			manaCost = 30,
 
 			healLife = 50,

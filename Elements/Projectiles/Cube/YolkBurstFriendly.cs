@@ -13,10 +13,10 @@ public class YolkBurstFriendly : ModProjectile
 {
 	public override void SetDefaults()
 	{
-		Projectile.damage = 60;
+		Projectile.damage = 80;
 		Projectile.knockBack = 3;
 		Projectile.DamageType = DamageClass.Generic;
-		Projectile.penetrate = 2;
+		Projectile.penetrate = 3;
 		Projectile.friendly = true;
 		Projectile.timeLeft = 180;
 
