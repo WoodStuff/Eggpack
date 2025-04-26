@@ -17,26 +17,25 @@ public class ModIntegrationsSystem : ModSystem
 
 	private void DoBossChecklistIntegration()
 	{
-		if (!ModLoader.TryGetMod("BossChecklist", out Mod bossChecklistMod))
-			return;
+		if (!ModLoader.TryGetMod("BossChecklist", out Mod checklist)) return;
 
+		IntegrateRulerOfEggs(checklist);
+	}
+
+	private void IntegrateRulerOfEggs(Mod checklist)
+	{
 		string internalName = "RulerOfEggs";
-
 		float weight = 3.75f;
-
 		Func<bool> downed = () => DownedBossSystem.downedRulerOfEggs;
-
 		int bossType = ModContent.NPCType<RulerOfEggs>();
-
 		int spawnItem = ModContent.ItemType<EggSplatter>();
-
 		List<int> collectibles =
 		[
 			ModContent.ItemType<YolkShard>(),
-				ModContent.ItemType<Yolkifier>(),
-			];
+			ModContent.ItemType<Yolkifier>(),
+		];
 
-		bossChecklistMod.Call(
+		checklist.Call(
 			"LogBoss",
 			Mod,
 			internalName,
