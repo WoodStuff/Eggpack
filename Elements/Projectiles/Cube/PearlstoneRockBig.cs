@@ -15,10 +15,10 @@ public class PearlstoneRockBig : ModProjectile
 
 	public override void SetDefaults()
 	{
-		Projectile.damage = 300;
+		Projectile.damage = 200;
 		Projectile.knockBack = 6;
 		Projectile.DamageType = DamageClass.Generic;
-		Projectile.penetrate = 1;
+		Projectile.penetrate = 5;
 		Projectile.tileCollide = true;
 		Projectile.friendly = true;
 
