@@ -13,7 +13,10 @@ public class PearlstoneCube : Cube
 	public override void CustomDefaults()
 	{
 		Item.SetShopValues(ItemRarityColor.LightRed4, Item.sellPrice(0, 1));
+		Item.width = 32;
+		Item.height = 34;
 	}
+
 	public override CubeSettings GetCubeSettings()
 	{
 		CubeSettings settings = new()

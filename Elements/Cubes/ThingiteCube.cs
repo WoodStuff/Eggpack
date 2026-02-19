@@ -13,6 +13,8 @@ public class ThingiteCube : Cube
 	public override void CustomDefaults()
 	{
 		Item.SetShopValues(ItemRarityColor.Blue1, Item.sellPrice(0, 0, 50));
+		Item.width = 32;
+		Item.height = 34;
 	}
 
 	public override CubeSettings GetCubeSettings()
