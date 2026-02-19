@@ -25,7 +25,7 @@ public class ThingiteOreTile : ModTile
 		LocalizedText name = CreateMapEntryName();
 		AddMapEntry(new Color(140, 180, 219), name);
 
-		DustType = 84;
+		DustType = DustID.Platinum;
 		MinPick = 40;
 	}
 }

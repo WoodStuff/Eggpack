@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -22,6 +23,6 @@ public class ThingiteBarTile : ModTile
 
 		AddMapEntry(new Color(80, 80, 100), Language.GetText("MapObject.MetalBar"));
 
-		DustType = 84;
+		DustType = DustID.Platinum;
 	}
 }
